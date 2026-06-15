@@ -1,0 +1,924 @@
+{
+  "summary": {
+    "start_date": "2025-06-03",
+    "end_date": "2025-06-04",
+    "horizon_days": 30,
+    "step_days": 1,
+    "total_predictions": 53,
+    "total_correct": 14,
+    "accuracy": 0.2642,
+    "precision_up": 0.625,
+    "precision_down": 0.1081,
+    "up_predictions": {
+      "total": 16,
+      "correct": 10
+    },
+    "down_predictions": {
+      "total": 37,
+      "correct": 4
+    },
+    "portfolio": {
+      "initial_capital": 10000.0,
+      "final_value": 10619.07,
+      "return_pct": 6.19,
+      "final_value_real": 10456.95,
+      "return_pct_real": 4.57,
+      "final_cash": 10619.07,
+      "trades_pnl": {
+        "total_trades": 8,
+        "correct_trades": 6,
+        "incorrect_trades": 2,
+        "total_gains_usd": 620.51,
+        "total_losses_usd": -1.45,
+        "total_gains_real_usd": 467.51,
+        "total_losses_real_usd": -3.44,
+        "completed_pnl_usd": 0.55,
+        "liquidated_pnl_usd": 618.51,
+        "completed_pnl_real_usd": -1.93,
+        "liquidated_pnl_real_usd": 466.0,
+        "net_pnl_usd": 619.06,
+        "net_pnl_real_usd": 464.07
+      }
+    }
+  },
+  "predictions": [
+    {
+      "date": "2025-06-03",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 81100.0,
+      "price_end": 85200.0,
+      "change": 4100.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 83190.0,
+      "price_end": 87200.0,
+      "change": 4010.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "TZV26",
+      "predicted_direction": "UP",
+      "price_start": 108800.0,
+      "price_end": 116450.0,
+      "change": 7650.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "TZX27",
+      "predicted_direction": "UP",
+      "price_start": 239.05,
+      "price_end": 242.1,
+      "change": 3.05,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "TX31",
+      "predicted_direction": "UP",
+      "price_start": 948.1,
+      "price_end": 944.3,
+      "change": -3.8,
+      "correct": false,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "DICP",
+      "predicted_direction": "UP",
+      "price_start": 41250.0,
+      "price_end": 37325.0,
+      "change": -3925.0,
+      "correct": false,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "DIP0",
+      "predicted_direction": "UP",
+      "price_start": 41000.0,
+      "price_end": 37105.0,
+      "change": -3895.0,
+      "correct": false,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "PARP",
+      "predicted_direction": "UP",
+      "price_start": 22360.0,
+      "price_end": 22150.0,
+      "change": -210.0,
+      "correct": false,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "PAP0",
+      "predicted_direction": "UP",
+      "price_start": 22650.0,
+      "price_end": 21970.0,
+      "change": -680.0,
+      "correct": false,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "CUAP",
+      "predicted_direction": "UP",
+      "price_start": 27980.0,
+      "price_end": 26920.0,
+      "change": -1060.0,
+      "correct": false,
+      "explanation": "El análisis de los activos seleccionados se basa en la convergencia de tres motores macroeconómicos actuales extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30 y similares):** Existe una tendencia al alza impulsada por el sólido desempeño fiscal. El **Superávit Primario (845.949 M)** y el **Financiero (572.341 M)** actúan como el principal catalizador, reduciendo el **Riesgo País a 651 pbs**. \n   *Causalidad:* `Superávit Fiscal` ──► `↓ Riesgo País` ──► `↑ Precio Bonos Hard Dollar`.\n\n2. **Bonos de Tasa Fija (DICP, DIP0, PARP, PAP0, CUAP):** Presentan la señal más fuerte de consenso (Soporte 3) debido a la estabilidad del tipo de cambio. Con un **Dólar MEP ($1.184,36)** y **CCL ($1.195,3)** muy cercanos al oficial, el atractivo de los activos en pesos a tasa fija aumenta significativamente.\n   *Causalidad:* `Dólar Estable/Bajo` ──► `↑ Atractivo Activos Pesos` ──► `↑ Precio Tasa Fija`.\n\n3. **Bonos CER (TZV26, TZX27, TX31):** Se mantienen con señal UP debido a la combinación de tasas reales positivas y la persistencia de la inflación, aunque esta última haya desacelerado al **1,5% mensual**.\n   *Causalidad:* `Inflación + Tasas Reales Positivas` ──► `↑ Demanda Protección IPC` ──► `↑ Precio Bonos CER`.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** el Riesgo País vuelve a subir por encima de las 1.000 pbs o el superávit financiero se vuelve deficitario, **entonces** venda posiciones en AL30/GD30.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) se dispara por encima del 40%, **entonces** salga de activos de Tasa Fija (DICP, etc.) y migre a Hard Dollar.\n- **Si** la inflación mensual cae por debajo de la tasa de política monetaria (29% anual), **entonces** reduzca exposición a bonos CER.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL29",
+      "predicted_direction": "DOWN",
+      "price_start": 87910.0,
+      "price_end": 91730.0,
+      "change": 3820.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL30",
+      "predicted_direction": "DOWN",
+      "price_start": 81100.0,
+      "price_end": 85200.0,
+      "change": 4100.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 81850.0,
+      "price_end": 85100.0,
+      "change": 3250.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 75450.0,
+      "price_end": 78400.0,
+      "change": 2950.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AE38",
+      "predicted_direction": "DOWN",
+      "price_start": 85230.0,
+      "price_end": 88900.0,
+      "change": 3670.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD29",
+      "predicted_direction": "DOWN",
+      "price_start": 89870.0,
+      "price_end": 94620.0,
+      "change": 4750.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD30",
+      "predicted_direction": "DOWN",
+      "price_start": 83190.0,
+      "price_end": 87200.0,
+      "change": 4010.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 82580.0,
+      "price_end": 85890.0,
+      "change": 3310.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD38",
+      "predicted_direction": "DOWN",
+      "price_start": 87750.0,
+      "price_end": 91380.0,
+      "change": 3630.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 76440.0,
+      "price_end": 79610.0,
+      "change": 3170.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD46",
+      "predicted_direction": "DOWN",
+      "price_start": 78990.0,
+      "price_end": 82040.0,
+      "change": 3050.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL29D",
+      "predicted_direction": "DOWN",
+      "price_start": 74.03,
+      "price_end": 74.01,
+      "change": -0.02,
+      "correct": true,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL30D",
+      "predicted_direction": "DOWN",
+      "price_start": 68.17,
+      "price_end": 68.8,
+      "change": 0.63,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AE38D",
+      "predicted_direction": "DOWN",
+      "price_start": 71.78,
+      "price_end": 71.8,
+      "change": 0.02,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL35D",
+      "predicted_direction": "DOWN",
+      "price_start": 68.84,
+      "price_end": 68.69,
+      "change": -0.15,
+      "correct": true,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL41D",
+      "predicted_direction": "DOWN",
+      "price_start": 63.42,
+      "price_end": 63.33,
+      "change": -0.09,
+      "correct": true,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD29D",
+      "predicted_direction": "DOWN",
+      "price_start": 75.67,
+      "price_end": 76.25,
+      "change": 0.58,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD30D",
+      "predicted_direction": "DOWN",
+      "price_start": 69.8,
+      "price_end": 70.26,
+      "change": 0.46,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD38D",
+      "predicted_direction": "DOWN",
+      "price_start": 73.8,
+      "price_end": 73.97,
+      "change": 0.17,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD35D",
+      "predicted_direction": "DOWN",
+      "price_start": 69.5,
+      "price_end": 69.49,
+      "change": -0.01,
+      "correct": true,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD41D",
+      "predicted_direction": "DOWN",
+      "price_start": 64.33,
+      "price_end": 64.41,
+      "change": 0.08,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD46D",
+      "predicted_direction": "DOWN",
+      "price_start": 66.5,
+      "price_end": 66.77,
+      "change": 0.27,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "BA37D",
+      "predicted_direction": "DOWN",
+      "price_start": 83860.0,
+      "price_end": 86780.0,
+      "change": 2920.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "CO26",
+      "predicted_direction": "DOWN",
+      "price_start": 23985.0,
+      "price_end": 24095.0,
+      "change": 110.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de señales del grafo de conocimiento Neo4j y el contexto macroeconómico actual obtenido de la base de datos de Supabase, se identifica una tendencia a la baja en el corto plazo para los activos denominados en **Hard Dólar**. \n\n**Análisis Causal:**\nEl razonamiento sigue la siguiente cadena de efectos:\n`[Orden Macroeconómico / Superávit Fiscal] ──► causa ──► [Reducción de Brecha Cambiaria / Expectativa de Liberalización] ──► señal [DOWN] en [Hard Dólar]`.\n\n1. **Contexto Macro:** Los datos muestran un superávit financiero robusto (572.341 M) y un superávit primario (845.949 M), lo que valida el concepto de 'Orden Macroeconómico'.\n2. **Brecha Cambiaria:** Se observa una brecha extremadamente reducida (Dólar Oficial: 1207 vs MEP: 1184), lo que se alinea con los disparadores de 'Dólar bajo' y 'Liberalización cambiaria' registrados en el grafo.\n3. **Señales del Grafo:** La herramienta `get_asset_signals` para 'Hard Dolar' indica explícitamente que tanto el orden macroeconómico como la salida del cepo (liberalización) sugieren una operación **DOWN** para estos activos.\n\n**Condicionales y Triggers de Salida:**\n- **Cuándo vender:** Se recomienda considerar la salida de estas posiciones en un horizonte de **corto plazo (menos de 6 meses)** o si el precio alcanza un rendimiento (TIR) objetivo que compense el riesgo de liquidez.\n- **Escenario A (Venta):** Si la inflación (IPC) se mantiene baja (actualmente 1.5%) y la brecha cambiaria permanece comprimida, la presión bajista sobre los bonos Hard Dólar podría persistir frente a activos CER (que muestran señal UP).\n- **Escenario B (Reversión):** Si las reservas netas (actualmente negativas en -2.000 M) continúan cayendo drásticamente y se produce una nueva devaluación del oficial, la señal podría revertirse a UP.\n\n**Riesgos a monitorear:**\n- Evolución de las reservas netas del BCRA.\n- Sostenibilidad del superávit primario.\n- Movimientos bruscos en el Riesgo País (actualmente en 651 pbs).\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 80900.0,
+      "price_end": 85900.0,
+      "change": 5000.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, el análisis para el corto plazo (menos de 6 meses) es el siguiente:\n\n### 1. Análisis Macroeconómico Actual\nEl contexto macroeconómico muestra indicadores muy positivos para la valoración de activos soberanos:\n- **Sostenibilidad Fiscal**: Se registra un fuerte superávit primario y financiero (según `obtener_contexto_macro`), lo que reduce la necesidad de financiamiento mediante emisión monetaria.\n- **Riesgo País**: Se ubica en **651 pbs**, un nivel significativamente bajo que sugiere una compresión de tasas y un aumento de precios en los bonos.\n- **Reservas y FMI**: Aunque las reservas netas son negativas (-2.000 millones USD), existe una expectativa inmediata de ingresos en junio por desembolsos del FMI y acuerdos REPO, lo que mejora la capacidad de pago.\n- **Inflación y Tipo de Cambio**: La inflación mensual es baja (1,5%) y la brecha cambiaria es mínima (MEP/CCL muy cercanos al Oficial), lo que estabiliza el mercado.\n\n### 2. Cadenas Causales de Alza\n\n**Para Bonos Hard Dollar (AL30, GD30, AL29, GD29):**\n`[Superávit Fiscal + Baja del Riesgo País] ──► causes ──► [Mejora en la percepción de solvencia y capacidad de pago] ──► signals [UP] on [Hard Dollar Bonds]`\n*Justificación*: El mercado premia la disciplina fiscal y la caída del riesgo país. Los bonos más líquidos (AL30/GD30) y los de corto plazo (AL29/GD29) son los primeros en reaccionar a la llegada de fondos del FMI y la normalización de las reservas.\n\n**Para Bonos CER (TZV26, TZX27):**\n`[Tasas reales positivas + Presiones macroeconómicas] ──► causes ──► [Atractivo de activos indexados como cobertura] ──► signals [UP] on [CER Bonds]`\n*Justificación*: Según el grafo de conocimiento Neo4j, existe una señal de alza para los activos CER basada en la combinación de tasas reales positivas, lo que los hace atractivos a pesar de la desaceleración de la inflación.\n\n### 3. Estrategia de Salida y Escenarios Condicionales\n\n**Triggers de Venta (Cuándo salir):**\n- **Hard Dollar**: Considerar la venta si el Riesgo País vuelve a superar los 800-900 pbs o si la misión del FMI reporta incumplimientos graves en las metas de reservas.\n- **CER**: Salir de la posición si la inflación mensual cae por debajo del 1% de forma sostenida y las tasas reales se vuelven negativas.\n\n**Lógica Condicional:**\n- **Escenario A**: *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 40%*, entonces reduzca exposición a bonos soberanos y adquiera Hard Dólar (cash).\n- **Escenario B**: *Si la inflación (IPC) se acelera nuevamente por encima de la tasa de política monetaria*, entonces venda activos a tasa fija y aumente la posición en bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 83100.0,
+      "price_end": 87900.0,
+      "change": 4800.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, el análisis para el corto plazo (menos de 6 meses) es el siguiente:\n\n### 1. Análisis Macroeconómico Actual\nEl contexto macroeconómico muestra indicadores muy positivos para la valoración de activos soberanos:\n- **Sostenibilidad Fiscal**: Se registra un fuerte superávit primario y financiero (según `obtener_contexto_macro`), lo que reduce la necesidad de financiamiento mediante emisión monetaria.\n- **Riesgo País**: Se ubica en **651 pbs**, un nivel significativamente bajo que sugiere una compresión de tasas y un aumento de precios en los bonos.\n- **Reservas y FMI**: Aunque las reservas netas son negativas (-2.000 millones USD), existe una expectativa inmediata de ingresos en junio por desembolsos del FMI y acuerdos REPO, lo que mejora la capacidad de pago.\n- **Inflación y Tipo de Cambio**: La inflación mensual es baja (1,5%) y la brecha cambiaria es mínima (MEP/CCL muy cercanos al Oficial), lo que estabiliza el mercado.\n\n### 2. Cadenas Causales de Alza\n\n**Para Bonos Hard Dollar (AL30, GD30, AL29, GD29):**\n`[Superávit Fiscal + Baja del Riesgo País] ──► causes ──► [Mejora en la percepción de solvencia y capacidad de pago] ──► signals [UP] on [Hard Dollar Bonds]`\n*Justificación*: El mercado premia la disciplina fiscal y la caída del riesgo país. Los bonos más líquidos (AL30/GD30) y los de corto plazo (AL29/GD29) son los primeros en reaccionar a la llegada de fondos del FMI y la normalización de las reservas.\n\n**Para Bonos CER (TZV26, TZX27):**\n`[Tasas reales positivas + Presiones macroeconómicas] ──► causes ──► [Atractivo de activos indexados como cobertura] ──► signals [UP] on [CER Bonds]`\n*Justificación*: Según el grafo de conocimiento Neo4j, existe una señal de alza para los activos CER basada en la combinación de tasas reales positivas, lo que los hace atractivos a pesar de la desaceleración de la inflación.\n\n### 3. Estrategia de Salida y Escenarios Condicionales\n\n**Triggers de Venta (Cuándo salir):**\n- **Hard Dollar**: Considerar la venta si el Riesgo País vuelve a superar los 800-900 pbs o si la misión del FMI reporta incumplimientos graves en las metas de reservas.\n- **CER**: Salir de la posición si la inflación mensual cae por debajo del 1% de forma sostenida y las tasas reales se vuelven negativas.\n\n**Lógica Condicional:**\n- **Escenario A**: *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 40%*, entonces reduzca exposición a bonos soberanos y adquiera Hard Dólar (cash).\n- **Escenario B**: *Si la inflación (IPC) se acelera nuevamente por encima de la tasa de política monetaria*, entonces venda activos a tasa fija y aumente la posición en bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL29",
+      "predicted_direction": "UP",
+      "price_start": 87440.0,
+      "price_end": 92590.0,
+      "change": 5150.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, el análisis para el corto plazo (menos de 6 meses) es el siguiente:\n\n### 1. Análisis Macroeconómico Actual\nEl contexto macroeconómico muestra indicadores muy positivos para la valoración de activos soberanos:\n- **Sostenibilidad Fiscal**: Se registra un fuerte superávit primario y financiero (según `obtener_contexto_macro`), lo que reduce la necesidad de financiamiento mediante emisión monetaria.\n- **Riesgo País**: Se ubica en **651 pbs**, un nivel significativamente bajo que sugiere una compresión de tasas y un aumento de precios en los bonos.\n- **Reservas y FMI**: Aunque las reservas netas son negativas (-2.000 millones USD), existe una expectativa inmediata de ingresos en junio por desembolsos del FMI y acuerdos REPO, lo que mejora la capacidad de pago.\n- **Inflación y Tipo de Cambio**: La inflación mensual es baja (1,5%) y la brecha cambiaria es mínima (MEP/CCL muy cercanos al Oficial), lo que estabiliza el mercado.\n\n### 2. Cadenas Causales de Alza\n\n**Para Bonos Hard Dollar (AL30, GD30, AL29, GD29):**\n`[Superávit Fiscal + Baja del Riesgo País] ──► causes ──► [Mejora en la percepción de solvencia y capacidad de pago] ──► signals [UP] on [Hard Dollar Bonds]`\n*Justificación*: El mercado premia la disciplina fiscal y la caída del riesgo país. Los bonos más líquidos (AL30/GD30) y los de corto plazo (AL29/GD29) son los primeros en reaccionar a la llegada de fondos del FMI y la normalización de las reservas.\n\n**Para Bonos CER (TZV26, TZX27):**\n`[Tasas reales positivas + Presiones macroeconómicas] ──► causes ──► [Atractivo de activos indexados como cobertura] ──► signals [UP] on [CER Bonds]`\n*Justificación*: Según el grafo de conocimiento Neo4j, existe una señal de alza para los activos CER basada en la combinación de tasas reales positivas, lo que los hace atractivos a pesar de la desaceleración de la inflación.\n\n### 3. Estrategia de Salida y Escenarios Condicionales\n\n**Triggers de Venta (Cuándo salir):**\n- **Hard Dollar**: Considerar la venta si el Riesgo País vuelve a superar los 800-900 pbs o si la misión del FMI reporta incumplimientos graves en las metas de reservas.\n- **CER**: Salir de la posición si la inflación mensual cae por debajo del 1% de forma sostenida y las tasas reales se vuelven negativas.\n\n**Lógica Condicional:**\n- **Escenario A**: *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 40%*, entonces reduzca exposición a bonos soberanos y adquiera Hard Dólar (cash).\n- **Escenario B**: *Si la inflación (IPC) se acelera nuevamente por encima de la tasa de política monetaria*, entonces venda activos a tasa fija y aumente la posición en bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD29",
+      "predicted_direction": "UP",
+      "price_start": 89290.0,
+      "price_end": 94900.0,
+      "change": 5610.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, el análisis para el corto plazo (menos de 6 meses) es el siguiente:\n\n### 1. Análisis Macroeconómico Actual\nEl contexto macroeconómico muestra indicadores muy positivos para la valoración de activos soberanos:\n- **Sostenibilidad Fiscal**: Se registra un fuerte superávit primario y financiero (según `obtener_contexto_macro`), lo que reduce la necesidad de financiamiento mediante emisión monetaria.\n- **Riesgo País**: Se ubica en **651 pbs**, un nivel significativamente bajo que sugiere una compresión de tasas y un aumento de precios en los bonos.\n- **Reservas y FMI**: Aunque las reservas netas son negativas (-2.000 millones USD), existe una expectativa inmediata de ingresos en junio por desembolsos del FMI y acuerdos REPO, lo que mejora la capacidad de pago.\n- **Inflación y Tipo de Cambio**: La inflación mensual es baja (1,5%) y la brecha cambiaria es mínima (MEP/CCL muy cercanos al Oficial), lo que estabiliza el mercado.\n\n### 2. Cadenas Causales de Alza\n\n**Para Bonos Hard Dollar (AL30, GD30, AL29, GD29):**\n`[Superávit Fiscal + Baja del Riesgo País] ──► causes ──► [Mejora en la percepción de solvencia y capacidad de pago] ──► signals [UP] on [Hard Dollar Bonds]`\n*Justificación*: El mercado premia la disciplina fiscal y la caída del riesgo país. Los bonos más líquidos (AL30/GD30) y los de corto plazo (AL29/GD29) son los primeros en reaccionar a la llegada de fondos del FMI y la normalización de las reservas.\n\n**Para Bonos CER (TZV26, TZX27):**\n`[Tasas reales positivas + Presiones macroeconómicas] ──► causes ──► [Atractivo de activos indexados como cobertura] ──► signals [UP] on [CER Bonds]`\n*Justificación*: Según el grafo de conocimiento Neo4j, existe una señal de alza para los activos CER basada en la combinación de tasas reales positivas, lo que los hace atractivos a pesar de la desaceleración de la inflación.\n\n### 3. Estrategia de Salida y Escenarios Condicionales\n\n**Triggers de Venta (Cuándo salir):**\n- **Hard Dollar**: Considerar la venta si el Riesgo País vuelve a superar los 800-900 pbs o si la misión del FMI reporta incumplimientos graves en las metas de reservas.\n- **CER**: Salir de la posición si la inflación mensual cae por debajo del 1% de forma sostenida y las tasas reales se vuelven negativas.\n\n**Lógica Condicional:**\n- **Escenario A**: *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 40%*, entonces reduzca exposición a bonos soberanos y adquiera Hard Dólar (cash).\n- **Escenario B**: *Si la inflación (IPC) se acelera nuevamente por encima de la tasa de política monetaria*, entonces venda activos a tasa fija y aumente la posición en bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "TZV26",
+      "predicted_direction": "UP",
+      "price_start": 108700.0,
+      "price_end": 117900.0,
+      "change": 9200.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, el análisis para el corto plazo (menos de 6 meses) es el siguiente:\n\n### 1. Análisis Macroeconómico Actual\nEl contexto macroeconómico muestra indicadores muy positivos para la valoración de activos soberanos:\n- **Sostenibilidad Fiscal**: Se registra un fuerte superávit primario y financiero (según `obtener_contexto_macro`), lo que reduce la necesidad de financiamiento mediante emisión monetaria.\n- **Riesgo País**: Se ubica en **651 pbs**, un nivel significativamente bajo que sugiere una compresión de tasas y un aumento de precios en los bonos.\n- **Reservas y FMI**: Aunque las reservas netas son negativas (-2.000 millones USD), existe una expectativa inmediata de ingresos en junio por desembolsos del FMI y acuerdos REPO, lo que mejora la capacidad de pago.\n- **Inflación y Tipo de Cambio**: La inflación mensual es baja (1,5%) y la brecha cambiaria es mínima (MEP/CCL muy cercanos al Oficial), lo que estabiliza el mercado.\n\n### 2. Cadenas Causales de Alza\n\n**Para Bonos Hard Dollar (AL30, GD30, AL29, GD29):**\n`[Superávit Fiscal + Baja del Riesgo País] ──► causes ──► [Mejora en la percepción de solvencia y capacidad de pago] ──► signals [UP] on [Hard Dollar Bonds]`\n*Justificación*: El mercado premia la disciplina fiscal y la caída del riesgo país. Los bonos más líquidos (AL30/GD30) y los de corto plazo (AL29/GD29) son los primeros en reaccionar a la llegada de fondos del FMI y la normalización de las reservas.\n\n**Para Bonos CER (TZV26, TZX27):**\n`[Tasas reales positivas + Presiones macroeconómicas] ──► causes ──► [Atractivo de activos indexados como cobertura] ──► signals [UP] on [CER Bonds]`\n*Justificación*: Según el grafo de conocimiento Neo4j, existe una señal de alza para los activos CER basada en la combinación de tasas reales positivas, lo que los hace atractivos a pesar de la desaceleración de la inflación.\n\n### 3. Estrategia de Salida y Escenarios Condicionales\n\n**Triggers de Venta (Cuándo salir):**\n- **Hard Dollar**: Considerar la venta si el Riesgo País vuelve a superar los 800-900 pbs o si la misión del FMI reporta incumplimientos graves en las metas de reservas.\n- **CER**: Salir de la posición si la inflación mensual cae por debajo del 1% de forma sostenida y las tasas reales se vuelven negativas.\n\n**Lógica Condicional:**\n- **Escenario A**: *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 40%*, entonces reduzca exposición a bonos soberanos y adquiera Hard Dólar (cash).\n- **Escenario B**: *Si la inflación (IPC) se acelera nuevamente por encima de la tasa de política monetaria*, entonces venda activos a tasa fija y aumente la posición en bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "TZX27",
+      "predicted_direction": "UP",
+      "price_start": 239.6,
+      "price_end": 242.5,
+      "change": 2.9,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, el análisis para el corto plazo (menos de 6 meses) es el siguiente:\n\n### 1. Análisis Macroeconómico Actual\nEl contexto macroeconómico muestra indicadores muy positivos para la valoración de activos soberanos:\n- **Sostenibilidad Fiscal**: Se registra un fuerte superávit primario y financiero (según `obtener_contexto_macro`), lo que reduce la necesidad de financiamiento mediante emisión monetaria.\n- **Riesgo País**: Se ubica en **651 pbs**, un nivel significativamente bajo que sugiere una compresión de tasas y un aumento de precios en los bonos.\n- **Reservas y FMI**: Aunque las reservas netas son negativas (-2.000 millones USD), existe una expectativa inmediata de ingresos en junio por desembolsos del FMI y acuerdos REPO, lo que mejora la capacidad de pago.\n- **Inflación y Tipo de Cambio**: La inflación mensual es baja (1,5%) y la brecha cambiaria es mínima (MEP/CCL muy cercanos al Oficial), lo que estabiliza el mercado.\n\n### 2. Cadenas Causales de Alza\n\n**Para Bonos Hard Dollar (AL30, GD30, AL29, GD29):**\n`[Superávit Fiscal + Baja del Riesgo País] ──► causes ──► [Mejora en la percepción de solvencia y capacidad de pago] ──► signals [UP] on [Hard Dollar Bonds]`\n*Justificación*: El mercado premia la disciplina fiscal y la caída del riesgo país. Los bonos más líquidos (AL30/GD30) y los de corto plazo (AL29/GD29) son los primeros en reaccionar a la llegada de fondos del FMI y la normalización de las reservas.\n\n**Para Bonos CER (TZV26, TZX27):**\n`[Tasas reales positivas + Presiones macroeconómicas] ──► causes ──► [Atractivo de activos indexados como cobertura] ──► signals [UP] on [CER Bonds]`\n*Justificación*: Según el grafo de conocimiento Neo4j, existe una señal de alza para los activos CER basada en la combinación de tasas reales positivas, lo que los hace atractivos a pesar de la desaceleración de la inflación.\n\n### 3. Estrategia de Salida y Escenarios Condicionales\n\n**Triggers de Venta (Cuándo salir):**\n- **Hard Dollar**: Considerar la venta si el Riesgo País vuelve a superar los 800-900 pbs o si la misión del FMI reporta incumplimientos graves en las metas de reservas.\n- **CER**: Salir de la posición si la inflación mensual cae por debajo del 1% de forma sostenida y las tasas reales se vuelven negativas.\n\n**Lógica Condicional:**\n- **Escenario A**: *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 40%*, entonces reduzca exposición a bonos soberanos y adquiera Hard Dólar (cash).\n- **Escenario B**: *Si la inflación (IPC) se acelera nuevamente por encima de la tasa de política monetaria*, entonces venda activos a tasa fija y aumente la posición en bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "TZV26",
+      "predicted_direction": "DOWN",
+      "price_start": 108700.0,
+      "price_end": 117900.0,
+      "change": 9200.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "TZX27",
+      "predicted_direction": "DOWN",
+      "price_start": 239.6,
+      "price_end": 242.5,
+      "change": 2.9,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "TX31",
+      "predicted_direction": "DOWN",
+      "price_start": 950.0,
+      "price_end": 953.9,
+      "change": 3.9,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL30",
+      "predicted_direction": "DOWN",
+      "price_start": 80900.0,
+      "price_end": 85900.0,
+      "change": 5000.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD30",
+      "predicted_direction": "DOWN",
+      "price_start": 83100.0,
+      "price_end": 87900.0,
+      "change": 4800.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 81550.0,
+      "price_end": 86000.0,
+      "change": 4450.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 82340.0,
+      "price_end": 86810.0,
+      "change": 4470.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL29",
+      "predicted_direction": "DOWN",
+      "price_start": 87440.0,
+      "price_end": 92590.0,
+      "change": 5150.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD29",
+      "predicted_direction": "DOWN",
+      "price_start": 89290.0,
+      "price_end": 94900.0,
+      "change": 5610.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 75200.0,
+      "price_end": 79890.0,
+      "change": 4690.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 76150.0,
+      "price_end": 80200.0,
+      "change": 4050.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AE38",
+      "predicted_direction": "DOWN",
+      "price_start": 85000.0,
+      "price_end": 89900.0,
+      "change": 4900.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD38",
+      "predicted_direction": "DOWN",
+      "price_start": 87400.0,
+      "price_end": 92300.0,
+      "change": 4900.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales (2025-06-02) y las señales del grafo de conocimiento Neo4j, se identifican dos motores principales de baja de precios para los activos mencionados:\n\n1. **Desaceleración Inflacionaria (Impacto en Bonos CER):**\nLa inflación mensual se ha situado en un **1,5%**, un nivel significativamente bajo. En un entorno de inflación decreciente, los bonos ajustados por CER pierden su atractivo frente a los activos de tasa fija (como las LECAPs que rinden un 35% anual), ya que el ajuste por inflación se vuelve marginal.\n*   **Cadena Causal:** `Baja de Inflación (1,5%) ──► Reducción del rendimiento real de activos CER ──► signals DOWN on [TZV26, TZX27, TX31]`.\n\n2. **Convergencia Cambiaria y Gap Negativo (Impacto en Hard Dollar):**\nSe observa una situación inusual donde el **Dólar Oficial ($1.207)** es superior al **Dólar MEP ($1.184,36)** y al **CCL ($1.195,3)**. Esta convergencia (gap negativo) elimina la prima de cobertura que suelen tener los bonos Hard Dollar. Según el grafo de conocimiento, el escenario de 'Dólar bajo' y la 'Liberalización cambiaria' actúan como señales bajistas para estos activos.\n*   **Cadena Causal:** `Convergencia Cambiaria (Gap Negativo) ──► Menor demanda de cobertura en USD paralelos ──► signals DOWN on [AL/GD Series]`.\n\n**Estrategia y Condicionales:**\n*   **Cuándo vender:** Considerar la salida de posiciones en bonos CER si la inflación mensual se mantiene por debajo del 2% en los próximos dos meses.\n*   **Escenario A:** *Si la inflación vuelve a acelerarse* por encima del 3% mensual, los bonos CER (TZV26, TZX27, TX31) recuperarán atractivo y podrían subir de precio.\n*   **Escenario B:** *Si el Riesgo País (actualmente en 651) vuelve a subir* significativamente, los bonos Hard Dollar podrían experimentar volatilidad, pero la presión bajista por la brecha cambiaria podría mitigarse.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    }
+  ],
+  "portfolio_history": [
+    {
+      "date": "2025-06-03",
+      "cash": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 0.0092,
+          "price": 108800.0,
+          "value": 1000.0
+        },
+        "AL30": {
+          "quantity": 0.0247,
+          "price": 81100.0,
+          "value": 2000.0
+        },
+        "GD30": {
+          "quantity": 0.024,
+          "price": 83190.0,
+          "value": 2000.0
+        },
+        "TX31": {
+          "quantity": 1.0547,
+          "price": 948.1,
+          "value": 1000.0
+        },
+        "DICP": {
+          "quantity": 0.0485,
+          "price": 41250.0,
+          "value": 2000.0
+        },
+        "DIP0": {
+          "quantity": 0.0488,
+          "price": 41000.0,
+          "value": 2000.0
+        }
+      },
+      "total_value": 10000.0,
+      "inflation_factor": 1.0
+    },
+    {
+      "date": "2025-06-04",
+      "cash": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 0.0092,
+          "price": 108700.0,
+          "value": 999.25
+        },
+        "AL30": {
+          "quantity": 0.0309,
+          "price": 80900.0,
+          "value": 2498.13
+        },
+        "GD30": {
+          "quantity": 0.0301,
+          "price": 83100.0,
+          "value": 2498.13
+        },
+        "AL29": {
+          "quantity": 0.0229,
+          "price": 87440.0,
+          "value": 1998.51
+        },
+        "GD29": {
+          "quantity": 0.0224,
+          "price": 89290.0,
+          "value": 1998.51
+        }
+      },
+      "total_value": 9992.53,
+      "inflation_factor": 1.0004964102539347
+    },
+    {
+      "date": "2025-07-04",
+      "cash": 10619.07,
+      "holdings": {},
+      "total_value": 10619.07,
+      "inflation_factor": 1.0155038564077439
+    }
+  ],
+  "realized_trades": [
+    {
+      "ticker": "TZV26",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 0.0092,
+      "buy_price": 108800.0,
+      "buy_price_real": 108800.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 0.0247,
+      "buy_price": 81100.0,
+      "buy_price_real": 81100.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "GD30",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 0.024,
+      "buy_price": 83190.0,
+      "buy_price_real": 83190.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "TX31",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 1.0547,
+      "buy_price": 948.1,
+      "buy_price_real": 948.1,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "DICP",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 0.0485,
+      "buy_price": 41250.0,
+      "buy_price_real": 41250.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "DIP0",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 0.0488,
+      "buy_price": 41000.0,
+      "buy_price_real": 41000.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "TX31",
+      "date": "2025-06-04",
+      "action": "SELL_ALL",
+      "quantity": 1.0547,
+      "buy_price": 948.1,
+      "buy_price_real": 948.57,
+      "sell_price": 950.0,
+      "pnl_amount": 2.0,
+      "pnl_pct": 0.2,
+      "pnl_amount_real": 1.51,
+      "pnl_pct_real": 0.15,
+      "correct": true
+    },
+    {
+      "ticker": "DICP",
+      "date": "2025-06-04",
+      "action": "SELL_ALL",
+      "quantity": 0.0485,
+      "buy_price": 41250.0,
+      "buy_price_real": 41270.48,
+      "sell_price": 41220.0,
+      "pnl_amount": -1.45,
+      "pnl_pct": -0.07,
+      "pnl_amount_real": -2.45,
+      "pnl_pct_real": -0.12,
+      "correct": false
+    },
+    {
+      "ticker": "DIP0",
+      "date": "2025-06-04",
+      "action": "SELL_ALL",
+      "quantity": 0.0488,
+      "buy_price": 41000.0,
+      "buy_price_real": 41020.35,
+      "sell_price": 41000.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": -0.99,
+      "pnl_pct_real": -0.05,
+      "correct": false
+    },
+    {
+      "ticker": "TZV26",
+      "date": "2025-06-04",
+      "action": "BUY",
+      "quantity": 0.0,
+      "buy_price": 108700.0,
+      "buy_price_real": 108700.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "AL29",
+      "date": "2025-06-04",
+      "action": "BUY",
+      "quantity": 0.0229,
+      "buy_price": 87440.0,
+      "buy_price_real": 87440.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-06-04",
+      "action": "BUY",
+      "quantity": 0.0062,
+      "buy_price": 80900.0,
+      "buy_price_real": 80900.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "GD29",
+      "date": "2025-06-04",
+      "action": "BUY",
+      "quantity": 0.0224,
+      "buy_price": 89290.0,
+      "buy_price_real": 89290.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "GD30",
+      "date": "2025-06-04",
+      "action": "BUY",
+      "quantity": 0.006,
+      "buy_price": 83100.0,
+      "buy_price_real": 83100.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "TZV26",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.0092,
+      "buy_price": 108799.98,
+      "buy_price_real": 110486.79,
+      "sell_price": 117900.0,
+      "pnl_amount": 83.65,
+      "pnl_pct": 8.36,
+      "pnl_amount_real": 68.15,
+      "pnl_pct_real": 6.71,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.0309,
+      "buy_price": 81059.72,
+      "buy_price_real": 82308.25,
+      "sell_price": 85900.0,
+      "pnl_amount": 149.46,
+      "pnl_pct": 5.97,
+      "pnl_amount_real": 110.91,
+      "pnl_pct_real": 4.36,
+      "correct": true
+    },
+    {
+      "ticker": "GD30",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.0301,
+      "buy_price": 83171.98,
+      "buy_price_real": 84453.08,
+      "sell_price": 87900.0,
+      "pnl_amount": 142.13,
+      "pnl_pct": 5.68,
+      "pnl_amount_real": 103.62,
+      "pnl_pct_real": 4.08,
+      "correct": true
+    },
+    {
+      "ticker": "AL29",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.0229,
+      "buy_price": 87440.0,
+      "buy_price_real": 88751.6,
+      "sell_price": 92590.0,
+      "pnl_amount": 117.71,
+      "pnl_pct": 5.89,
+      "pnl_amount_real": 87.73,
+      "pnl_pct_real": 4.32,
+      "correct": true
+    },
+    {
+      "ticker": "GD29",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.0224,
+      "buy_price": 89290.0,
+      "buy_price_real": 90629.35,
+      "sell_price": 94900.0,
+      "pnl_amount": 125.56,
+      "pnl_pct": 6.28,
+      "pnl_amount_real": 95.59,
+      "pnl_pct_real": 4.71,
+      "correct": true
+    }
+  ]
+}

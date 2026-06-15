@@ -1,0 +1,488 @@
+{
+  "summary": {
+    "start_date": "2025-06-03",
+    "end_date": "2025-06-04",
+    "horizon_days": 30,
+    "step_days": 1,
+    "total_predictions": 34,
+    "total_correct": 17,
+    "accuracy": 0.5,
+    "precision_up": 1.0,
+    "precision_down": 0.0,
+    "up_predictions": {
+      "total": 17,
+      "correct": 17
+    },
+    "down_predictions": {
+      "total": 17,
+      "correct": 0
+    },
+    "portfolio": {
+      "initial_capital": 10000.0,
+      "final_value": 10512.33,
+      "return_pct": 5.12,
+      "final_cash": 10512.33,
+      "trades_pnl": {
+        "total_trades": 5,
+        "correct_trades": 5,
+        "incorrect_trades": 0,
+        "total_gains_usd": 512.34,
+        "total_losses_usd": 0,
+        "completed_pnl_usd": 0.02,
+        "liquidated_pnl_usd": 512.32,
+        "net_pnl_usd": 512.34
+      }
+    }
+  },
+  "predictions": [
+    {
+      "date": "2025-06-03",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 81100.0,
+      "price_end": 85200.0,
+      "change": 4100.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 83190.0,
+      "price_end": 87200.0,
+      "change": 4010.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 81850.0,
+      "price_end": 85100.0,
+      "change": 3250.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 82580.0,
+      "price_end": 85890.0,
+      "change": 3310.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL41",
+      "predicted_direction": "UP",
+      "price_start": 75450.0,
+      "price_end": 78400.0,
+      "change": 2950.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD41",
+      "predicted_direction": "UP",
+      "price_start": 76440.0,
+      "price_end": 79610.0,
+      "change": 3170.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AE38",
+      "predicted_direction": "UP",
+      "price_start": 85230.0,
+      "price_end": 88900.0,
+      "change": 3670.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "TZV26",
+      "predicted_direction": "UP",
+      "price_start": 108800.0,
+      "price_end": 116450.0,
+      "change": 7650.0,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "TZX27",
+      "predicted_direction": "UP",
+      "price_start": 239.05,
+      "price_end": 242.1,
+      "change": 3.05,
+      "correct": true,
+      "explanation": "El análisis de los activos soberanos para el corto plazo se fundamenta en tres ejes causales principales derivados de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n1. **Bonos Hard Dollar (AL30, GD30, AL35, GD35, AL41, GD41, AE38):** \nExiste un fuerte consenso (Support > 2) de que la contracción fiscal y el plan de estabilización macroeconómica impulsan estos activos. La cadena causal es: \n`Superávit Fiscal Primario (845.9B) y Financiero (572.3B)` ──► `Reducción de la necesidad de financiamiento externo` ──► `Baja del Riesgo País (actualmente en 651 bps)` ──► `Sube precio de Bonos Hard Dollar`.\nLa estabilidad del tipo de cambio (MEP $1184, CCL $1195) y la reducción de la inflación mensual al 1.5% validan la trayectoria de estabilización, haciendo que los bonos globales y locales en dólares sean más atractivos para el inversor.\n\n2. **Bonos CER (TZV26, TZX27):**\nSe registran señales de alza basadas en la existencia de **tasas reales excepcionalmente altas**. La lógica es: \n`Tasas Reales Positivas` ──► `Atractivo de cobertura contra inflación residual` ──► `Sube precio de Bonos CER`.\nAunque la inflación está bajando, el rendimiento real que ofrecen estos instrumentos sigue siendo competitivo frente a otras opciones de corto plazo.\n\n3. **Activos a Tasa Fija:**\nEl escenario de 'Dólar bajo' y estable (Support 3) favorece los activos a tasa fija. La cadena es: \n`Baja Inflación (1.5%)` ──► `Estabilidad Cambiaria (Brecha mínima)` ──► `Aumento de atractivo de Tasa Fija` ──► `Sube precio de activos a tasa fija`.\n\n**Estrategia de Salida y Condicionales:**\n- **Cuándo vender:** Se recomienda considerar la salida de las posiciones en Hard Dollar si el Riesgo País vuelve a superar los 800-900 bps o si el superávit financiero se vuelve negativo.\n- **Escenario A:** *Si la inflación (IPC) se acelera nuevamente por encima del 4% mensual*, venda activos a tasa fija y aumente exposición a bonos CER.\n- **Escenario B:** *Si la brecha cambiaria (MEP/CCL vs Oficial) sube del 20%*, reduzca exposición a bonos soberanos y migre hacia Hard Dollar líquido o activos refugio.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL30",
+      "predicted_direction": "DOWN",
+      "price_start": 81100.0,
+      "price_end": 85200.0,
+      "change": 4100.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD30",
+      "predicted_direction": "DOWN",
+      "price_start": 83190.0,
+      "price_end": 87200.0,
+      "change": 4010.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 81850.0,
+      "price_end": 85100.0,
+      "change": 3250.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 82580.0,
+      "price_end": 85890.0,
+      "change": 3310.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 75450.0,
+      "price_end": 78400.0,
+      "change": 2950.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 76440.0,
+      "price_end": 79610.0,
+      "change": 3170.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AE38",
+      "predicted_direction": "DOWN",
+      "price_start": 85230.0,
+      "price_end": 88900.0,
+      "change": 3670.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD38",
+      "predicted_direction": "DOWN",
+      "price_start": 87750.0,
+      "price_end": 91380.0,
+      "change": 3630.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL29",
+      "predicted_direction": "DOWN",
+      "price_start": 87910.0,
+      "price_end": 91730.0,
+      "change": 3820.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD29",
+      "predicted_direction": "DOWN",
+      "price_start": 89870.0,
+      "price_end": 94620.0,
+      "change": 4750.0,
+      "correct": false,
+      "explanation": "El análisis de los activos soberanos para el corto plazo (< 6 meses) indica un riesgo de corrección a la baja basado en la fragilidad de los amortiguadores externos, a pesar del fuerte ancla fiscal actual. \n\n**Análisis Causal:**\n[Bajas Reservas Netas / Riesgo de Corrección Cambiaria] ──► causa ──► [Aumento de la incertidumbre sobre la sostenibilidad del tipo de cambio y cumplimiento de metas con el FMI] ──► señala tendencia [DOWN] en [Bonos Soberanos (Series AL, GD, AE)].\n\n**Justificación Detallada:**\n1. **Situación de Reservas:** Según la base de datos relacional de Supabase, las Reservas Internacionales Netas (RIN) se encuentran en terreno negativo (-US$ 2.000 millones). Esta vulnerabilidad es crítica ya que el Gobierno debe alcanzar targets específicos para la revisión del programa con el FMI (prevista para las próximas semanas). \n2. **Riesgo de 'Accidente Cambiario':** Fuentes de noticias (Bloomberg Línea) destacan la advertencia de analistas como Martín Rapetti, quien señala que el mercado está 'menospreciando' el riesgo de un atraso cambiario. Si el dólar se mantiene artificialmente bajo mientras la economía se expande, podría generarse una presión insostenible que derive en una corrección brusca, impactando directamente en la confianza de los inversores y elevando el Riesgo País (actualmente en 651 bps).\n3. **Sensibilidad de los Títulos:** Los bonos de mayor plazo (como AL35, GD35, AL41, GD41) son los más vulnerables debido a su mayor duración, lo que los hace más sensibles a cualquier incremento en la tasa de descuento por riesgo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si** las Reservas Netas continúan cayendo o el FMI no otorga un *waiver* ante el incumplimiento de las metas de acumulación, **entonces** se recomienda reducir la exposición a bonos soberanos inmediatamente.\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) comienza a acelerarse por encima del 40%, **entonces** es una señal clara de salida de activos en pesos y bonos soberanos para migrar a Hard Dólar.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** venda bonos a tasa fija y rote hacia activos ajustados por CER.\n\n**Consideración Final:** Aunque el superávit financiero es un soporte fundamental, la falta de liquidez en dólares del BCRA es el principal 'cuello de botella' que podría gatillar la baja de precios en el corto plazo.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 80900.0,
+      "price_end": 85900.0,
+      "change": 5000.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 83100.0,
+      "price_end": 87900.0,
+      "change": 4800.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 81550.0,
+      "price_end": 86000.0,
+      "change": 4450.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 82340.0,
+      "price_end": 86810.0,
+      "change": 4470.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL41",
+      "predicted_direction": "UP",
+      "price_start": 75200.0,
+      "price_end": 79890.0,
+      "change": 4690.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD41",
+      "predicted_direction": "UP",
+      "price_start": 76150.0,
+      "price_end": 80200.0,
+      "change": 4050.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AE38",
+      "predicted_direction": "UP",
+      "price_start": 85000.0,
+      "price_end": 89900.0,
+      "change": 4900.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD38",
+      "predicted_direction": "UP",
+      "price_start": 87400.0,
+      "price_end": 92300.0,
+      "change": 4900.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se proyecta un alza de precio en el corto plazo para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos como AL30, GD30, AL35 y GD35. \n\n**Análisis Causal de Alza:**\nEl movimiento alcista se fundamenta en la siguiente cadena de causalidad:\n`Superávit Fiscal Financiero (572.3B) + Inflación Baja (1.5%) ──► ↓ Riesgo País (651) ──► ↑ Precio Bonos Soberanos`.\n\n1. **Ancla Fiscal Sólida**: El registro de un superávit primario de 845.9B y un superávit financiero de 572.3B actúa como el principal motor de confianza. Según el grafo de conocimiento, la estabilidad de las políticas económicas y el mantenimiento del superávit fiscal son causas directas de la reducción del Riesgo País.\n2. **Estabilidad Cambiaria**: Un dato crítico es la convergencia de los tipos de cambio. Con el Dólar Oficial en 1207, el MEP en 1184 y el CCL en 1195, la brecha cambiaria es prácticamente inexistente o incluso invertida. Esta ausencia de presión sobre el tipo de cambio elimina el riesgo de saltos bruscos, favoreciendo la compra de activos soberanos.\n3. **Desaceleración Inflacionaria**: La inflación mensual del 1.5% reduce el atractivo de los activos ajustados por CER en comparación con los bonos Hard Dollar, provocando una rotación de cartera hacia los títulos en dólares.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si la brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20-30%**, se recomienda reducir la exposición a bonos soberanos y rotar hacia activos de refugio (Hard Dollar físico o activos fuera de la jurisdicción local).\n- **Si el superávit primario se compromete o se vuelve negativo**, el soporte del precio de los bonos desaparecerá rápidamente, siendo el trigger inmediato para vender.\n- **Plazo de salida**: Se sugiere monitorear la posición para un cierre o toma de ganancias en un horizonte de 3 a 6 meses, o bien cuando el Riesgo País alcance niveles de soporte técnico inferiores a 500 puntos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 75200.0,
+      "price_end": 79890.0,
+      "change": 4690.0,
+      "correct": false,
+      "explanation": "El análisis de los activos solicitados indica que, si bien existe un sentimiento general alcista para los bonos soberanos debido al superávit fiscal (Primario: 845.949M, Financiero: 572.341M según la base de datos relacional de Supabase), los bonos de **largo plazo en Hard Dólar** son los más vulnerables a una corrección de precio en el corto plazo.\n\n**Justificación Causal:**\nLa vulnerabilidad de estos activos se explica a través de la siguiente cadena causal:\n`[Cuestionamiento de la solvencia / Salida del cepo] ──► causes ──► [Aumento de Riesgo País / Volatilidad] ──► signals [DOWN] on [Hard Dollar Bonds (Long Term)]`.\n\nLos factores clave que sustentan esta predicción son:\n1. **Riesgo de Solvencia y Reservas**: El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**. Según el grafo de conocimiento Neo4j, el 'Cuestionamiento de la solvencia del Estado' es un disparador directo de señales DOWN para los activos Hard Dólar.\n2. **Sensibilidad por Duración (Duration Risk)**: Los bonos como **AL41** (Macaulay Duration: 15.09 años) y **GD46** (Macaulay Duration: 19.72 años) poseen una sensibilidad significativamente mayor a las variaciones del riesgo país que los bonos cortos como el AL30 o GD30. Cualquier incremento en la percepción de riesgo impactará con mayor fuerza en el precio de los vencimientos largos.\n3. **Riesgo de Liberalización**: El grafo identifica que la 'Salida del cepo cambiario' puede generar señales DOWN en Hard Dólar debido a la volatilidad inherente al proceso de unificación cambiaria.\n\n**Escenarios Condicionales:**\n- **Si** el BCRA no logra revertir la tendencia de reservas netas negativas o se produce una salida desordenada del cepo, **entonces** los bonos de largo plazo (AL41, GD46, etc.) experimentarán la mayor caída de precio.\n- **Si** el riesgo país comienza a subir por encima de los 700-800 pbs, **entonces** se recomienda reducir exposición en bonos largos y rotar hacia activos más cortos o ajustados por CER.\n\n**Tener en cuenta**: Monitorear la brecha cambiaria (actualmente muy baja con el MEP en 1184.36 y el Oficial en 1207) y la evolución de las reservas netas.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 76150.0,
+      "price_end": 80200.0,
+      "change": 4050.0,
+      "correct": false,
+      "explanation": "El análisis de los activos solicitados indica que, si bien existe un sentimiento general alcista para los bonos soberanos debido al superávit fiscal (Primario: 845.949M, Financiero: 572.341M según la base de datos relacional de Supabase), los bonos de **largo plazo en Hard Dólar** son los más vulnerables a una corrección de precio en el corto plazo.\n\n**Justificación Causal:**\nLa vulnerabilidad de estos activos se explica a través de la siguiente cadena causal:\n`[Cuestionamiento de la solvencia / Salida del cepo] ──► causes ──► [Aumento de Riesgo País / Volatilidad] ──► signals [DOWN] on [Hard Dollar Bonds (Long Term)]`.\n\nLos factores clave que sustentan esta predicción son:\n1. **Riesgo de Solvencia y Reservas**: El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**. Según el grafo de conocimiento Neo4j, el 'Cuestionamiento de la solvencia del Estado' es un disparador directo de señales DOWN para los activos Hard Dólar.\n2. **Sensibilidad por Duración (Duration Risk)**: Los bonos como **AL41** (Macaulay Duration: 15.09 años) y **GD46** (Macaulay Duration: 19.72 años) poseen una sensibilidad significativamente mayor a las variaciones del riesgo país que los bonos cortos como el AL30 o GD30. Cualquier incremento en la percepción de riesgo impactará con mayor fuerza en el precio de los vencimientos largos.\n3. **Riesgo de Liberalización**: El grafo identifica que la 'Salida del cepo cambiario' puede generar señales DOWN en Hard Dólar debido a la volatilidad inherente al proceso de unificación cambiaria.\n\n**Escenarios Condicionales:**\n- **Si** el BCRA no logra revertir la tendencia de reservas netas negativas o se produce una salida desordenada del cepo, **entonces** los bonos de largo plazo (AL41, GD46, etc.) experimentarán la mayor caída de precio.\n- **Si** el riesgo país comienza a subir por encima de los 700-800 pbs, **entonces** se recomienda reducir exposición en bonos largos y rotar hacia activos más cortos o ajustados por CER.\n\n**Tener en cuenta**: Monitorear la brecha cambiaria (actualmente muy baja con el MEP en 1184.36 y el Oficial en 1207) y la evolución de las reservas netas.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD46",
+      "predicted_direction": "DOWN",
+      "price_start": 79720.0,
+      "price_end": 83080.0,
+      "change": 3360.0,
+      "correct": false,
+      "explanation": "El análisis de los activos solicitados indica que, si bien existe un sentimiento general alcista para los bonos soberanos debido al superávit fiscal (Primario: 845.949M, Financiero: 572.341M según la base de datos relacional de Supabase), los bonos de **largo plazo en Hard Dólar** son los más vulnerables a una corrección de precio en el corto plazo.\n\n**Justificación Causal:**\nLa vulnerabilidad de estos activos se explica a través de la siguiente cadena causal:\n`[Cuestionamiento de la solvencia / Salida del cepo] ──► causes ──► [Aumento de Riesgo País / Volatilidad] ──► signals [DOWN] on [Hard Dollar Bonds (Long Term)]`.\n\nLos factores clave que sustentan esta predicción son:\n1. **Riesgo de Solvencia y Reservas**: El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**. Según el grafo de conocimiento Neo4j, el 'Cuestionamiento de la solvencia del Estado' es un disparador directo de señales DOWN para los activos Hard Dólar.\n2. **Sensibilidad por Duración (Duration Risk)**: Los bonos como **AL41** (Macaulay Duration: 15.09 años) y **GD46** (Macaulay Duration: 19.72 años) poseen una sensibilidad significativamente mayor a las variaciones del riesgo país que los bonos cortos como el AL30 o GD30. Cualquier incremento en la percepción de riesgo impactará con mayor fuerza en el precio de los vencimientos largos.\n3. **Riesgo de Liberalización**: El grafo identifica que la 'Salida del cepo cambiario' puede generar señales DOWN en Hard Dólar debido a la volatilidad inherente al proceso de unificación cambiaria.\n\n**Escenarios Condicionales:**\n- **Si** el BCRA no logra revertir la tendencia de reservas netas negativas o se produce una salida desordenada del cepo, **entonces** los bonos de largo plazo (AL41, GD46, etc.) experimentarán la mayor caída de precio.\n- **Si** el riesgo país comienza a subir por encima de los 700-800 pbs, **entonces** se recomienda reducir exposición en bonos largos y rotar hacia activos más cortos o ajustados por CER.\n\n**Tener en cuenta**: Monitorear la brecha cambiaria (actualmente muy baja con el MEP en 1184.36 y el Oficial en 1207) y la evolución de las reservas netas.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 81550.0,
+      "price_end": 86000.0,
+      "change": 4450.0,
+      "correct": false,
+      "explanation": "El análisis de los activos solicitados indica que, si bien existe un sentimiento general alcista para los bonos soberanos debido al superávit fiscal (Primario: 845.949M, Financiero: 572.341M según la base de datos relacional de Supabase), los bonos de **largo plazo en Hard Dólar** son los más vulnerables a una corrección de precio en el corto plazo.\n\n**Justificación Causal:**\nLa vulnerabilidad de estos activos se explica a través de la siguiente cadena causal:\n`[Cuestionamiento de la solvencia / Salida del cepo] ──► causes ──► [Aumento de Riesgo País / Volatilidad] ──► signals [DOWN] on [Hard Dollar Bonds (Long Term)]`.\n\nLos factores clave que sustentan esta predicción son:\n1. **Riesgo de Solvencia y Reservas**: El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**. Según el grafo de conocimiento Neo4j, el 'Cuestionamiento de la solvencia del Estado' es un disparador directo de señales DOWN para los activos Hard Dólar.\n2. **Sensibilidad por Duración (Duration Risk)**: Los bonos como **AL41** (Macaulay Duration: 15.09 años) y **GD46** (Macaulay Duration: 19.72 años) poseen una sensibilidad significativamente mayor a las variaciones del riesgo país que los bonos cortos como el AL30 o GD30. Cualquier incremento en la percepción de riesgo impactará con mayor fuerza en el precio de los vencimientos largos.\n3. **Riesgo de Liberalización**: El grafo identifica que la 'Salida del cepo cambiario' puede generar señales DOWN en Hard Dólar debido a la volatilidad inherente al proceso de unificación cambiaria.\n\n**Escenarios Condicionales:**\n- **Si** el BCRA no logra revertir la tendencia de reservas netas negativas o se produce una salida desordenada del cepo, **entonces** los bonos de largo plazo (AL41, GD46, etc.) experimentarán la mayor caída de precio.\n- **Si** el riesgo país comienza a subir por encima de los 700-800 pbs, **entonces** se recomienda reducir exposición en bonos largos y rotar hacia activos más cortos o ajustados por CER.\n\n**Tener en cuenta**: Monitorear la brecha cambiaria (actualmente muy baja con el MEP en 1184.36 y el Oficial en 1207) y la evolución de las reservas netas.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 82340.0,
+      "price_end": 86810.0,
+      "change": 4470.0,
+      "correct": false,
+      "explanation": "El análisis de los activos solicitados indica que, si bien existe un sentimiento general alcista para los bonos soberanos debido al superávit fiscal (Primario: 845.949M, Financiero: 572.341M según la base de datos relacional de Supabase), los bonos de **largo plazo en Hard Dólar** son los más vulnerables a una corrección de precio en el corto plazo.\n\n**Justificación Causal:**\nLa vulnerabilidad de estos activos se explica a través de la siguiente cadena causal:\n`[Cuestionamiento de la solvencia / Salida del cepo] ──► causes ──► [Aumento de Riesgo País / Volatilidad] ──► signals [DOWN] on [Hard Dollar Bonds (Long Term)]`.\n\nLos factores clave que sustentan esta predicción son:\n1. **Riesgo de Solvencia y Reservas**: El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**. Según el grafo de conocimiento Neo4j, el 'Cuestionamiento de la solvencia del Estado' es un disparador directo de señales DOWN para los activos Hard Dólar.\n2. **Sensibilidad por Duración (Duration Risk)**: Los bonos como **AL41** (Macaulay Duration: 15.09 años) y **GD46** (Macaulay Duration: 19.72 años) poseen una sensibilidad significativamente mayor a las variaciones del riesgo país que los bonos cortos como el AL30 o GD30. Cualquier incremento en la percepción de riesgo impactará con mayor fuerza en el precio de los vencimientos largos.\n3. **Riesgo de Liberalización**: El grafo identifica que la 'Salida del cepo cambiario' puede generar señales DOWN en Hard Dólar debido a la volatilidad inherente al proceso de unificación cambiaria.\n\n**Escenarios Condicionales:**\n- **Si** el BCRA no logra revertir la tendencia de reservas netas negativas o se produce una salida desordenada del cepo, **entonces** los bonos de largo plazo (AL41, GD46, etc.) experimentarán la mayor caída de precio.\n- **Si** el riesgo país comienza a subir por encima de los 700-800 pbs, **entonces** se recomienda reducir exposición en bonos largos y rotar hacia activos más cortos o ajustados por CER.\n\n**Tener en cuenta**: Monitorear la brecha cambiaria (actualmente muy baja con el MEP en 1184.36 y el Oficial en 1207) y la evolución de las reservas netas.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "AE38",
+      "predicted_direction": "DOWN",
+      "price_start": 85000.0,
+      "price_end": 89900.0,
+      "change": 4900.0,
+      "correct": false,
+      "explanation": "El análisis de los activos solicitados indica que, si bien existe un sentimiento general alcista para los bonos soberanos debido al superávit fiscal (Primario: 845.949M, Financiero: 572.341M según la base de datos relacional de Supabase), los bonos de **largo plazo en Hard Dólar** son los más vulnerables a una corrección de precio en el corto plazo.\n\n**Justificación Causal:**\nLa vulnerabilidad de estos activos se explica a través de la siguiente cadena causal:\n`[Cuestionamiento de la solvencia / Salida del cepo] ──► causes ──► [Aumento de Riesgo País / Volatilidad] ──► signals [DOWN] on [Hard Dollar Bonds (Long Term)]`.\n\nLos factores clave que sustentan esta predicción son:\n1. **Riesgo de Solvencia y Reservas**: El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**. Según el grafo de conocimiento Neo4j, el 'Cuestionamiento de la solvencia del Estado' es un disparador directo de señales DOWN para los activos Hard Dólar.\n2. **Sensibilidad por Duración (Duration Risk)**: Los bonos como **AL41** (Macaulay Duration: 15.09 años) y **GD46** (Macaulay Duration: 19.72 años) poseen una sensibilidad significativamente mayor a las variaciones del riesgo país que los bonos cortos como el AL30 o GD30. Cualquier incremento en la percepción de riesgo impactará con mayor fuerza en el precio de los vencimientos largos.\n3. **Riesgo de Liberalización**: El grafo identifica que la 'Salida del cepo cambiario' puede generar señales DOWN en Hard Dólar debido a la volatilidad inherente al proceso de unificación cambiaria.\n\n**Escenarios Condicionales:**\n- **Si** el BCRA no logra revertir la tendencia de reservas netas negativas o se produce una salida desordenada del cepo, **entonces** los bonos de largo plazo (AL41, GD46, etc.) experimentarán la mayor caída de precio.\n- **Si** el riesgo país comienza a subir por encima de los 700-800 pbs, **entonces** se recomienda reducir exposición en bonos largos y rotar hacia activos más cortos o ajustados por CER.\n\n**Tener en cuenta**: Monitorear la brecha cambiaria (actualmente muy baja con el MEP en 1184.36 y el Oficial en 1207) y la evolución de las reservas netas.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-04",
+      "ticker": "GD38",
+      "predicted_direction": "DOWN",
+      "price_start": 87400.0,
+      "price_end": 92300.0,
+      "change": 4900.0,
+      "correct": false,
+      "explanation": "El análisis de los activos solicitados indica que, si bien existe un sentimiento general alcista para los bonos soberanos debido al superávit fiscal (Primario: 845.949M, Financiero: 572.341M según la base de datos relacional de Supabase), los bonos de **largo plazo en Hard Dólar** son los más vulnerables a una corrección de precio en el corto plazo.\n\n**Justificación Causal:**\nLa vulnerabilidad de estos activos se explica a través de la siguiente cadena causal:\n`[Cuestionamiento de la solvencia / Salida del cepo] ──► causes ──► [Aumento de Riesgo País / Volatilidad] ──► signals [DOWN] on [Hard Dollar Bonds (Long Term)]`.\n\nLos factores clave que sustentan esta predicción son:\n1. **Riesgo de Solvencia y Reservas**: El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**. Según el grafo de conocimiento Neo4j, el 'Cuestionamiento de la solvencia del Estado' es un disparador directo de señales DOWN para los activos Hard Dólar.\n2. **Sensibilidad por Duración (Duration Risk)**: Los bonos como **AL41** (Macaulay Duration: 15.09 años) y **GD46** (Macaulay Duration: 19.72 años) poseen una sensibilidad significativamente mayor a las variaciones del riesgo país que los bonos cortos como el AL30 o GD30. Cualquier incremento en la percepción de riesgo impactará con mayor fuerza en el precio de los vencimientos largos.\n3. **Riesgo de Liberalización**: El grafo identifica que la 'Salida del cepo cambiario' puede generar señales DOWN en Hard Dólar debido a la volatilidad inherente al proceso de unificación cambiaria.\n\n**Escenarios Condicionales:**\n- **Si** el BCRA no logra revertir la tendencia de reservas netas negativas o se produce una salida desordenada del cepo, **entonces** los bonos de largo plazo (AL41, GD46, etc.) experimentarán la mayor caída de precio.\n- **Si** el riesgo país comienza a subir por encima de los 700-800 pbs, **entonces** se recomienda reducir exposición en bonos largos y rotar hacia activos más cortos o ajustados por CER.\n\n**Tener en cuenta**: Monitorear la brecha cambiaria (actualmente muy baja con el MEP en 1184.36 y el Oficial en 1207) y la evolución de las reservas netas.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    }
+  ],
+  "portfolio_history": [
+    {
+      "date": "2025-06-03",
+      "cash": 2000.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 0.0368,
+          "price": 108800.0,
+          "value": 4000.0
+        },
+        "TZX27": {
+          "quantity": 16.7329,
+          "price": 239.05,
+          "value": 4000.0
+        }
+      },
+      "total_value": 10000.0
+    },
+    {
+      "date": "2025-06-04",
+      "cash": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 0.0368,
+          "price": 108700.0,
+          "value": 4002.21
+        },
+        "TZX27": {
+          "quantity": 16.7037,
+          "price": 239.6,
+          "value": 4002.21
+        },
+        "AL30": {
+          "quantity": 0.0124,
+          "price": 80900.0,
+          "value": 1000.55
+        },
+        "GD30": {
+          "quantity": 0.012,
+          "price": 83100.0,
+          "value": 1000.55
+        }
+      },
+      "total_value": 10005.53
+    },
+    {
+      "date": "2025-07-04",
+      "cash": 10512.33,
+      "holdings": {},
+      "total_value": 10512.33
+    }
+  ],
+  "realized_trades": [
+    {
+      "ticker": "TZX27",
+      "date": "2025-06-04",
+      "action": "SELL_PARTIAL",
+      "quantity": 0.0292,
+      "buy_price": 239.05,
+      "sell_price": 239.6,
+      "pnl_amount": 0.02,
+      "pnl_pct": 0.23,
+      "correct": true
+    },
+    {
+      "ticker": "TZV26",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.0368,
+      "buy_price": 108799.85,
+      "sell_price": 117900.0,
+      "pnl_amount": 335.06,
+      "pnl_pct": 8.36,
+      "correct": true
+    },
+    {
+      "ticker": "TZX27",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 16.7037,
+      "buy_price": 239.05,
+      "sell_price": 242.5,
+      "pnl_amount": 57.63,
+      "pnl_pct": 1.44,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.0124,
+      "buy_price": 80900.0,
+      "sell_price": 85900.0,
+      "pnl_amount": 61.84,
+      "pnl_pct": 6.18,
+      "correct": true
+    },
+    {
+      "ticker": "GD30",
+      "date": "2025-07-04",
+      "action": "LIQUIDATION",
+      "quantity": 0.012,
+      "buy_price": 83100.0,
+      "sell_price": 87900.0,
+      "pnl_amount": 57.79,
+      "pnl_pct": 5.78,
+      "correct": true
+    }
+  ]
+}

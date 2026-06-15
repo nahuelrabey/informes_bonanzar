@@ -1,0 +1,367 @@
+{
+  "summary": {
+    "start_date": "2025-06-03",
+    "end_date": "2025-06-03",
+    "horizon_days": 30,
+    "step_days": 1,
+    "total_predictions": 17,
+    "total_correct": 10,
+    "accuracy": 0.5882,
+    "precision_up": 1.0,
+    "precision_down": 0.0,
+    "up_predictions": {
+      "total": 10,
+      "correct": 10
+    },
+    "down_predictions": {
+      "total": 7,
+      "correct": 0
+    },
+    "portfolio": {
+      "initial_capital": 1000000.0,
+      "final_value": 1048888.86,
+      "return_pct": 4.89,
+      "final_value_real": 1033388.04,
+      "return_pct_real": 3.34,
+      "final_cash": 1048888.86,
+      "trades_pnl": {
+        "total_trades": 4,
+        "correct_trades": 4,
+        "incorrect_trades": 0,
+        "total_gains_ARS": 48888.86,
+        "total_losses_ARS": 0,
+        "total_gains_real_ARS": 33888.86,
+        "total_losses_real_ARS": 0,
+        "completed_pnl_ARS": 0,
+        "liquidated_pnl_ARS": 48888.86,
+        "completed_pnl_real_ARS": 0,
+        "liquidated_pnl_real_ARS": 33888.86,
+        "net_pnl_ARS": 48888.86,
+        "net_pnl_real_ARS": 33888.86
+      }
+    }
+  },
+  "predictions": [
+    {
+      "date": "2025-06-03",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 81100.0,
+      "price_end": 85200.0,
+      "change": 4100.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 83190.0,
+      "price_end": 87200.0,
+      "change": 4010.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 81850.0,
+      "price_end": 85100.0,
+      "change": 3250.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 82580.0,
+      "price_end": 85890.0,
+      "change": 3310.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL29",
+      "predicted_direction": "UP",
+      "price_start": 87910.0,
+      "price_end": 91730.0,
+      "change": 3820.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD29",
+      "predicted_direction": "UP",
+      "price_start": 89870.0,
+      "price_end": 94620.0,
+      "change": 4750.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL41",
+      "predicted_direction": "UP",
+      "price_start": 75450.0,
+      "price_end": 78400.0,
+      "change": 2950.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD41",
+      "predicted_direction": "UP",
+      "price_start": 76440.0,
+      "price_end": 79610.0,
+      "change": 3170.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AE38",
+      "predicted_direction": "UP",
+      "price_start": 85230.0,
+      "price_end": 88900.0,
+      "change": 3670.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD38",
+      "predicted_direction": "UP",
+      "price_start": 87750.0,
+      "price_end": 91380.0,
+      "change": 3630.0,
+      "correct": true,
+      "explanation": "El análisis de los activos seleccionados para el horizonte de 30 días se basa en la fuerte correlación entre la disciplina fiscal y la valoración de los bonos soberanos. \n\n**Justificación Causal:**\n1. **Sostenibilidad Fiscal ──► ↓ Riesgo País ──► ↑ Precio de Bonos**: Según los datos de la base de datos relacional de Supabase, Argentina presenta un superávit financiero de 572.341 millones y un superávit primario de 845.949 millones. Esta solidez fiscal es el principal motor alcista, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps), lo que se traduce directamente en una subida de los precios de los bonos Hard Dollar (AL y GD).\n2. **Desaceleración Inflacionaria ──► Estabilidad Cambiaria ──► ↓ Volatilidad**: Con una inflación mensual del 1,5%, se observa una tendencia a la estabilización. Esto reduce la presión sobre el tipo de cambio (MEP/CCL/Blue), eliminando el riesgo de saltos bruscos que suelen afectar la cotización de los activos en moneda dura.\n3. **Convergencia de Tipos de Cambio**: La brecha cambiaria es mínima (Dólar Oficial 1207 vs MEP 1184), lo que sugiere un escenario de normalización que favorece la entrada de capitales y la compra de deuda soberana.\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene o aumenta en el próximo reporte mensual, **entonces** los bonos AL30 y GD30 deberían continuar su tendencia alcista hacia niveles de TIR más bajos.\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, **entonces** se recomienda reducir exposición a bonos de tasa fija y rotar hacia activos ajustados por CER.\n\n**Trigger de Salida:** Considerar la venta de las posiciones si el Riesgo País cae por debajo de los 500 bps o si se alcanza un objetivo de TIR acorde al valor razonable de mercado para el corto plazo.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL30",
+      "predicted_direction": "DOWN",
+      "price_start": 81100.0,
+      "price_end": 85200.0,
+      "change": 4100.0,
+      "correct": false,
+      "explanation": "..."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD30",
+      "predicted_direction": "DOWN",
+      "price_start": 83190.0,
+      "price_end": 87200.0,
+      "change": 4010.0,
+      "correct": false,
+      "explanation": "..."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 81850.0,
+      "price_end": 85100.0,
+      "change": 3250.0,
+      "correct": false,
+      "explanation": "..."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 82580.0,
+      "price_end": 85890.0,
+      "change": 3310.0,
+      "correct": false,
+      "explanation": "..."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 75450.0,
+      "price_end": 78400.0,
+      "change": 2950.0,
+      "correct": false,
+      "explanation": "..."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 76440.0,
+      "price_end": 79610.0,
+      "change": 3170.0,
+      "correct": false,
+      "explanation": "..."
+    },
+    {
+      "date": "2025-06-03",
+      "ticker": "GD46",
+      "predicted_direction": "DOWN",
+      "price_start": 78990.0,
+      "price_end": 82040.0,
+      "change": 3050.0,
+      "correct": false,
+      "explanation": "..."
+    }
+  ],
+  "portfolio_history": [
+    {
+      "date": "2025-06-03",
+      "cash": 0.0,
+      "holdings": {
+        "AL29": {
+          "quantity": 2.2751,
+          "price": 87910.0,
+          "value": 200000.0
+        },
+        "AL30": {
+          "quantity": 3.6991,
+          "price": 81100.0,
+          "value": 300000.0
+        },
+        "GD29": {
+          "quantity": 2.2254,
+          "price": 89870.0,
+          "value": 200000.0
+        },
+        "GD30": {
+          "quantity": 3.6062,
+          "price": 83190.0,
+          "value": 300000.0
+        }
+      },
+      "total_value": 1000000.0,
+      "inflation_factor": 1.0
+    },
+    {
+      "date": "2025-07-03",
+      "cash": 1048888.86,
+      "holdings": {},
+      "total_value": 1048888.86,
+      "inflation_factor": 1.0150000000000003
+    }
+  ],
+  "realized_trades": [
+    {
+      "ticker": "AL29",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 2.2751,
+      "buy_price": 87910.0,
+      "buy_price_real": 87910.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 3.6991,
+      "buy_price": 81100.0,
+      "buy_price_real": 81100.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "GD29",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 2.2254,
+      "buy_price": 89870.0,
+      "buy_price_real": 89870.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "GD30",
+      "date": "2025-06-03",
+      "action": "BUY",
+      "quantity": 3.6062,
+      "buy_price": 83190.0,
+      "buy_price_real": 83190.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "AL29",
+      "date": "2025-07-03",
+      "action": "LIQUIDATION",
+      "quantity": 2.2751,
+      "buy_price": 87910.0,
+      "buy_price_real": 89228.65,
+      "sell_price": 91730.0,
+      "pnl_amount": 8690.71,
+      "pnl_pct": 4.35,
+      "pnl_amount_real": 5690.71,
+      "pnl_pct_real": 2.8,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-07-03",
+      "action": "LIQUIDATION",
+      "quantity": 3.6991,
+      "buy_price": 81100.0,
+      "buy_price_real": 82316.5,
+      "sell_price": 85200.0,
+      "pnl_amount": 15166.46,
+      "pnl_pct": 5.06,
+      "pnl_amount_real": 10666.46,
+      "pnl_pct_real": 3.5,
+      "correct": true
+    },
+    {
+      "ticker": "GD29",
+      "date": "2025-07-03",
+      "action": "LIQUIDATION",
+      "quantity": 2.2254,
+      "buy_price": 89870.0,
+      "buy_price_real": 91218.05,
+      "sell_price": 94620.0,
+      "pnl_amount": 10570.82,
+      "pnl_pct": 5.29,
+      "pnl_amount_real": 7570.82,
+      "pnl_pct_real": 3.73,
+      "correct": true
+    },
+    {
+      "ticker": "GD30",
+      "date": "2025-07-03",
+      "action": "LIQUIDATION",
+      "quantity": 3.6062,
+      "buy_price": 83190.0,
+      "buy_price_real": 84437.85,
+      "sell_price": 87200.0,
+      "pnl_amount": 14460.87,
+      "pnl_pct": 4.82,
+      "pnl_amount_real": 9960.87,
+      "pnl_pct_real": 3.27,
+      "correct": true
+    }
+  ]
+}
