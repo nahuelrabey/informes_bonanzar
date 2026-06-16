@@ -78,11 +78,11 @@ Cómo respuesta, devuelve una lista de bonos, y cuánto dinero invertir en cada 
 ## 3. Comparación entre Versiones de Tests
 
 | Versión | Modelo | Período | Capital Inicial | Retorno Nom. | Retorno Real | Accuracy | Cambios |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **Test 1.3 (Base)** | `gemma-4-31b-it` | 2025-06-03 → 2025-06-03 | $1,000,000 ARS | 4.89% | 3.34% | 58.82% | Simulación limpia de 1 día (horizonte 30d), sin rebalanceo intermedio, permitiendo evaluar la decisión pura del agente. |
-| **Test 1.4 (Predeterminado)** | `gemma-4-31b-it` | 2025-06-05 → 2025-07-03 | $1,000,000 ARS | 9.51% | 5.36% | 46.24% | Simulación de 45 días (rebalanceo cada 5 días, temp 0.20, máx 10 iteraciones). |
-| **Test 1.4 (Agresivo)** | `gemma-4-31b-it` | 2025-06-05 → 2025-07-03 | $1,000,000 ARS | 7.02% | 2.96% | 44.16% | Simulación de 45 días (rebalanceo cada 5 días, temp 0.50, máx 10 iteraciones). Mayor simetría de señales UP/DOWN. |
-| **Test 1.4 (Analítico)** | `gemma-4-31b-it` | 2025-06-05 → 2025-07-03 | $1,000,000 ARS | 10.99% | 6.78% | 49.15% | Simulación de 45 días (rebalanceo cada 5 días, temp 0.00, máx 20 iteraciones). Mejor desempeño predictivo y de retorno. |
+|:---------------------|:------------|:--------------------|:----------------|:-------------|:-------------|:---------|:---------------------------------------------------------------------------------------------------|
+| **Test 1.3 (Base)** | `gemma-4-31b-it` | 2025-06-03 → 2025-06-03 | $1,000,000 ARS | 4.89% | 3.34% | 58.82% | Rango 1 día (horizonte 30d), permitiendo evaluar la decisión pura del agente. |
+| **Test 1.4 (Predeterminado)** | `gemma-4-31b-it` | 2025-06-05 → 2025-07-03 | $1,000,000 ARS | 9.51% | 5.36% | 46.24% | Rango 45 días (rebalanceo cada 5 días, temp 0.20, máx 10 iteraciones). |
+| **Test 1.4 (Agresivo)** | `gemma-4-31b-it` | 2025-06-05 → 2025-07-03 | $1,000,000 ARS | 7.02% | 2.96% | 44.16% | Rango 45 días (rebalanceo cada 5 días, temp 0.50, máx 10 iteraciones). Mayor simetría de señales UP/DOWN. |
+| **Test 1.4 (Analítico)** | `gemma-4-31b-it` | 2025-06-05 → 2025-07-03 | $1,000,000 ARS | 10.99% | 6.78% | 49.15% | Rango 45 días (rebalanceo cada 5 días, temp 0.00, máx 20 iteraciones). Mejor desempeño predictivo y de retorno. |
 
 ---
 
@@ -117,7 +117,7 @@ La matriz de confusión se estructura asumiendo la dirección **UP (Alza)** como
 
 El agente emitió 10 señales de UP (todas correctas) y 7 señales de DOWN (todas incorrectas, ya que esos bonos también subieron de precio). Esto evidencia un **sesgo optimista (UP bias)** del LLM y una dificultad para identificar tendencias bajistas o de sobrecompra en un contexto macro de estabilización.
 
-|  | Predicho UP | Predicho DOWN |
+| | Predicho UP | Predicho DOWN |
 | --- | --- | --- |
 | **Real UP** | VP = 10 | FN = 7 |
 | **Real DOWN** | FP = 0 | VN = 0 |
@@ -176,10 +176,10 @@ El agente **BonanzAR** agregó un valor significativo frente al promedio del mer
 | 2025-06-03 | AL30 | Compra | 3.6991 | $81100.00 | $81100.00 | - | - | - | - | - | N/A |
 | 2025-06-03 | GD29 | Compra | 2.2254 | $89870.00 | $89870.00 | - | - | - | - | - | N/A |
 | 2025-06-03 | GD30 | Compra | 3.6062 | $83190.00 | $83190.00 | - | - | - | - | - | N/A |
-| 2025-07-03 | AL29 | Liquidación Final | 2.2751 | $87910.00 | $89228.65 | $91730.00 | $8690.71 | 4.35% | $5690.71 | 2.80% | 🟢 GANADOR |
-| 2025-07-03 | AL30 | Liquidación Final | 3.6991 | $81100.00 | $82316.50 | $85200.00 | $15166.46 | 5.06% | $10666.46 | 3.50% | 🟢 GANADOR |
-| 2025-07-03 | GD29 | Liquidación Final | 2.2254 | $89870.00 | $91218.05 | $94620.00 | $10570.82 | 5.29% | $7570.82 | 3.73% | 🟢 GANADOR |
-| 2025-07-03 | GD30 | Liquidación Final | 3.6062 | $83190.00 | $84437.85 | $87200.00 | $14460.87 | 4.82% | $9960.87 | 3.27% | 🟢 GANADOR |
+| 2025-07-03 | AL29 | Liquidación Final | 2.2751 | $87910.00 | $89228.65 | $91730.00 | $8690.71 | 4.35% | $5690.71 | 2.80% | GANADOR |
+| 2025-07-03 | AL30 | Liquidación Final | 3.6991 | $81100.00 | $82316.50 | $85200.00 | $15166.46 | 5.06% | $10666.46 | 3.50% | GANADOR |
+| 2025-07-03 | GD29 | Liquidación Final | 2.2254 | $89870.00 | $91218.05 | $94620.00 | $10570.82 | 5.29% | $7570.82 | 3.73% | GANADOR |
+| 2025-07-03 | GD30 | Liquidación Final | 3.6062 | $83190.00 | $84437.85 | $87200.00 | $14460.87 | 4.82% | $9960.87 | 3.27% | GANADOR |
 
 #### 4.7 Evolución del Portfolio
 
@@ -210,23 +210,23 @@ Justo antes de la liquidación, la distribución por valor de mercado era:
 
 | Fecha | Bono | Predicción | Precio Inicial | Precio Final | Cambio | Resultado |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2025-06-03 | AL30 | UP | 81100.00 | 85200.00 | 4100.00 | ✅ ACERTADO |
-| 2025-06-03 | GD30 | UP | 83190.00 | 87200.00 | 4010.00 | ✅ ACERTADO |
-| 2025-06-03 | AL35 | UP | 81850.00 | 85100.00 | 3250.00 | ✅ ACERTADO |
-| 2025-06-03 | GD35 | UP | 82580.00 | 85890.00 | 3310.00 | ✅ ACERTADO |
-| 2025-06-03 | AL29 | UP | 87910.00 | 91730.00 | 3820.00 | ✅ ACERTADO |
-| 2025-06-03 | GD29 | UP | 89870.00 | 94620.00 | 4750.00 | ✅ ACERTADO |
-| 2025-06-03 | AL41 | UP | 75450.00 | 78400.00 | 2950.00 | ✅ ACERTADO |
-| 2025-06-03 | GD41 | UP | 76440.00 | 79610.00 | 3170.00 | ✅ ACERTADO |
-| 2025-06-03 | AE38 | UP | 85230.00 | 88900.00 | 3670.00 | ✅ ACERTADO |
-| 2025-06-03 | GD38 | UP | 87750.00 | 91380.00 | 3630.00 | ✅ ACERTADO |
-| 2025-06-03 | AL30 | DOWN | 81100.00 | 85200.00 | 4100.00 | ❌ FALLADO |
-| 2025-06-03 | GD30 | DOWN | 83190.00 | 87200.00 | 4010.00 | ❌ FALLADO |
-| 2025-06-03 | AL35 | DOWN | 81850.00 | 85100.00 | 3250.00 | ❌ FALLADO |
-| 2025-06-03 | GD35 | DOWN | 82580.00 | 85890.00 | 3310.00 | ❌ FALLADO |
-| 2025-06-03 | AL41 | DOWN | 75450.00 | 78400.00 | 2950.00 | ❌ FALLADO |
-| 2025-06-03 | GD41 | DOWN | 76440.00 | 79610.00 | 3170.00 | ❌ FALLADO |
-| 2025-06-03 | GD46 | DOWN | 78990.00 | 82040.00 | 3050.00 | ❌ FALLADO |
+| 2025-06-03 | AL30 | UP | 81100.00 | 85200.00 | 4100.00 | ACERTADO |
+| 2025-06-03 | GD30 | UP | 83190.00 | 87200.00 | 4010.00 | ACERTADO |
+| 2025-06-03 | AL35 | UP | 81850.00 | 85100.00 | 3250.00 | ACERTADO |
+| 2025-06-03 | GD35 | UP | 82580.00 | 85890.00 | 3310.00 | ACERTADO |
+| 2025-06-03 | AL29 | UP | 87910.00 | 91730.00 | 3820.00 | ACERTADO |
+| 2025-06-03 | GD29 | UP | 89870.00 | 94620.00 | 4750.00 | ACERTADO |
+| 2025-06-03 | AL41 | UP | 75450.00 | 78400.00 | 2950.00 | ACERTADO |
+| 2025-06-03 | GD41 | UP | 76440.00 | 79610.00 | 3170.00 | ACERTADO |
+| 2025-06-03 | AE38 | UP | 85230.00 | 88900.00 | 3670.00 | ACERTADO |
+| 2025-06-03 | GD38 | UP | 87750.00 | 91380.00 | 3630.00 | ACERTADO |
+| 2025-06-03 | AL30 | DOWN | 81100.00 | 85200.00 | 4100.00 | FALLADO |
+| 2025-06-03 | GD30 | DOWN | 83190.00 | 87200.00 | 4010.00 | FALLADO |
+| 2025-06-03 | AL35 | DOWN | 81850.00 | 85100.00 | 3250.00 | FALLADO |
+| 2025-06-03 | GD35 | DOWN | 82580.00 | 85890.00 | 3310.00 | FALLADO |
+| 2025-06-03 | AL41 | DOWN | 75450.00 | 78400.00 | 2950.00 | FALLADO |
+| 2025-06-03 | GD41 | DOWN | 76440.00 | 79610.00 | 3170.00 | FALLADO |
+| 2025-06-03 | GD46 | DOWN | 78990.00 | 82040.00 | 3050.00 | FALLADO |
 
 ### Test 1.4 (Predeterminado) — `gemma-4-31b-it`
 
@@ -255,7 +255,7 @@ La matriz de confusión se estructura asumiendo la dirección **UP (Alza)** como
 
 El agente predeterminado (Default) muestra una distribución de predicciones desbalanceada hacia la dirección UP (64 de 93 totales). El accuracy general fue de 46.24%. Registra una precisión aceptable en alzas (51.56%) pero un recall muy bajo en bajas (24.39%), indicando que la mayor parte de las bajas del mercado no fueron anticipadas por el agente.
 
-|  | Predicho UP | Predicho DOWN |
+| | Predicho UP | Predicho DOWN |
 | --- | --- | --- |
 | **Real UP** | VP = 33 | FN = 19 |
 | **Real DOWN** | FP = 31 | VN = 10 |
@@ -294,10 +294,10 @@ Para esta versión con ventana extendida y rebalanceos parciales a 45 días, no 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2025-06-05 | AL30 | Compra | 624.3756 | $800.80 | $800.80 | - | - | - | - | - | N/A |
 | 2025-06-05 | GD30 | Compra | 607.1645 | $823.50 | $823.50 | - | - | - | - | - | N/A |
-| 2025-06-30 | AL30 | Venta Total | 624.3756 | $800.80 | $811.46 | $829.00 | $17607.39 | 3.52% | $10949.56 | 2.16% | 🟢 GANADOR |
-| 2025-06-30 | GD30 | Venta Total | 607.1645 | $823.50 | $834.47 | $849.10 | $15543.41 | 3.11% | $8885.58 | 1.75% | 🟢 GANADOR |
+| 2025-06-30 | AL30 | Venta Total | 624.3756 | $800.80 | $811.46 | $829.00 | $17607.39 | 3.52% | $10949.56 | 2.16% | GANADOR |
+| 2025-06-30 | GD30 | Venta Total | 607.1645 | $823.50 | $834.47 | $849.10 | $15543.41 | 3.11% | $8885.58 | 1.75% | GANADOR |
 | 2025-06-30 | TZV26 | Compra | 898.3920 | $1150.00 | $1150.00 | - | - | - | - | - | N/A |
-| 2025-08-17 | TZV26 | Liquidación Final | 898.3920 | $1150.00 | $1179.58 | $1219.00 | $61989.05 | 6.00% | $35413.70 | 3.34% | 🟢 GANADOR |
+| 2025-08-17 | TZV26 | Liquidación Final | 898.3920 | $1150.00 | $1179.58 | $1219.00 | $61989.05 | 6.00% | $35413.70 | 3.34% | GANADOR |
 
 #### 4.7 Evolución del Portfolio
 
@@ -321,99 +321,99 @@ Al cierre del horizonte del test (17/08/2025), se ejecutó una liquidación fina
 
 | Fecha | Bono | Predicción | Precio Inicial | Precio Final | Cambio | Resultado |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2025-06-05 | AL30 | UP | 800.80 | 762.00 | -38.80 | ❌ FALLADO |
-| 2025-06-05 | GD30 | UP | 823.50 | 783.00 | -40.50 | ❌ FALLADO |
-| 2025-06-05 | AL29 | UP | 871.40 | 802.60 | -68.80 | ❌ FALLADO |
-| 2025-06-05 | GD29 | UP | 889.50 | 824.90 | -64.60 | ❌ FALLADO |
-| 2025-06-05 | AL35 | UP | 805.00 | 824.00 | 19.00 | ✅ ACERTADO |
-| 2025-06-05 | GD35 | UP | 812.00 | 840.00 | 28.00 | ✅ ACERTADO |
-| 2025-06-05 | AL30D | UP | 801.62 | 763.67 | -37.95 | ❌ FALLADO |
-| 2025-06-05 | GD30D | UP | 820.00 | 785.81 | -34.19 | ❌ FALLADO |
-| 2025-06-10 | AL30 | UP | 817.50 | 770.30 | -47.20 | ❌ FALLADO |
-| 2025-06-10 | GD30 | UP | 841.00 | 795.00 | -46.00 | ❌ FALLADO |
-| 2025-06-10 | GD35 | UP | 828.30 | 849.00 | 20.70 | ✅ ACERTADO |
-| 2025-06-10 | AL35 | UP | 821.90 | 836.10 | 14.20 | ✅ ACERTADO |
-| 2025-06-10 | GD41 | UP | 765.80 | 785.00 | 19.20 | ✅ ACERTADO |
-| 2025-06-10 | AL41 | UP | 752.60 | 764.00 | 11.40 | ✅ ACERTADO |
-| 2025-06-10 | AE38 | UP | 858.80 | 873.40 | 14.60 | ✅ ACERTADO |
-| 2025-06-10 | GD46 | DOWN | 788.50 | 789.90 | 1.40 | ❌ FALLADO |
-| 2025-06-10 | GD46D | DOWN | 788.97 | 792.18 | 3.21 | ❌ FALLADO |
-| 2025-06-10 | GD41 | DOWN | 765.80 | 785.00 | 19.20 | ❌ FALLADO |
-| 2025-06-10 | GD41D | DOWN | 767.40 | 787.02 | 19.62 | ❌ FALLADO |
-| 2025-06-10 | AL41 | DOWN | 752.60 | 764.00 | 11.40 | ❌ FALLADO |
-| 2025-06-10 | AL41D | DOWN | 756.32 | 767.67 | 11.35 | ❌ FALLADO |
-| 2025-06-15 | AE38 | UP | 846.30 | 898.60 | 52.30 | ✅ ACERTADO |
-| 2025-06-15 | AL29 | UP | 870.80 | 830.00 | -40.80 | ❌ FALLADO |
-| 2025-06-15 | AL30 | UP | 805.40 | 799.50 | -5.90 | ❌ FALLADO |
-| 2025-06-15 | AL35 | UP | 812.80 | 867.70 | 54.90 | ✅ ACERTADO |
-| 2025-06-15 | AL41 | UP | 743.20 | 796.00 | 52.80 | ✅ ACERTADO |
-| 2025-06-15 | GD29 | UP | 890.00 | 858.40 | -31.60 | ❌ FALLADO |
-| 2025-06-15 | GD30 | UP | 825.50 | 822.50 | -3.00 | ❌ FALLADO |
-| 2025-06-15 | GD35 | UP | 814.50 | 876.50 | 62.00 | ✅ ACERTADO |
-| 2025-06-15 | GD38 | UP | 870.60 | 940.60 | 70.00 | ✅ ACERTADO |
-| 2025-06-15 | GD41 | UP | 755.90 | 816.70 | 60.80 | ✅ ACERTADO |
-| 2025-06-15 | GD46 | UP | 783.00 | 817.00 | 34.00 | ✅ ACERTADO |
-| 2025-06-15 | GD29D | UP | 893.84 | 859.28 | -34.56 | ❌ FALLADO |
-| 2025-06-15 | GD30D | UP | 827.87 | 824.85 | -3.02 | ❌ FALLADO |
-| 2025-06-15 | GD38D | UP | 872.01 | 937.92 | 65.91 | ✅ ACERTADO |
-| 2025-06-15 | GD35D | UP | 815.94 | 879.40 | 63.46 | ✅ ACERTADO |
-| 2025-06-15 | GD41D | UP | 756.30 | 816.25 | 59.95 | ✅ ACERTADO |
-| 2025-06-15 | GD46D | UP | 784.69 | 827.10 | 42.41 | ✅ ACERTADO |
-| 2025-06-15 | AL29D | UP | 874.16 | 839.15 | -35.01 | ❌ FALLADO |
-| 2025-06-15 | AL30D | UP | 805.92 | 800.49 | -5.43 | ❌ FALLADO |
-| 2025-06-15 | AE38D | UP | 847.08 | 906.94 | 59.86 | ✅ ACERTADO |
-| 2025-06-15 | AL35D | UP | 811.17 | 870.53 | 59.36 | ✅ ACERTADO |
-| 2025-06-15 | AL41D | UP | 744.49 | 798.77 | 54.28 | ✅ ACERTADO |
-| 2025-06-15 | TZX27 | UP | 2.41 | 2.31 | -0.10 | ❌ FALLADO |
-| 2025-06-15 | TX31 | UP | 9.53 | 9.17 | -0.36 | ❌ FALLADO |
-| 2025-06-15 | DICP | UP | 417.05 | 362.50 | -54.55 | ❌ FALLADO |
-| 2025-06-15 | DIP0 | UP | 415.40 | 355.60 | -59.80 | ❌ FALLADO |
-| 2025-06-15 | PARP | UP | 224.00 | 214.40 | -9.60 | ❌ FALLADO |
-| 2025-06-15 | PAP0 | UP | 223.55 | 210.60 | -12.95 | ❌ FALLADO |
-| 2025-06-15 | CUAP | UP | 278.80 | 257.80 | -21.00 | ❌ FALLADO |
-| 2025-06-20 | AL30 | UP | 789.30 | 812.20 | 22.90 | ✅ ACERTADO |
-| 2025-06-20 | GD30 | UP | 811.00 | 839.00 | 28.00 | ✅ ACERTADO |
-| 2025-06-20 | AL35 | UP | 791.50 | 875.50 | 84.00 | ✅ ACERTADO |
-| 2025-06-20 | GD35 | UP | 797.00 | 892.80 | 95.80 | ✅ ACERTADO |
-| 2025-06-20 | AL41 | UP | 724.90 | 805.50 | 80.60 | ✅ ACERTADO |
-| 2025-06-20 | GD41 | UP | 733.60 | 824.30 | 90.70 | ✅ ACERTADO |
-| 2025-06-20 | TZX27 | DOWN | 2.43 | 2.39 | -0.04 | ✅ ACERTADO |
-| 2025-06-20 | TX31 | DOWN | 9.69 | 9.14 | -0.54 | ✅ ACERTADO |
-| 2025-06-20 | DICP | DOWN | 413.50 | 367.80 | -45.70 | ✅ ACERTADO |
-| 2025-06-20 | DIP0 | DOWN | 414.20 | 361.60 | -52.60 | ✅ ACERTADO |
-| 2025-06-20 | PARP | DOWN | 225.00 | 217.00 | -8.00 | ✅ ACERTADO |
-| 2025-06-20 | PAP0 | DOWN | 230.00 | 217.50 | -12.50 | ✅ ACERTADO |
-| 2025-06-20 | CUAP | DOWN | 278.60 | 264.80 | -13.80 | ✅ ACERTADO |
-| 2025-06-25 | AL30 | UP | 823.50 | 804.00 | -19.50 | ❌ FALLADO |
-| 2025-06-25 | GD30 | UP | 847.00 | 833.00 | -14.00 | ❌ FALLADO |
-| 2025-06-25 | AL35 | UP | 826.70 | 875.20 | 48.50 | ✅ ACERTADO |
-| 2025-06-25 | GD35 | UP | 835.80 | 888.50 | 52.70 | ✅ ACERTADO |
-| 2025-06-25 | AL29 | UP | 890.00 | 841.40 | -48.60 | ❌ FALLADO |
-| 2025-06-25 | GD29 | UP | 919.50 | 873.70 | -45.80 | ❌ FALLADO |
-| 2025-06-25 | AL35 | DOWN | 826.70 | 875.20 | 48.50 | ❌ FALLADO |
-| 2025-06-25 | GD35 | DOWN | 835.80 | 888.50 | 52.70 | ❌ FALLADO |
-| 2025-06-25 | AL41 | DOWN | 753.60 | 799.90 | 46.30 | ❌ FALLADO |
-| 2025-06-25 | GD41 | DOWN | 768.70 | 821.00 | 52.30 | ❌ FALLADO |
-| 2025-06-25 | GD46 | DOWN | 790.00 | 811.30 | 21.30 | ❌ FALLADO |
-| 2025-06-25 | GD38 | DOWN | 884.00 | 946.60 | 62.60 | ❌ FALLADO |
-| 2025-06-25 | AE38 | DOWN | 862.00 | 908.60 | 46.60 | ❌ FALLADO |
-| 2025-06-30 | AL30 | UP | 829.00 | 796.00 | -33.00 | ❌ FALLADO |
-| 2025-06-30 | GD30 | UP | 849.10 | 820.50 | -28.60 | ❌ FALLADO |
-| 2025-06-30 | AL35 | UP | 831.00 | 860.10 | 29.10 | ✅ ACERTADO |
-| 2025-06-30 | GD35 | UP | 839.00 | 881.90 | 42.90 | ✅ ACERTADO |
-| 2025-06-30 | AL29 | UP | 898.00 | 827.60 | -70.40 | ❌ FALLADO |
-| 2025-06-30 | GD29 | UP | 924.80 | 861.00 | -63.80 | ❌ FALLADO |
-| 2025-06-30 | AL41 | UP | 763.40 | 794.20 | 30.80 | ✅ ACERTADO |
-| 2025-06-30 | GD41 | UP | 777.00 | 816.20 | 39.20 | ✅ ACERTADO |
-| 2025-06-30 | AL30 | DOWN | 829.00 | 796.00 | -33.00 | ✅ ACERTADO |
-| 2025-06-30 | GD30 | DOWN | 849.10 | 820.50 | -28.60 | ✅ ACERTADO |
-| 2025-06-30 | AL35 | DOWN | 831.00 | 860.10 | 29.10 | ❌ FALLADO |
-| 2025-06-30 | GD35 | DOWN | 839.00 | 881.90 | 42.90 | ❌ FALLADO |
-| 2025-06-30 | AL41 | DOWN | 763.40 | 794.20 | 30.80 | ❌ FALLADO |
-| 2025-06-30 | GD41 | DOWN | 777.00 | 816.20 | 39.20 | ❌ FALLADO |
-| 2025-06-30 | GD46 | DOWN | 800.80 | 811.70 | 10.90 | ❌ FALLADO |
-| 2025-06-30 | GD38 | DOWN | 894.00 | 938.80 | 44.80 | ❌ FALLADO |
-| 2025-06-30 | GD29 | DOWN | 924.80 | 861.00 | -63.80 | ✅ ACERTADO |
+| 2025-06-05 | AL30 | UP | 800.80 | 762.00 | -38.80 | FALLADO |
+| 2025-06-05 | GD30 | UP | 823.50 | 783.00 | -40.50 | FALLADO |
+| 2025-06-05 | AL29 | UP | 871.40 | 802.60 | -68.80 | FALLADO |
+| 2025-06-05 | GD29 | UP | 889.50 | 824.90 | -64.60 | FALLADO |
+| 2025-06-05 | AL35 | UP | 805.00 | 824.00 | 19.00 | ACERTADO |
+| 2025-06-05 | GD35 | UP | 812.00 | 840.00 | 28.00 | ACERTADO |
+| 2025-06-05 | AL30D | UP | 801.62 | 763.67 | -37.95 | FALLADO |
+| 2025-06-05 | GD30D | UP | 820.00 | 785.81 | -34.19 | FALLADO |
+| 2025-06-10 | AL30 | UP | 817.50 | 770.30 | -47.20 | FALLADO |
+| 2025-06-10 | GD30 | UP | 841.00 | 795.00 | -46.00 | FALLADO |
+| 2025-06-10 | GD35 | UP | 828.30 | 849.00 | 20.70 | ACERTADO |
+| 2025-06-10 | AL35 | UP | 821.90 | 836.10 | 14.20 | ACERTADO |
+| 2025-06-10 | GD41 | UP | 765.80 | 785.00 | 19.20 | ACERTADO |
+| 2025-06-10 | AL41 | UP | 752.60 | 764.00 | 11.40 | ACERTADO |
+| 2025-06-10 | AE38 | UP | 858.80 | 873.40 | 14.60 | ACERTADO |
+| 2025-06-10 | GD46 | DOWN | 788.50 | 789.90 | 1.40 | FALLADO |
+| 2025-06-10 | GD46D | DOWN | 788.97 | 792.18 | 3.21 | FALLADO |
+| 2025-06-10 | GD41 | DOWN | 765.80 | 785.00 | 19.20 | FALLADO |
+| 2025-06-10 | GD41D | DOWN | 767.40 | 787.02 | 19.62 | FALLADO |
+| 2025-06-10 | AL41 | DOWN | 752.60 | 764.00 | 11.40 | FALLADO |
+| 2025-06-10 | AL41D | DOWN | 756.32 | 767.67 | 11.35 | FALLADO |
+| 2025-06-15 | AE38 | UP | 846.30 | 898.60 | 52.30 | ACERTADO |
+| 2025-06-15 | AL29 | UP | 870.80 | 830.00 | -40.80 | FALLADO |
+| 2025-06-15 | AL30 | UP | 805.40 | 799.50 | -5.90 | FALLADO |
+| 2025-06-15 | AL35 | UP | 812.80 | 867.70 | 54.90 | ACERTADO |
+| 2025-06-15 | AL41 | UP | 743.20 | 796.00 | 52.80 | ACERTADO |
+| 2025-06-15 | GD29 | UP | 890.00 | 858.40 | -31.60 | FALLADO |
+| 2025-06-15 | GD30 | UP | 825.50 | 822.50 | -3.00 | FALLADO |
+| 2025-06-15 | GD35 | UP | 814.50 | 876.50 | 62.00 | ACERTADO |
+| 2025-06-15 | GD38 | UP | 870.60 | 940.60 | 70.00 | ACERTADO |
+| 2025-06-15 | GD41 | UP | 755.90 | 816.70 | 60.80 | ACERTADO |
+| 2025-06-15 | GD46 | UP | 783.00 | 817.00 | 34.00 | ACERTADO |
+| 2025-06-15 | GD29D | UP | 893.84 | 859.28 | -34.56 | FALLADO |
+| 2025-06-15 | GD30D | UP | 827.87 | 824.85 | -3.02 | FALLADO |
+| 2025-06-15 | GD38D | UP | 872.01 | 937.92 | 65.91 | ACERTADO |
+| 2025-06-15 | GD35D | UP | 815.94 | 879.40 | 63.46 | ACERTADO |
+| 2025-06-15 | GD41D | UP | 756.30 | 816.25 | 59.95 | ACERTADO |
+| 2025-06-15 | GD46D | UP | 784.69 | 827.10 | 42.41 | ACERTADO |
+| 2025-06-15 | AL29D | UP | 874.16 | 839.15 | -35.01 | FALLADO |
+| 2025-06-15 | AL30D | UP | 805.92 | 800.49 | -5.43 | FALLADO |
+| 2025-06-15 | AE38D | UP | 847.08 | 906.94 | 59.86 | ACERTADO |
+| 2025-06-15 | AL35D | UP | 811.17 | 870.53 | 59.36 | ACERTADO |
+| 2025-06-15 | AL41D | UP | 744.49 | 798.77 | 54.28 | ACERTADO |
+| 2025-06-15 | TZX27 | UP | 2.41 | 2.31 | -0.10 | FALLADO |
+| 2025-06-15 | TX31 | UP | 9.53 | 9.17 | -0.36 | FALLADO |
+| 2025-06-15 | DICP | UP | 417.05 | 362.50 | -54.55 | FALLADO |
+| 2025-06-15 | DIP0 | UP | 415.40 | 355.60 | -59.80 | FALLADO |
+| 2025-06-15 | PARP | UP | 224.00 | 214.40 | -9.60 | FALLADO |
+| 2025-06-15 | PAP0 | UP | 223.55 | 210.60 | -12.95 | FALLADO |
+| 2025-06-15 | CUAP | UP | 278.80 | 257.80 | -21.00 | FALLADO |
+| 2025-06-20 | AL30 | UP | 789.30 | 812.20 | 22.90 | ACERTADO |
+| 2025-06-20 | GD30 | UP | 811.00 | 839.00 | 28.00 | ACERTADO |
+| 2025-06-20 | AL35 | UP | 791.50 | 875.50 | 84.00 | ACERTADO |
+| 2025-06-20 | GD35 | UP | 797.00 | 892.80 | 95.80 | ACERTADO |
+| 2025-06-20 | AL41 | UP | 724.90 | 805.50 | 80.60 | ACERTADO |
+| 2025-06-20 | GD41 | UP | 733.60 | 824.30 | 90.70 | ACERTADO |
+| 2025-06-20 | TZX27 | DOWN | 2.43 | 2.39 | -0.04 | ACERTADO |
+| 2025-06-20 | TX31 | DOWN | 9.69 | 9.14 | -0.54 | ACERTADO |
+| 2025-06-20 | DICP | DOWN | 413.50 | 367.80 | -45.70 | ACERTADO |
+| 2025-06-20 | DIP0 | DOWN | 414.20 | 361.60 | -52.60 | ACERTADO |
+| 2025-06-20 | PARP | DOWN | 225.00 | 217.00 | -8.00 | ACERTADO |
+| 2025-06-20 | PAP0 | DOWN | 230.00 | 217.50 | -12.50 | ACERTADO |
+| 2025-06-20 | CUAP | DOWN | 278.60 | 264.80 | -13.80 | ACERTADO |
+| 2025-06-25 | AL30 | UP | 823.50 | 804.00 | -19.50 | FALLADO |
+| 2025-06-25 | GD30 | UP | 847.00 | 833.00 | -14.00 | FALLADO |
+| 2025-06-25 | AL35 | UP | 826.70 | 875.20 | 48.50 | ACERTADO |
+| 2025-06-25 | GD35 | UP | 835.80 | 888.50 | 52.70 | ACERTADO |
+| 2025-06-25 | AL29 | UP | 890.00 | 841.40 | -48.60 | FALLADO |
+| 2025-06-25 | GD29 | UP | 919.50 | 873.70 | -45.80 | FALLADO |
+| 2025-06-25 | AL35 | DOWN | 826.70 | 875.20 | 48.50 | FALLADO |
+| 2025-06-25 | GD35 | DOWN | 835.80 | 888.50 | 52.70 | FALLADO |
+| 2025-06-25 | AL41 | DOWN | 753.60 | 799.90 | 46.30 | FALLADO |
+| 2025-06-25 | GD41 | DOWN | 768.70 | 821.00 | 52.30 | FALLADO |
+| 2025-06-25 | GD46 | DOWN | 790.00 | 811.30 | 21.30 | FALLADO |
+| 2025-06-25 | GD38 | DOWN | 884.00 | 946.60 | 62.60 | FALLADO |
+| 2025-06-25 | AE38 | DOWN | 862.00 | 908.60 | 46.60 | FALLADO |
+| 2025-06-30 | AL30 | UP | 829.00 | 796.00 | -33.00 | FALLADO |
+| 2025-06-30 | GD30 | UP | 849.10 | 820.50 | -28.60 | FALLADO |
+| 2025-06-30 | AL35 | UP | 831.00 | 860.10 | 29.10 | ACERTADO |
+| 2025-06-30 | GD35 | UP | 839.00 | 881.90 | 42.90 | ACERTADO |
+| 2025-06-30 | AL29 | UP | 898.00 | 827.60 | -70.40 | FALLADO |
+| 2025-06-30 | GD29 | UP | 924.80 | 861.00 | -63.80 | FALLADO |
+| 2025-06-30 | AL41 | UP | 763.40 | 794.20 | 30.80 | ACERTADO |
+| 2025-06-30 | GD41 | UP | 777.00 | 816.20 | 39.20 | ACERTADO |
+| 2025-06-30 | AL30 | DOWN | 829.00 | 796.00 | -33.00 | ACERTADO |
+| 2025-06-30 | GD30 | DOWN | 849.10 | 820.50 | -28.60 | ACERTADO |
+| 2025-06-30 | AL35 | DOWN | 831.00 | 860.10 | 29.10 | FALLADO |
+| 2025-06-30 | GD35 | DOWN | 839.00 | 881.90 | 42.90 | FALLADO |
+| 2025-06-30 | AL41 | DOWN | 763.40 | 794.20 | 30.80 | FALLADO |
+| 2025-06-30 | GD41 | DOWN | 777.00 | 816.20 | 39.20 | FALLADO |
+| 2025-06-30 | GD46 | DOWN | 800.80 | 811.70 | 10.90 | FALLADO |
+| 2025-06-30 | GD38 | DOWN | 894.00 | 938.80 | 44.80 | FALLADO |
+| 2025-06-30 | GD29 | DOWN | 924.80 | 861.00 | -63.80 | ACERTADO |
 
 ### Test 1.4 (Agresivo) — `gemma-4-31b-it`
 
@@ -442,7 +442,7 @@ La matriz de confusión se estructura asumiendo la dirección **UP (Alza)** como
 
 Con una mayor temperatura (0.50), la versión agresiva (Agressive) logró un comportamiento más simétrico en la distribución de señales (34 UP vs 43 DOWN). Sin embargo, el accuracy se deterioró al 44.16%. Logró un recall de bajas del 50.00%, superior a la versión default, pero a costa de un recall de alzas significativamente menor (40.00%).
 
-|  | Predicho UP | Predicho DOWN |
+| | Predicho UP | Predicho DOWN |
 | --- | --- | --- |
 | **Real UP** | VP = 18 | FN = 27 |
 | **Real DOWN** | FP = 16 | VN = 16 |
@@ -481,16 +481,16 @@ Para esta versión con ventana extendida y rebalanceos parciales a 45 días, no 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2025-06-05 | DICP | Compra | 1214.3291 | $411.75 | $411.75 | - | - | - | - | - | N/A |
 | 2025-06-05 | DIP0 | Compra | 1211.5338 | $412.70 | $412.70 | - | - | - | - | - | N/A |
-| 2025-06-20 | DICP | Venta Total | 1214.3291 | $411.75 | $415.03 | $413.50 | $2125.08 | 0.43% | $-1859.05 | -0.37% | 🔴 PERDEDOR |
-| 2025-06-20 | DIP0 | Venta Total | 1211.5338 | $412.70 | $415.99 | $414.20 | $1817.30 | 0.36% | $-2166.83 | -0.43% | 🔴 PERDEDOR |
+| 2025-06-20 | DICP | Venta Total | 1214.3291 | $411.75 | $415.03 | $413.50 | $2125.08 | 0.43% | $-1859.05 | -0.37% | PERDEDOR |
+| 2025-06-20 | DIP0 | Venta Total | 1211.5338 | $412.70 | $415.99 | $414.20 | $1817.30 | 0.36% | $-2166.83 | -0.43% | PERDEDOR |
 | 2025-06-20 | AL30 | Compra | 635.9701 | $789.30 | $789.30 | - | - | - | - | - | N/A |
 | 2025-06-20 | GD30 | Compra | 618.9534 | $811.00 | $811.00 | - | - | - | - | - | N/A |
-| 2025-07-09 | AL30 | Cobro Amortización | 50.8776 | - | - | $1260.10 | $23953.18 | - | $23127.61 | - | 🟢 COBRADO |
-| 2025-07-09 | AL30 | Cobro Interés | 585.0925 | - | - | $4.69 | $2742.06 | - | $2693.17 | - | 🟢 COBRADO |
-| 2025-07-09 | GD30 | Cobro Amortización | 49.5163 | - | - | $1260.10 | $22237.76 | - | $21442.77 | - | 🟢 COBRADO |
-| 2025-07-09 | GD30 | Cobro Interés | 569.4371 | - | - | $4.69 | $2668.69 | - | $2621.11 | - | 🟢 COBRADO |
-| 2025-08-17 | AL30 | Liquidación Final | 585.0925 | $789.30 | $813.90 | $796.00 | $3920.12 | 0.85% | $-10471.94 | -2.20% | 🔴 PERDEDOR |
-| 2025-08-17 | GD30 | Liquidación Final | 569.4371 | $811.00 | $836.27 | $820.50 | $5409.65 | 1.17% | $-8982.40 | -1.89% | 🔴 PERDEDOR |
+| 2025-07-09 | AL30 | Cobro Amortización | 50.8776 | - | - | $1260.10 | $23953.18 | - | $23127.61 | - | COBRADO |
+| 2025-07-09 | AL30 | Cobro Interés | 585.0925 | - | - | $4.69 | $2742.06 | - | $2693.17 | - | COBRADO |
+| 2025-07-09 | GD30 | Cobro Amortización | 49.5163 | - | - | $1260.10 | $22237.76 | - | $21442.77 | - | COBRADO |
+| 2025-07-09 | GD30 | Cobro Interés | 569.4371 | - | - | $4.69 | $2668.69 | - | $2621.11 | - | COBRADO |
+| 2025-08-17 | AL30 | Liquidación Final | 585.0925 | $789.30 | $813.90 | $796.00 | $3920.12 | 0.85% | $-10471.94 | -2.20% | PERDEDOR |
+| 2025-08-17 | GD30 | Liquidación Final | 569.4371 | $811.00 | $836.27 | $820.50 | $5409.65 | 1.17% | $-8982.40 | -1.89% | PERDEDOR |
 
 #### 4.7 Evolución del Portfolio
 
@@ -514,83 +514,83 @@ Al cierre del horizonte del test (17/08/2025), se ejecutó una liquidación fina
 
 | Fecha | Bono | Predicción | Precio Inicial | Precio Final | Cambio | Resultado |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2025-06-05 | AL30 | UP | 800.80 | 762.00 | -38.80 | ❌ FALLADO |
-| 2025-06-05 | GD30 | UP | 823.50 | 783.00 | -40.50 | ❌ FALLADO |
-| 2025-06-05 | AL29 | UP | 871.40 | 802.60 | -68.80 | ❌ FALLADO |
-| 2025-06-05 | GD29 | UP | 889.50 | 824.90 | -64.60 | ❌ FALLADO |
-| 2025-06-05 | AL30 | DOWN | 800.80 | 762.00 | -38.80 | ✅ ACERTADO |
-| 2025-06-05 | GD30 | DOWN | 823.50 | 783.00 | -40.50 | ✅ ACERTADO |
-| 2025-06-05 | AL35 | DOWN | 805.00 | 824.00 | 19.00 | ❌ FALLADO |
-| 2025-06-05 | GD35 | DOWN | 812.00 | 840.00 | 28.00 | ❌ FALLADO |
-| 2025-06-05 | AL41 | DOWN | 744.90 | 756.80 | 11.90 | ❌ FALLADO |
-| 2025-06-05 | GD41 | DOWN | 753.00 | 779.00 | 26.00 | ❌ FALLADO |
-| 2025-06-05 | AE38 | DOWN | 840.60 | 861.30 | 20.70 | ❌ FALLADO |
-| 2025-06-05 | GD38 | DOWN | 866.50 | 894.00 | 27.50 | ❌ FALLADO |
-| 2025-06-05 | AL30D | DOWN | 801.62 | 763.67 | -37.95 | ✅ ACERTADO |
-| 2025-06-05 | GD30D | DOWN | 820.00 | 785.81 | -34.19 | ✅ ACERTADO |
-| 2025-06-05 | AL35D | DOWN | 809.14 | 828.67 | 19.53 | ❌ FALLADO |
-| 2025-06-05 | GD35D | DOWN | 814.63 | 842.66 | 28.02 | ❌ FALLADO |
-| 2025-06-10 | AL30 | UP | 817.50 | 770.30 | -47.20 | ❌ FALLADO |
-| 2025-06-10 | GD30 | UP | 841.00 | 795.00 | -46.00 | ❌ FALLADO |
-| 2025-06-10 | GD35 | UP | 828.30 | 849.00 | 20.70 | ✅ ACERTADO |
-| 2025-06-10 | GD41 | UP | 765.80 | 785.00 | 19.20 | ✅ ACERTADO |
-| 2025-06-10 | AE38 | UP | 858.80 | 873.40 | 14.60 | ✅ ACERTADO |
-| 2025-06-10 | GD46 | DOWN | 788.50 | 789.90 | 1.40 | ❌ FALLADO |
-| 2025-06-10 | AL41 | DOWN | 752.60 | 764.00 | 11.40 | ❌ FALLADO |
-| 2025-06-10 | GD29D | DOWN | 903.15 | 834.50 | -68.64 | ✅ ACERTADO |
-| 2025-06-10 | GD30D | DOWN | 841.41 | 794.89 | -46.52 | ✅ ACERTADO |
-| 2025-06-10 | GD35D | DOWN | 826.16 | 850.24 | 24.09 | ❌ FALLADO |
-| 2025-06-10 | GD38D | DOWN | 881.93 | 905.59 | 23.66 | ❌ FALLADO |
-| 2025-06-10 | GD41D | DOWN | 767.40 | 787.02 | 19.62 | ❌ FALLADO |
-| 2025-06-10 | GD46D | DOWN | 788.97 | 792.18 | 3.21 | ❌ FALLADO |
-| 2025-06-10 | AL29D | DOWN | 887.30 | 819.28 | -68.02 | ✅ ACERTADO |
-| 2025-06-10 | AL30D | DOWN | 819.12 | 772.83 | -46.29 | ✅ ACERTADO |
-| 2025-06-10 | AL35D | DOWN | 819.96 | 839.15 | 19.19 | ❌ FALLADO |
-| 2025-06-10 | AL41D | DOWN | 756.32 | 767.67 | 11.35 | ❌ FALLADO |
-| 2025-06-10 | AE38D | DOWN | 858.10 | 875.27 | 17.18 | ❌ FALLADO |
-| 2025-06-15 | AL29 | UP | 870.80 | 830.00 | -40.80 | ❌ FALLADO |
-| 2025-06-15 | GD29 | UP | 890.00 | 858.40 | -31.60 | ❌ FALLADO |
-| 2025-06-15 | AL30 | UP | 805.40 | 799.50 | -5.90 | ❌ FALLADO |
-| 2025-06-15 | GD30 | UP | 825.50 | 822.50 | -3.00 | ❌ FALLADO |
-| 2025-06-15 | AL35 | UP | 812.80 | 867.70 | 54.90 | ✅ ACERTADO |
-| 2025-06-15 | GD35 | UP | 814.50 | 876.50 | 62.00 | ✅ ACERTADO |
-| 2025-06-15 | GD38 | UP | 870.60 | 940.60 | 70.00 | ✅ ACERTADO |
-| 2025-06-15 | GD41 | UP | 755.90 | 816.70 | 60.80 | ✅ ACERTADO |
-| 2025-06-15 | GD46 | UP | 783.00 | 817.00 | 34.00 | ✅ ACERTADO |
-| 2025-06-15 | GD46 | DOWN | 783.00 | 817.00 | 34.00 | ❌ FALLADO |
-| 2025-06-15 | GD41 | DOWN | 755.90 | 816.70 | 60.80 | ❌ FALLADO |
-| 2025-06-15 | AL41 | DOWN | 743.20 | 796.00 | 52.80 | ❌ FALLADO |
-| 2025-06-15 | GD38 | DOWN | 870.60 | 940.60 | 70.00 | ❌ FALLADO |
-| 2025-06-20 | AL30 | UP | 789.30 | 812.20 | 22.90 | ✅ ACERTADO |
-| 2025-06-20 | GD30 | UP | 811.00 | 839.00 | 28.00 | ✅ ACERTADO |
-| 2025-06-20 | AL29 | UP | 867.80 | 848.70 | -19.10 | ❌ FALLADO |
-| 2025-06-20 | GD29 | UP | 885.00 | 879.50 | -5.50 | ❌ FALLADO |
-| 2025-06-20 | AL35 | UP | 791.50 | 875.50 | 84.00 | ✅ ACERTADO |
-| 2025-06-20 | GD35 | UP | 797.00 | 892.80 | 95.80 | ✅ ACERTADO |
-| 2025-06-20 | TZV26 | DOWN | 1087.10 | 1258.00 | 170.90 | ❌ FALLADO |
-| 2025-06-20 | TZX27 | DOWN | 2.43 | 2.39 | -0.04 | ✅ ACERTADO |
-| 2025-06-20 | TX31 | DOWN | 9.69 | 9.14 | -0.54 | ✅ ACERTADO |
-| 2025-06-25 | AL30 | UP | 823.50 | 804.00 | -19.50 | ❌ FALLADO |
-| 2025-06-25 | GD30 | UP | 847.00 | 833.00 | -14.00 | ❌ FALLADO |
-| 2025-06-25 | AL35 | UP | 826.70 | 875.20 | 48.50 | ✅ ACERTADO |
-| 2025-06-25 | GD35 | UP | 835.80 | 888.50 | 52.70 | ✅ ACERTADO |
-| 2025-06-25 | AL35 | DOWN | 826.70 | 875.20 | 48.50 | ❌ FALLADO |
-| 2025-06-25 | GD35 | DOWN | 835.80 | 888.50 | 52.70 | ❌ FALLADO |
-| 2025-06-25 | GD38 | DOWN | 884.00 | 946.60 | 62.60 | ❌ FALLADO |
-| 2025-06-25 | GD41 | DOWN | 768.70 | 821.00 | 52.30 | ❌ FALLADO |
-| 2025-06-25 | GD46 | DOWN | 790.00 | 811.30 | 21.30 | ❌ FALLADO |
-| 2025-06-25 | TX31 | DOWN | 9.53 | 9.28 | -0.25 | ✅ ACERTADO |
-| 2025-06-25 | TZX27 | DOWN | 2.41 | 2.38 | -0.03 | ✅ ACERTADO |
-| 2025-06-30 | AL30 | UP | 829.00 | 796.00 | -33.00 | ❌ FALLADO |
-| 2025-06-30 | GD30 | UP | 849.10 | 820.50 | -28.60 | ❌ FALLADO |
-| 2025-06-30 | AL35 | UP | 831.00 | 860.10 | 29.10 | ✅ ACERTADO |
-| 2025-06-30 | GD35 | UP | 839.00 | 881.90 | 42.90 | ✅ ACERTADO |
-| 2025-06-30 | AL41 | UP | 763.40 | 794.20 | 30.80 | ✅ ACERTADO |
-| 2025-06-30 | GD41 | UP | 777.00 | 816.20 | 39.20 | ✅ ACERTADO |
-| 2025-06-30 | TZX27 | DOWN | 2.39 | 2.31 | -0.09 | ✅ ACERTADO |
-| 2025-06-30 | TX31 | DOWN | 9.61 | 9.04 | -0.57 | ✅ ACERTADO |
-| 2025-06-30 | DICP | DOWN | 371.50 | 355.75 | -15.75 | ✅ ACERTADO |
-| 2025-06-30 | DIP0 | DOWN | 369.00 | 351.10 | -17.90 | ✅ ACERTADO |
+| 2025-06-05 | AL30 | UP | 800.80 | 762.00 | -38.80 | FALLADO |
+| 2025-06-05 | GD30 | UP | 823.50 | 783.00 | -40.50 | FALLADO |
+| 2025-06-05 | AL29 | UP | 871.40 | 802.60 | -68.80 | FALLADO |
+| 2025-06-05 | GD29 | UP | 889.50 | 824.90 | -64.60 | FALLADO |
+| 2025-06-05 | AL30 | DOWN | 800.80 | 762.00 | -38.80 | ACERTADO |
+| 2025-06-05 | GD30 | DOWN | 823.50 | 783.00 | -40.50 | ACERTADO |
+| 2025-06-05 | AL35 | DOWN | 805.00 | 824.00 | 19.00 | FALLADO |
+| 2025-06-05 | GD35 | DOWN | 812.00 | 840.00 | 28.00 | FALLADO |
+| 2025-06-05 | AL41 | DOWN | 744.90 | 756.80 | 11.90 | FALLADO |
+| 2025-06-05 | GD41 | DOWN | 753.00 | 779.00 | 26.00 | FALLADO |
+| 2025-06-05 | AE38 | DOWN | 840.60 | 861.30 | 20.70 | FALLADO |
+| 2025-06-05 | GD38 | DOWN | 866.50 | 894.00 | 27.50 | FALLADO |
+| 2025-06-05 | AL30D | DOWN | 801.62 | 763.67 | -37.95 | ACERTADO |
+| 2025-06-05 | GD30D | DOWN | 820.00 | 785.81 | -34.19 | ACERTADO |
+| 2025-06-05 | AL35D | DOWN | 809.14 | 828.67 | 19.53 | FALLADO |
+| 2025-06-05 | GD35D | DOWN | 814.63 | 842.66 | 28.02 | FALLADO |
+| 2025-06-10 | AL30 | UP | 817.50 | 770.30 | -47.20 | FALLADO |
+| 2025-06-10 | GD30 | UP | 841.00 | 795.00 | -46.00 | FALLADO |
+| 2025-06-10 | GD35 | UP | 828.30 | 849.00 | 20.70 | ACERTADO |
+| 2025-06-10 | GD41 | UP | 765.80 | 785.00 | 19.20 | ACERTADO |
+| 2025-06-10 | AE38 | UP | 858.80 | 873.40 | 14.60 | ACERTADO |
+| 2025-06-10 | GD46 | DOWN | 788.50 | 789.90 | 1.40 | FALLADO |
+| 2025-06-10 | AL41 | DOWN | 752.60 | 764.00 | 11.40 | FALLADO |
+| 2025-06-10 | GD29D | DOWN | 903.15 | 834.50 | -68.64 | ACERTADO |
+| 2025-06-10 | GD30D | DOWN | 841.41 | 794.89 | -46.52 | ACERTADO |
+| 2025-06-10 | GD35D | DOWN | 826.16 | 850.24 | 24.09 | FALLADO |
+| 2025-06-10 | GD38D | DOWN | 881.93 | 905.59 | 23.66 | FALLADO |
+| 2025-06-10 | GD41D | DOWN | 767.40 | 787.02 | 19.62 | FALLADO |
+| 2025-06-10 | GD46D | DOWN | 788.97 | 792.18 | 3.21 | FALLADO |
+| 2025-06-10 | AL29D | DOWN | 887.30 | 819.28 | -68.02 | ACERTADO |
+| 2025-06-10 | AL30D | DOWN | 819.12 | 772.83 | -46.29 | ACERTADO |
+| 2025-06-10 | AL35D | DOWN | 819.96 | 839.15 | 19.19 | FALLADO |
+| 2025-06-10 | AL41D | DOWN | 756.32 | 767.67 | 11.35 | FALLADO |
+| 2025-06-10 | AE38D | DOWN | 858.10 | 875.27 | 17.18 | FALLADO |
+| 2025-06-15 | AL29 | UP | 870.80 | 830.00 | -40.80 | FALLADO |
+| 2025-06-15 | GD29 | UP | 890.00 | 858.40 | -31.60 | FALLADO |
+| 2025-06-15 | AL30 | UP | 805.40 | 799.50 | -5.90 | FALLADO |
+| 2025-06-15 | GD30 | UP | 825.50 | 822.50 | -3.00 | FALLADO |
+| 2025-06-15 | AL35 | UP | 812.80 | 867.70 | 54.90 | ACERTADO |
+| 2025-06-15 | GD35 | UP | 814.50 | 876.50 | 62.00 | ACERTADO |
+| 2025-06-15 | GD38 | UP | 870.60 | 940.60 | 70.00 | ACERTADO |
+| 2025-06-15 | GD41 | UP | 755.90 | 816.70 | 60.80 | ACERTADO |
+| 2025-06-15 | GD46 | UP | 783.00 | 817.00 | 34.00 | ACERTADO |
+| 2025-06-15 | GD46 | DOWN | 783.00 | 817.00 | 34.00 | FALLADO |
+| 2025-06-15 | GD41 | DOWN | 755.90 | 816.70 | 60.80 | FALLADO |
+| 2025-06-15 | AL41 | DOWN | 743.20 | 796.00 | 52.80 | FALLADO |
+| 2025-06-15 | GD38 | DOWN | 870.60 | 940.60 | 70.00 | FALLADO |
+| 2025-06-20 | AL30 | UP | 789.30 | 812.20 | 22.90 | ACERTADO |
+| 2025-06-20 | GD30 | UP | 811.00 | 839.00 | 28.00 | ACERTADO |
+| 2025-06-20 | AL29 | UP | 867.80 | 848.70 | -19.10 | FALLADO |
+| 2025-06-20 | GD29 | UP | 885.00 | 879.50 | -5.50 | FALLADO |
+| 2025-06-20 | AL35 | UP | 791.50 | 875.50 | 84.00 | ACERTADO |
+| 2025-06-20 | GD35 | UP | 797.00 | 892.80 | 95.80 | ACERTADO |
+| 2025-06-20 | TZV26 | DOWN | 1087.10 | 1258.00 | 170.90 | FALLADO |
+| 2025-06-20 | TZX27 | DOWN | 2.43 | 2.39 | -0.04 | ACERTADO |
+| 2025-06-20 | TX31 | DOWN | 9.69 | 9.14 | -0.54 | ACERTADO |
+| 2025-06-25 | AL30 | UP | 823.50 | 804.00 | -19.50 | FALLADO |
+| 2025-06-25 | GD30 | UP | 847.00 | 833.00 | -14.00 | FALLADO |
+| 2025-06-25 | AL35 | UP | 826.70 | 875.20 | 48.50 | ACERTADO |
+| 2025-06-25 | GD35 | UP | 835.80 | 888.50 | 52.70 | ACERTADO |
+| 2025-06-25 | AL35 | DOWN | 826.70 | 875.20 | 48.50 | FALLADO |
+| 2025-06-25 | GD35 | DOWN | 835.80 | 888.50 | 52.70 | FALLADO |
+| 2025-06-25 | GD38 | DOWN | 884.00 | 946.60 | 62.60 | FALLADO |
+| 2025-06-25 | GD41 | DOWN | 768.70 | 821.00 | 52.30 | FALLADO |
+| 2025-06-25 | GD46 | DOWN | 790.00 | 811.30 | 21.30 | FALLADO |
+| 2025-06-25 | TX31 | DOWN | 9.53 | 9.28 | -0.25 | ACERTADO |
+| 2025-06-25 | TZX27 | DOWN | 2.41 | 2.38 | -0.03 | ACERTADO |
+| 2025-06-30 | AL30 | UP | 829.00 | 796.00 | -33.00 | FALLADO |
+| 2025-06-30 | GD30 | UP | 849.10 | 820.50 | -28.60 | FALLADO |
+| 2025-06-30 | AL35 | UP | 831.00 | 860.10 | 29.10 | ACERTADO |
+| 2025-06-30 | GD35 | UP | 839.00 | 881.90 | 42.90 | ACERTADO |
+| 2025-06-30 | AL41 | UP | 763.40 | 794.20 | 30.80 | ACERTADO |
+| 2025-06-30 | GD41 | UP | 777.00 | 816.20 | 39.20 | ACERTADO |
+| 2025-06-30 | TZX27 | DOWN | 2.39 | 2.31 | -0.09 | ACERTADO |
+| 2025-06-30 | TX31 | DOWN | 9.61 | 9.04 | -0.57 | ACERTADO |
+| 2025-06-30 | DICP | DOWN | 371.50 | 355.75 | -15.75 | ACERTADO |
+| 2025-06-30 | DIP0 | DOWN | 369.00 | 351.10 | -17.90 | ACERTADO |
 
 ### Test 1.4 (Analítico) — `gemma-4-31b-it`
 
@@ -619,7 +619,7 @@ La matriz de confusión se estructura asumiendo la dirección **UP (Alza)** como
 
 La versión analytical (temperatura 0.0 y 20 iteraciones) obtuvo el mejor desempeño predictivo y de portafolio de la corrida. Logró una precisión del 60.00% en señales alcistas y un accuracy global del 49.15%. La rigurosidad analítica atenuó levemente el optimismo ciego, aunque el recall de bajas sigue siendo modesto (36.36%).
 
-|  | Predicho UP | Predicho DOWN |
+| | Predicho UP | Predicho DOWN |
 | --- | --- | --- |
 | **Real UP** | VP = 21 | FN = 16 |
 | **Real DOWN** | FP = 14 | VN = 8 |
@@ -657,11 +657,11 @@ Para esta versión con ventana extendida y rebalanceos parciales a 45 días, no 
 | Fecha | Bono | Acción | Cantidad | Pr. Compra (Nom) | Pr. Compra (Real) | Pr. Venta / Liq | P&L Nom ($) | P&L Nom (%) | P&L Real ($) | P&L Real (%) | Resultado |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2025-06-05 | TZV26 | Compra | 917.4312 | $1090.00 | $1090.00 | - | - | - | - | - | N/A |
-| 2025-06-10 | TZV26 | Venta Parcial | 458.7156 | $1090.00 | $1092.71 | $1095.00 | $2293.58 | 0.46% | $1051.32 | 0.21% | 🟢 GANADOR |
+| 2025-06-10 | TZV26 | Venta Parcial | 458.7156 | $1090.00 | $1092.71 | $1095.00 | $2293.58 | 0.46% | $1051.32 | 0.21% | GANADOR |
 | 2025-06-10 | AL30 | Compra | 614.4264 | $817.50 | $817.50 | - | - | - | - | - | N/A |
-| 2025-06-25 | AL30 | Venta Total | 614.4264 | $817.50 | $824.15 | $823.50 | $3686.56 | 0.73% | $-398.95 | -0.08% | 🔴 PERDEDOR |
+| 2025-06-25 | AL30 | Venta Total | 614.4264 | $817.50 | $824.15 | $823.50 | $3686.56 | 0.73% | $-398.95 | -0.08% | PERDEDOR |
 | 2025-06-25 | TZV26 | Compra | 451.7680 | $1120.00 | $1120.00 | - | - | - | - | - | N/A |
-| 2025-08-17 | TZV26 | Liquidación Final | 910.4836 | $1104.89 | $1142.32 | $1219.00 | $103899.34 | 10.33% | $69818.96 | 6.71% | 🟢 GANADOR |
+| 2025-08-17 | TZV26 | Liquidación Final | 910.4836 | $1104.89 | $1142.32 | $1219.00 | $103899.34 | 10.33% | $69818.96 | 6.71% | GANADOR |
 
 #### 4.7 Evolución del Portfolio
 
@@ -685,65 +685,65 @@ Al cierre del horizonte del test (17/08/2025), se ejecutó una liquidación fina
 
 | Fecha | Bono | Predicción | Precio Inicial | Precio Final | Cambio | Resultado |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2025-06-05 | AL30 | UP | 800.80 | 762.00 | -38.80 | ❌ FALLADO |
-| 2025-06-05 | GD30 | UP | 823.50 | 783.00 | -40.50 | ❌ FALLADO |
-| 2025-06-05 | AL35 | UP | 805.00 | 824.00 | 19.00 | ✅ ACERTADO |
-| 2025-06-05 | GD35 | UP | 812.00 | 840.00 | 28.00 | ✅ ACERTADO |
-| 2025-06-05 | AL35 | DOWN | 805.00 | 824.00 | 19.00 | ❌ FALLADO |
-| 2025-06-05 | GD35 | DOWN | 812.00 | 840.00 | 28.00 | ❌ FALLADO |
-| 2025-06-05 | AL41 | DOWN | 744.90 | 756.80 | 11.90 | ❌ FALLADO |
-| 2025-06-05 | GD41 | DOWN | 753.00 | 779.00 | 26.00 | ❌ FALLADO |
-| 2025-06-05 | AL30 | DOWN | 800.80 | 762.00 | -38.80 | ✅ ACERTADO |
-| 2025-06-05 | GD30 | DOWN | 823.50 | 783.00 | -40.50 | ✅ ACERTADO |
-| 2025-06-10 | AL30 | UP | 817.50 | 770.30 | -47.20 | ❌ FALLADO |
-| 2025-06-10 | GD30 | UP | 841.00 | 795.00 | -46.00 | ❌ FALLADO |
-| 2025-06-10 | GD35 | UP | 828.30 | 849.00 | 20.70 | ✅ ACERTADO |
-| 2025-06-10 | GD41 | UP | 765.80 | 785.00 | 19.20 | ✅ ACERTADO |
-| 2025-06-10 | AE38 | UP | 858.80 | 873.40 | 14.60 | ✅ ACERTADO |
-| 2025-06-15 | AL30 | UP | 805.40 | 799.50 | -5.90 | ❌ FALLADO |
-| 2025-06-15 | GD30 | UP | 825.50 | 822.50 | -3.00 | ❌ FALLADO |
-| 2025-06-15 | AL35 | UP | 812.80 | 867.70 | 54.90 | ✅ ACERTADO |
-| 2025-06-15 | GD35 | UP | 814.50 | 876.50 | 62.00 | ✅ ACERTADO |
-| 2025-06-15 | AL29 | UP | 870.80 | 830.00 | -40.80 | ❌ FALLADO |
-| 2025-06-15 | GD29 | UP | 890.00 | 858.40 | -31.60 | ❌ FALLADO |
-| 2025-06-15 | AL41 | UP | 743.20 | 796.00 | 52.80 | ✅ ACERTADO |
-| 2025-06-15 | GD41 | UP | 755.90 | 816.70 | 60.80 | ✅ ACERTADO |
-| 2025-06-20 | AL30 | UP | 789.30 | 812.20 | 22.90 | ✅ ACERTADO |
-| 2025-06-20 | GD30 | UP | 811.00 | 839.00 | 28.00 | ✅ ACERTADO |
-| 2025-06-20 | AL35 | UP | 791.50 | 875.50 | 84.00 | ✅ ACERTADO |
-| 2025-06-20 | GD35 | UP | 797.00 | 892.80 | 95.80 | ✅ ACERTADO |
-| 2025-06-20 | AL41 | UP | 724.90 | 805.50 | 80.60 | ✅ ACERTADO |
-| 2025-06-20 | GD41 | UP | 733.60 | 824.30 | 90.70 | ✅ ACERTADO |
-| 2025-06-20 | GD35 | DOWN | 797.00 | 892.80 | 95.80 | ❌ FALLADO |
-| 2025-06-20 | GD38 | DOWN | 847.40 | 956.10 | 108.70 | ❌ FALLADO |
-| 2025-06-20 | GD41 | DOWN | 733.60 | 824.30 | 90.70 | ❌ FALLADO |
-| 2025-06-20 | GD46 | DOWN | 766.70 | 832.50 | 65.80 | ❌ FALLADO |
-| 2025-06-20 | AL35 | DOWN | 791.50 | 875.50 | 84.00 | ❌ FALLADO |
-| 2025-06-20 | AL41 | DOWN | 724.90 | 805.50 | 80.60 | ❌ FALLADO |
-| 2025-06-20 | AE38 | DOWN | 827.50 | 912.60 | 85.10 | ❌ FALLADO |
-| 2025-06-25 | AL30 | UP | 823.50 | 804.00 | -19.50 | ❌ FALLADO |
-| 2025-06-25 | GD30 | UP | 847.00 | 833.00 | -14.00 | ❌ FALLADO |
-| 2025-06-25 | AL29 | UP | 890.00 | 841.40 | -48.60 | ❌ FALLADO |
-| 2025-06-25 | GD29 | UP | 919.50 | 873.70 | -45.80 | ❌ FALLADO |
-| 2025-06-25 | AL35 | UP | 826.70 | 875.20 | 48.50 | ✅ ACERTADO |
-| 2025-06-25 | GD35 | UP | 835.80 | 888.50 | 52.70 | ✅ ACERTADO |
-| 2025-06-25 | TX31 | DOWN | 9.53 | 9.28 | -0.25 | ✅ ACERTADO |
-| 2025-06-25 | TZX27 | DOWN | 2.41 | 2.38 | -0.03 | ✅ ACERTADO |
-| 2025-06-25 | AL30 | DOWN | 823.50 | 804.00 | -19.50 | ✅ ACERTADO |
-| 2025-06-25 | GD30 | DOWN | 847.00 | 833.00 | -14.00 | ✅ ACERTADO |
-| 2025-06-25 | AL35 | DOWN | 826.70 | 875.20 | 48.50 | ❌ FALLADO |
-| 2025-06-25 | GD35 | DOWN | 835.80 | 888.50 | 52.70 | ❌ FALLADO |
-| 2025-06-30 | AL30 | UP | 829.00 | 796.00 | -33.00 | ❌ FALLADO |
-| 2025-06-30 | GD30 | UP | 849.10 | 820.50 | -28.60 | ❌ FALLADO |
-| 2025-06-30 | AL35 | UP | 831.00 | 860.10 | 29.10 | ✅ ACERTADO |
-| 2025-06-30 | GD35 | UP | 839.00 | 881.90 | 42.90 | ✅ ACERTADO |
-| 2025-06-30 | GD41 | UP | 777.00 | 816.20 | 39.20 | ✅ ACERTADO |
-| 2025-06-30 | AL41 | UP | 763.40 | 794.20 | 30.80 | ✅ ACERTADO |
-| 2025-06-30 | AL30 | DOWN | 829.00 | 796.00 | -33.00 | ✅ ACERTADO |
-| 2025-06-30 | GD30 | DOWN | 849.10 | 820.50 | -28.60 | ✅ ACERTADO |
-| 2025-06-30 | AL41 | DOWN | 763.40 | 794.20 | 30.80 | ❌ FALLADO |
-| 2025-06-30 | GD41 | DOWN | 777.00 | 816.20 | 39.20 | ❌ FALLADO |
-| 2025-06-30 | GD46 | DOWN | 800.80 | 811.70 | 10.90 | ❌ FALLADO |
+| 2025-06-05 | AL30 | UP | 800.80 | 762.00 | -38.80 | FALLADO |
+| 2025-06-05 | GD30 | UP | 823.50 | 783.00 | -40.50 | FALLADO |
+| 2025-06-05 | AL35 | UP | 805.00 | 824.00 | 19.00 | ACERTADO |
+| 2025-06-05 | GD35 | UP | 812.00 | 840.00 | 28.00 | ACERTADO |
+| 2025-06-05 | AL35 | DOWN | 805.00 | 824.00 | 19.00 | FALLADO |
+| 2025-06-05 | GD35 | DOWN | 812.00 | 840.00 | 28.00 | FALLADO |
+| 2025-06-05 | AL41 | DOWN | 744.90 | 756.80 | 11.90 | FALLADO |
+| 2025-06-05 | GD41 | DOWN | 753.00 | 779.00 | 26.00 | FALLADO |
+| 2025-06-05 | AL30 | DOWN | 800.80 | 762.00 | -38.80 | ACERTADO |
+| 2025-06-05 | GD30 | DOWN | 823.50 | 783.00 | -40.50 | ACERTADO |
+| 2025-06-10 | AL30 | UP | 817.50 | 770.30 | -47.20 | FALLADO |
+| 2025-06-10 | GD30 | UP | 841.00 | 795.00 | -46.00 | FALLADO |
+| 2025-06-10 | GD35 | UP | 828.30 | 849.00 | 20.70 | ACERTADO |
+| 2025-06-10 | GD41 | UP | 765.80 | 785.00 | 19.20 | ACERTADO |
+| 2025-06-10 | AE38 | UP | 858.80 | 873.40 | 14.60 | ACERTADO |
+| 2025-06-15 | AL30 | UP | 805.40 | 799.50 | -5.90 | FALLADO |
+| 2025-06-15 | GD30 | UP | 825.50 | 822.50 | -3.00 | FALLADO |
+| 2025-06-15 | AL35 | UP | 812.80 | 867.70 | 54.90 | ACERTADO |
+| 2025-06-15 | GD35 | UP | 814.50 | 876.50 | 62.00 | ACERTADO |
+| 2025-06-15 | AL29 | UP | 870.80 | 830.00 | -40.80 | FALLADO |
+| 2025-06-15 | GD29 | UP | 890.00 | 858.40 | -31.60 | FALLADO |
+| 2025-06-15 | AL41 | UP | 743.20 | 796.00 | 52.80 | ACERTADO |
+| 2025-06-15 | GD41 | UP | 755.90 | 816.70 | 60.80 | ACERTADO |
+| 2025-06-20 | AL30 | UP | 789.30 | 812.20 | 22.90 | ACERTADO |
+| 2025-06-20 | GD30 | UP | 811.00 | 839.00 | 28.00 | ACERTADO |
+| 2025-06-20 | AL35 | UP | 791.50 | 875.50 | 84.00 | ACERTADO |
+| 2025-06-20 | GD35 | UP | 797.00 | 892.80 | 95.80 | ACERTADO |
+| 2025-06-20 | AL41 | UP | 724.90 | 805.50 | 80.60 | ACERTADO |
+| 2025-06-20 | GD41 | UP | 733.60 | 824.30 | 90.70 | ACERTADO |
+| 2025-06-20 | GD35 | DOWN | 797.00 | 892.80 | 95.80 | FALLADO |
+| 2025-06-20 | GD38 | DOWN | 847.40 | 956.10 | 108.70 | FALLADO |
+| 2025-06-20 | GD41 | DOWN | 733.60 | 824.30 | 90.70 | FALLADO |
+| 2025-06-20 | GD46 | DOWN | 766.70 | 832.50 | 65.80 | FALLADO |
+| 2025-06-20 | AL35 | DOWN | 791.50 | 875.50 | 84.00 | FALLADO |
+| 2025-06-20 | AL41 | DOWN | 724.90 | 805.50 | 80.60 | FALLADO |
+| 2025-06-20 | AE38 | DOWN | 827.50 | 912.60 | 85.10 | FALLADO |
+| 2025-06-25 | AL30 | UP | 823.50 | 804.00 | -19.50 | FALLADO |
+| 2025-06-25 | GD30 | UP | 847.00 | 833.00 | -14.00 | FALLADO |
+| 2025-06-25 | AL29 | UP | 890.00 | 841.40 | -48.60 | FALLADO |
+| 2025-06-25 | GD29 | UP | 919.50 | 873.70 | -45.80 | FALLADO |
+| 2025-06-25 | AL35 | UP | 826.70 | 875.20 | 48.50 | ACERTADO |
+| 2025-06-25 | GD35 | UP | 835.80 | 888.50 | 52.70 | ACERTADO |
+| 2025-06-25 | TX31 | DOWN | 9.53 | 9.28 | -0.25 | ACERTADO |
+| 2025-06-25 | TZX27 | DOWN | 2.41 | 2.38 | -0.03 | ACERTADO |
+| 2025-06-25 | AL30 | DOWN | 823.50 | 804.00 | -19.50 | ACERTADO |
+| 2025-06-25 | GD30 | DOWN | 847.00 | 833.00 | -14.00 | ACERTADO |
+| 2025-06-25 | AL35 | DOWN | 826.70 | 875.20 | 48.50 | FALLADO |
+| 2025-06-25 | GD35 | DOWN | 835.80 | 888.50 | 52.70 | FALLADO |
+| 2025-06-30 | AL30 | UP | 829.00 | 796.00 | -33.00 | FALLADO |
+| 2025-06-30 | GD30 | UP | 849.10 | 820.50 | -28.60 | FALLADO |
+| 2025-06-30 | AL35 | UP | 831.00 | 860.10 | 29.10 | ACERTADO |
+| 2025-06-30 | GD35 | UP | 839.00 | 881.90 | 42.90 | ACERTADO |
+| 2025-06-30 | GD41 | UP | 777.00 | 816.20 | 39.20 | ACERTADO |
+| 2025-06-30 | AL41 | UP | 763.40 | 794.20 | 30.80 | ACERTADO |
+| 2025-06-30 | AL30 | DOWN | 829.00 | 796.00 | -33.00 | ACERTADO |
+| 2025-06-30 | GD30 | DOWN | 849.10 | 820.50 | -28.60 | ACERTADO |
+| 2025-06-30 | AL41 | DOWN | 763.40 | 794.20 | 30.80 | FALLADO |
+| 2025-06-30 | GD41 | DOWN | 777.00 | 816.20 | 39.20 | FALLADO |
+| 2025-06-30 | GD46 | DOWN | 800.80 | 811.70 | 10.90 | FALLADO |
 
 ---
 
