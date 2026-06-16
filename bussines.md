@@ -194,6 +194,10 @@ Docta Capital publica precios para su producto de acceso institucional vía API,
 
 Los precios de Docta y Mercap Abbaco relevados corresponden a planes de acceso individual/retail. **Falta investigar los acuerdos comerciales institucionales de estos servicios** (licencias de Terminal completa para varios asientos dentro de una ALyC o banco, contratos de mayor escala), dado que no publican esa información — es esperable que el ticket institucional sea sustancialmente más alto que el plan retail, y habitualmente se negocia de forma personalizada según volumen de usuarios, AUM gestionado o nivel de integración requerido.
 
+### **Auditoría de Fiabilidad de Informes (Consultoras y Research)**
+
+Una capacidad adicional del grafo de conocimiento causal es evaluar la **fiabilidad de un informe o reporte de research** de terceros: dado un documento de análisis (de un banco, una consultora o un research independiente), el sistema puede contrastar sus afirmaciones causales contra la evidencia ya verificada en el grafo, señalando relaciones que carecen de sustento, que contradicen evidencia previa, o que se basan en fuentes de baja calidad. Esto convierte al producto en una herramienta de control de calidad para quienes producen o consumen research de forma recurrente — particularmente consultoras económico-financieras, que necesitan sostener la credibilidad de sus informes ante clientes institucionales y para quienes un error de consistencia interno puede tener costo reputacional alto. Se trata de un caso de uso institucional adicional al acceso vía API descrito arriba, con un modelo de precios a definir (por informe auditado o por suscripción), que **aún no fue validado con clientes potenciales** y se incorpora aquí como una línea de exploración para fases posteriores del roadmap, no como un ingreso proyectado en el corto plazo.
+
 ---
 
 ### **Estado Actual y Roadmap de Desarrollo**
