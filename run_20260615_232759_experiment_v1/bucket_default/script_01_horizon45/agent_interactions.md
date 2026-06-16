@@ -1,0 +1,893 @@
+# Interacciones con el Agente
+
+## Fecha: 2025-06-05 | Tipo: UP
+
+**Session ID:** `backtest_up_88daea91-6a73-47db-851d-ddd223b4f603`
+
+### Prompt
+```text
+De los siguientes bonos soberanos argentinos: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP
+¿Cuáles subirán de precio en el corto plazo debido a factores macroeconómicos y políticos (e.g. inflación IPC, tipo de cambio MEP/CCL/Blue, superávit fiscal, reservas del BCRA, tasa de política monetaria)?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de alza..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["AL30", "GD30", "AL29", "GD29", "AL35", "GD35", "AL30D", "GD30D"],
+  "textual_response": "Para un horizonte de inversión de 45 días, los activos con mayor probabilidad de alza son los **bonos soberanos en dólares (Hard Dollar)**, especialmente los más líquidos como el AL30 y GD30. Esta predicción se fundamenta en la siguiente cadena causal:\n\n**Análisis Causal:**\n`Superávit Fiscal Primario (ARS 845B) ──► causes ──► Reducción de Riesgo de Default ──► signals [UP] on [Hard Dollar Bonds]`\n`Anuncio de Préstamo REPO + Pago 9 de Julio ──► causes ──► Fortalecimiento de Reservas y Solvencia Corto Plazo ──► signals [UP] on [Hard Dollar Bonds]`\n\n**Justificación Detallada:**\n1. **Sustento Fiscal:** Según la base de datos relacional de Supabase, Argentina mantiene un superávit primario robusto (ARS 845.949 millones), lo que actúa como el principal ancla de confianza para los inversores en el corto plazo.\n2. **Liquidez Inmediata:** Las fuentes de noticias indican que el Tesoro ya posee los dólares necesarios para afrontar el vencimiento del 9 de julio (aprox. US$ 3.840M para privados), eliminando el riesgo de default técnico inmediato.\n3. **Catalizador de Reservas:** Se espera la concreción de un préstamo REPO con bancos internacionales en junio, lo que mejoraría la posición de reservas netas (actualmente en -US$ 2.000M), reduciendo la presión sobre el riesgo país (actualmente en 651 bps).\n4. **Rotación vs. CER:** Mientras que los bonos Hard Dollar suben por solvencia, los bonos ajustados por CER (como TZX27 o TX31) pierden atractivo debido a la desaceleración de la inflación (IPC mensual de 1,5% y expectativas del REM bajando hacia el 1,9% en junio), lo que sugiere una rotación de cartera desde tasa real hacia activos dolarizados.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el préstamo REPO se anuncia por un monto superior a US$ 1.000M y el pago de julio se ejecuta sin contratiempos, se recomienda mantener la posición hasta alcanzar un target de TIR más bajo.\n- **Escenario Bajista (Venta):** Venda o reduzca exposición si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a acelerarse por encima del 40% o si el superávit financiero se deteriora significativamente.\n- **Rotación:** Si la inflación (IPC) vuelve a acelerar por encima del 3% mensual, considere vender Hard Dollar y comprar bonos CER.\n\n**Plazo de Salida Sugerido:** 30 a 45 días, coincidiendo con la resolución del pago de julio y la estabilización de las reservas post-REPO.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+}
+```
+
+---
+
+## Fecha: 2025-06-05 | Tipo: DOWN
+
+**Session ID:** `backtest_down_2fab4a0a-7bdc-48fa-9c97-fc16a60f1fd5`
+
+### Prompt
+```text
+De los siguientes bonos disponibles: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP, ¿cuáles bajarán de precio en el corto plazo?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de baja..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": [],
+  "textual_response": "Tras analizar los activos solicitados utilizando el grafo de conocimiento Neo4j y la base de datos relacional de Supabase, no se han identificado señales de tendencia bajista ('DOWN') para ninguno de los bonos listados en el corto plazo (horizonte de 45 días). \n\nEl análisis macroeconómico actual respalda esta ausencia de señales negativas: \n1. **Sólido Balance Fiscal**: Se registra un superávit primario y financiero significativo (según datos de `obtener_contexto_macro`), lo cual es el principal motor de confianza para los tenedores de deuda soberana.\n2. **Inflación Controlada**: La inflación mensual se sitúa en el 1.5%, reduciendo la presión sobre las tasas reales y los bonos ajustados por CER.\n3. **Estabilidad Cambiaria**: La brecha entre el dólar oficial (1205) y los dólares MEP/CCL (~1194) es prácticamente inexistente, eliminando el riesgo inmediato de saltos cambiarios que suelen afectar los precios de los bonos.\n\nDado que no existen señales de venta ni desencadenantes causales negativos en el grafo para estos activos, no es posible predecir una baja de precio basada en la evidencia actual. \n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-05 | Tipo: PORTFOLIO
+
+**Session ID:** `backtest_portfolio_f52af0fa-3218-4003-ad43-503adcba526f`
+
+### Prompt
+```text
+Estás administrando un portafolio de inversión en bonos. Hoy es 2025-06-05.
+
+Estado actual del portafolio:
+- Efectivo disponible en pesos (ARS Cash): $1000000.00 ARS
+- Efectivo disponible en dólares (USD Cash): $0.00 USD
+- Tipo de cambio MEP de hoy: $1193.60 ARS/USD
+- Valor total del portafolio (valuado en ARS): $1000000.00 ARS
+Tenencias actuales:
+No tienes tenencias actualmente (100% en efectivo).
+
+Bonos disponibles para operar hoy:
+- TZV26 (Precio actual: $1090.00 ARS)
+- AE38 (Precio actual: $840.60 ARS)
+- AL29 (Precio actual: $871.40 ARS)
+- AL30 (Precio actual: $800.80 ARS)
+- AL35 (Precio actual: $805.00 ARS)
+- AL41 (Precio actual: $744.90 ARS)
+- BA37D (Precio actual: $825.80 USD)
+- CO26 (Precio actual: $233.05 ARS)
+- GD29 (Precio actual: $889.50 ARS)
+- GD30 (Precio actual: $823.50 ARS)
+- GD35 (Precio actual: $812.00 ARS)
+- GD38 (Precio actual: $866.50 ARS)
+- GD41 (Precio actual: $753.00 ARS)
+- GD46 (Precio actual: $779.80 ARS)
+- GD29D (Precio actual: $0.75 USD)
+- GD30D (Precio actual: $0.69 USD)
+- GD38D (Precio actual: $0.73 USD)
+- GD35D (Precio actual: $0.68 USD)
+- GD41D (Precio actual: $0.63 USD)
+- GD46D (Precio actual: $0.65 USD)
+- AL29D (Precio actual: $0.73 USD)
+- AL30D (Precio actual: $0.67 USD)
+- AE38D (Precio actual: $0.71 USD)
+- AL35D (Precio actual: $0.68 USD)
+- AL41D (Precio actual: $0.62 USD)
+- TZX27 (Precio actual: $2.39 ARS)
+- TX31 (Precio actual: $9.45 ARS)
+- DICP (Precio actual: $411.75 ARS)
+- DIP0 (Precio actual: $412.70 ARS)
+- PARP (Precio actual: $225.00 ARS)
+- PAP0 (Precio actual: $232.40 ARS)
+- CUAP (Precio actual: $279.60 ARS)
+
+
+Predicciones del día:
+- Subirán (UP): Por favor, guíate por las predicciones y el análisis que acabas de realizar en tu respuesta anterior.
+- Bajarán (DOWN): Ninguno
+
+Decide si deseas realizar cambios en el portafolio (comprar, vender, mantener o rebalancear).
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```.
+El JSON debe tener exactamente la siguiente estructura:
+{
+  "action": "REBALANCE" o "DO_NOTHING",
+  "bonds": {
+    "TICKER1": monto_ARS_asignado_1,
+    "TICKER2": monto_ARS_asignado_2
+  },
+  "justification": "Tu análisis y justificación detallada de los movimientos o de no hacer nada..."
+}
+
+Reglas importantes:
+1. El portafolio DEBE estar 100% invertido en bonos en todo momento. No se permite mantener efectivo (cash). Por lo tanto, la suma de los montos asignados en 'bonds' debe ser exactamente igual al valor total del portafolio ($1000000.00 ARS).
+2. Si seleccionas 'DO_NOTHING', solo es válido si el portafolio ya está 100% invertido y no deseas realizar cambios. Si hay efectivo disponible (como en el primer día), debes seleccionar 'REBALANCE' para invertir todo el efectivo.
+3. Si 'action' es 'REBALANCE', debes indicar el nuevo monto total en ARS que deseas tener asignado a CADA bono en 'bonds'. Para vender por completo un bono que posees, pon su monto en 0.0 o no lo incluyas en la lista 'bonds'.
+4. Nota sobre monedas: El sistema utiliza pesos para comprar bonos en pesos y dólares para bonos en dólares (tickers terminados en 'D'). Si no posees la moneda necesaria al operar, el sistema realizará automáticamente una conversión de moneda utilizando el tipo de cambio MEP de hoy.
+```
+
+### Respuesta
+El análisis del contexto macroeconómico al 2025-06-05 muestra indicadores sumamente positivos que favorecen la subida de los precios de los bonos soberanos en el corto plazo (ventana de 45 días). Se observa un fuerte superávit fiscal primario ($845.949M) y financiero ($572.341M), lo cual es el principal motor para la compresión del riesgo país (actualmente en 651 bps). Además, la inflación mensual se ha estabilizado en un 1,5%, reduciendo la presión sobre el tipo de cambio MEP ($1193,6). 
+
+La cadena causal es la siguiente: [Superávit Fiscal] ──► reduce ──► [Riesgo País] ──► impulsa al alza ──► [Precios de Bonos Soberanos]. 
+
+He decidido asignar el 100% del portafolio ($1.000.000 ARS) equitativamente entre AL30 y GD30 por ser los activos más líquidos del mercado, permitiendo capturar rápidamente la apreciación de los activos ante la mejora de la percepción de solvencia. La división entre ley local (AL30) y ley extranjera (GD30) busca diversificar el riesgo jurisdiccional. 
+
+Condicionales de salida: 
+1. Si el riesgo país comienza a subir nuevamente por encima de los 800 bps, se deberá rotar la cartera hacia activos más cortos o Hard Dólar.
+2. Si la inflación mensual vuelve a acelerarse por encima del 4%, se recomienda migrar hacia bonos ajustados por CER.
+3. Objetivo de salida: Venta de posiciones en aproximadamente 45 días o al alcanzar un target de precio basado en la compresión del riesgo país.
+
+---
+
+## Fecha: 2025-06-10 | Tipo: UP
+
+**Session ID:** `backtest_up_8f2e0233-fd7b-4ab2-b61b-e26205a4533b`
+
+### Prompt
+```text
+De los siguientes bonos soberanos argentinos: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP
+¿Cuáles subirán de precio en el corto plazo debido a factores macroeconómicos y políticos (e.g. inflación IPC, tipo de cambio MEP/CCL/Blue, superávit fiscal, reservas del BCRA, tasa de política monetaria)?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de alza..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["AL30", "GD30", "GD35", "AL35", "GD41", "AL41", "AE38"],
+  "textual_response": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el análisis de fuentes de noticias recientes, se prevé un alza de precio en los bonos soberanos mencionados en un horizonte de 45 días, impulsada por una combinación de factores macroeconómicos excepcionalmente positivos:\n\n1. **Sólida Posición Fiscal y Monetaria**: Según el contexto macroeconómico, Argentina registra un **superávit primario de 845.949 millones** y un **superávit financiero de 572.341 millones**. Esta capacidad de generar excedentes reduce drásticamente el riesgo de default y la necesidad de emisión monetaria, actuando como el principal motor alcista.\n\n2. **Estabilidad Cambiaria y Ausencia de Brecha**: Se observa una situación inusual donde el **Dólar Oficial (1200)** está prácticamente alineado con el **MEP (1191.8)** y el **CCL (1192.7)**. Una brecha cambiaria cercana al 0% es una señal potente de confianza y estabilidad, lo que incentiva la entrada de capitales hacia activos locales.\n\n3. **Desaceleración Inflacionaria**: La inflación mensual se sitúa en el **1.5%**, un nivel históricamente bajo para los estándares recientes. Esto favorece la compresión de las tasas reales y mejora la valoración de los bonos a tasa fija.\n\n4. **Fortalecimiento de Reservas**: El BCRA ha anunciado medidas concretas para aumentar la liquidez en dólares, incluyendo una **operación de Repo por US$2.000 millones** y la modalidad de suscripción directa en dólares por hasta US$1.000 millones mensuales. Esto mitiga la preocupación por la solvencia inmediata.\n\n**Rastreo Causal en Cascada**:\n`Superávit Financiero + Repo BCRA` ──► `Mejora en Solvencia Percibida` ──► `Compresión de Riesgo País (actualmente en 651)` ──► `Sube precio de Bonos Soberanos`.\n`Inflación 1.5% + Brecha ≈ 0%` ──► `Estabilidad Macroeconómica` ──► `Aumento de demanda de activos Hard Dollar` ──► `Sube precio de AL30, GD30, GD35, GD41`.\n\n**Justificación de Tickers Específicos**:\n- **AL30 y GD30**: Son los activos más líquidos y los primeros en reaccionar a cualquier mejora en la percepción de riesgo.\n- **GD35, AL35, GD41 y AL41**: Estos bonos poseen mayor *duration* y convexidad. Según el consenso de analistas (Facimex y PPI), son los que más capturan la subida de precio ante una compresión del riesgo país, con retornos proyectados significativos.\n- **AE38**: Destacado por analistas (Cocos Capital) como una oportunidad de apreciación de capital si el riesgo país continúa su tendencia a la baja.\n\n**Condicionales y Triggers de Salida**:\n- **Vender si**: La brecha cambiaria (MEP/Oficial) vuelve a subir por encima del 20% o si el superávit financiero se vuelve negativo.\n- **Monitorear**: El cumplimiento de las metas de reservas del FMI y la evolución de la inflación mensual. Si la inflación vuelve a acelerarse por encima del 4%, la preferencia debería rotar hacia bonos CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-10 | Tipo: DOWN
+
+**Session ID:** `backtest_down_25915816-0d4a-4690-ab80-4967d2bbfe18`
+
+### Prompt
+```text
+De los siguientes bonos disponibles: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP, ¿cuáles bajarán de precio en el corto plazo?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de baja..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["GD46", "GD46D", "GD41", "GD41D", "AL41", "AL41D"],
+  "textual_response": "Basado en el análisis de los datos macroeconómicos y las fuentes de noticias recientes, se identifica un escenario de riesgo para los activos de mayor duration (vencimientos largos) en el horizonte de 45 días. \n\n**Análisis Causal:**\n[Incertidumbre Electoral + Guerra Comercial EE.UU.-China] ──► causes ──► [Persistencia de Riesgo País Elevado y Dificultad en Acumulación de Reservas] ──► signals [DOWN] on [Bonos de Larga Duración (GD46, GD41, AL41)].\n\n**Justificación Detallada:**\n1. **Vulnerabilidad por Duration:** Los bonos con vencimientos más lejanos (como los 2041 y 2046) poseen una mayor sensibilidad (convexidad) ante variaciones en el Riesgo País. Según el análisis de Fausto Spotorno (OJF & Asociados) obtenido de la base de datos de noticias, el riesgo país se mantiene elevado debido a la falta de acumulación de reservas internacionales (actualmente en -2.000 millones de USD netos según el contexto macro) y la incertidumbre electoral de cara a las legislativas.\n2. **Contexto Internacional:** La noticia de Bloomberg Línea destaca una ventana de 90 días de incertidumbre por la guerra comercial entre EE.UU. y China. Este entorno de 'Risk-Off' global reduce la demanda de activos emergentes riesgosos, afectando primero a los títulos más largos y volátiles.\n3. **Anomalía Cambiaria:** Se observa una 'brecha invertida' (Dólar Oficial 1200 vs MEP 1191.8), lo que sugiere una sobrevaluación del tipo de cambio oficial que puede generar inestabilidad y volatilidad en los precios de los activos dolarizados en el corto plazo.\n\n**Escenarios Condicionales:**\n- **Si** la incertidumbre por las tarifas de Trump se intensifica o el BCRA no logra revertir la tendencia de reservas netas negativas, **entonces** los bonos GD46 y GD41 experimentarán una corrección a la baja por el aumento de la tasa de descuento aplicada.\n- **Si** el Riesgo País comienza a comprimirse por un acuerdo imprevisto o un flujo fuerte de dólares, **entonces** estos mismos bonos podrían revertir la tendencia debido a su alta convexidad.\n\n**Trigger de Salida:** Considerar la venta o reducción de exposición a estos activos si el Riesgo País supera los 700 puntos básicos o si la brecha cambiaria comienza a ensancharse nuevamente de forma acelerada.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-10 | Tipo: PORTFOLIO
+
+**Session ID:** `backtest_portfolio_9532b10a-3280-4d71-9b25-5d99a9f43f4e`
+
+### Prompt
+```text
+Estás administrando un portafolio de inversión en bonos. Hoy es 2025-06-10.
+
+Estado actual del portafolio:
+- Efectivo disponible en pesos (ARS Cash): $0.00 ARS
+- Efectivo disponible en dólares (USD Cash): $0.00 USD
+- Tipo de cambio MEP de hoy: $1191.80 ARS/USD
+- Valor total del portafolio (valuado en ARS): $1021052.45 ARS
+Tenencias actuales:
+- AL30: 624.3756 unidades (Precio actual: $817.50 ARS, Precio de compra promedio: $800.80 ARS, Valor actual: $510427.07 ARS, Peso actual: 50.0%)
+- GD30: 607.1645 unidades (Precio actual: $841.00 ARS, Precio de compra promedio: $823.50 ARS, Valor actual: $510625.38 ARS, Peso actual: 50.0%)
+
+Bonos disponibles para operar hoy:
+- TZV26 (Precio actual: $1095.00 ARS)
+- AE38 (Precio actual: $858.80 ARS)
+- AL29 (Precio actual: $886.30 ARS)
+- AL30 (Precio actual: $817.50 ARS)
+- AL35 (Precio actual: $821.90 ARS)
+- AL41 (Precio actual: $752.60 ARS)
+- BA37D (Precio actual: $831.30 USD)
+- CO26 (Precio actual: $238.45 ARS)
+- GD29 (Precio actual: $898.00 ARS)
+- GD30 (Precio actual: $841.00 ARS)
+- GD35 (Precio actual: $828.30 ARS)
+- GD38 (Precio actual: $879.40 ARS)
+- GD41 (Precio actual: $765.80 ARS)
+- GD46 (Precio actual: $788.50 ARS)
+- GD29D (Precio actual: $0.76 USD)
+- GD30D (Precio actual: $0.71 USD)
+- GD38D (Precio actual: $0.74 USD)
+- GD35D (Precio actual: $0.69 USD)
+- GD41D (Precio actual: $0.64 USD)
+- GD46D (Precio actual: $0.66 USD)
+- AL29D (Precio actual: $0.74 USD)
+- AL30D (Precio actual: $0.69 USD)
+- AE38D (Precio actual: $0.72 USD)
+- AL35D (Precio actual: $0.69 USD)
+- AL41D (Precio actual: $0.63 USD)
+- TZX27 (Precio actual: $2.41 ARS)
+- TX31 (Precio actual: $9.27 ARS)
+- DICP (Precio actual: $412.10 ARS)
+- DIP0 (Precio actual: $408.00 ARS)
+- PARP (Precio actual: $224.30 ARS)
+- PAP0 (Precio actual: $227.00 ARS)
+- CUAP (Precio actual: $275.95 ARS)
+
+
+Predicciones del día:
+- Subirán (UP): Por favor, guíate por las predicciones y el análisis que acabas de realizar en tu respuesta anterior.
+- Bajarán (DOWN): GD46, GD46D, GD41, GD41D, AL41, AL41D
+  Análisis detallado de baja (DOWN) obtenido:
+  Basado en el análisis de los datos macroeconómicos y las fuentes de noticias recientes, se identifica un escenario de riesgo para los activos de mayor duration (vencimientos largos) en el horizonte de 45 días. 
+
+**Análisis Causal:**
+[Incertidumbre Electoral + Guerra Comercial EE.UU.-China] ──► causes ──► [Persistencia de Riesgo País Elevado y Dificultad en Acumulación de Reservas] ──► signals [DOWN] on [Bonos de Larga Duración (GD46, GD41, AL41)].
+
+**Justificación Detallada:**
+1. **Vulnerabilidad por Duration:** Los bonos con vencimientos más lejanos (como los 2041 y 2046) poseen una mayor sensibilidad (convexidad) ante variaciones en el Riesgo País. Según el análisis de Fausto Spotorno (OJF & Asociados) obtenido de la base de datos de noticias, el riesgo país se mantiene elevado debido a la falta de acumulación de reservas internacionales (actualmente en -2.000 millones de USD netos según el contexto macro) y la incertidumbre electoral de cara a las legislativas.
+2. **Contexto Internacional:** La noticia de Bloomberg Línea destaca una ventana de 90 días de incertidumbre por la guerra comercial entre EE.UU. y China. Este entorno de 'Risk-Off' global reduce la demanda de activos emergentes riesgosos, afectando primero a los títulos más largos y volátiles.
+3. **Anomalía Cambiaria:** Se observa una 'brecha invertida' (Dólar Oficial 1200 vs MEP 1191.8), lo que sugiere una sobrevaluación del tipo de cambio oficial que puede generar inestabilidad y volatilidad en los precios de los activos dolarizados en el corto plazo.
+
+**Escenarios Condicionales:**
+- **Si** la incertidumbre por las tarifas de Trump se intensifica o el BCRA no logra revertir la tendencia de reservas netas negativas, **entonces** los bonos GD46 y GD41 experimentarán una corrección a la baja por el aumento de la tasa de descuento aplicada.
+- **Si** el Riesgo País comienza a comprimirse por un acuerdo imprevisto o un flujo fuerte de dólares, **entonces** estos mismos bonos podrían revertir la tendencia debido a su alta convexidad.
+
+**Trigger de Salida:** Considerar la venta o reducción de exposición a estos activos si el Riesgo País supera los 700 puntos básicos o si la brecha cambiaria comienza a ensancharse nuevamente de forma acelerada.
+
+Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.
+
+Decide si deseas realizar cambios en el portafolio (comprar, vender, mantener o rebalancear).
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```.
+El JSON debe tener exactamente la siguiente estructura:
+{
+  "action": "REBALANCE" o "DO_NOTHING",
+  "bonds": {
+    "TICKER1": monto_ARS_asignado_1,
+    "TICKER2": monto_ARS_asignado_2
+  },
+  "justification": "Tu análisis y justificación detallada de los movimientos o de no hacer nada..."
+}
+
+Reglas importantes:
+1. El portafolio DEBE estar 100% invertido en bonos en todo momento. No se permite mantener efectivo (cash). Por lo tanto, la suma de los montos asignados en 'bonds' debe ser exactamente igual al valor total del portafolio ($1021052.45 ARS).
+2. Si seleccionas 'DO_NOTHING', solo es válido si el portafolio ya está 100% invertido y no deseas realizar cambios. Si hay efectivo disponible (como en el primer día), debes seleccionar 'REBALANCE' para invertir todo el efectivo.
+3. Si 'action' es 'REBALANCE', debes indicar el nuevo monto total en ARS que deseas tener asignado a CADA bono en 'bonds'. Para vender por completo un bono que posees, pon su monto en 0.0 o no lo incluyas en la lista 'bonds'.
+4. Nota sobre monedas: El sistema utiliza pesos para comprar bonos en pesos y dólares para bonos en dólares (tickers terminados en 'D'). Si no posees la moneda necesaria al operar, el sistema realizará automáticamente una conversión de moneda utilizando el tipo de cambio MEP de hoy.
+```
+
+### Respuesta
+El portafolio se encuentra actualmente 100% invertido en AL30 y GD30, los cuales son los activos más líquidos y con menor duration relativa frente a los bonos señalados con tendencia bajista (DOWN). El análisis causal indica que el riesgo principal para los próximos 45 días recae sobre los bonos de larga duración (GD46, GD41, AL41) debido a la sensibilidad de su convexidad ante la incertidumbre electoral y la guerra comercial EE.UU.-China, factores que mantienen elevado el Riesgo País. Dado que AL30 y GD30 no están incluidos en la lista de activos en caída y actúan como los benchmarks del mercado, no existe una razón técnica para rotar la cartera hacia activos de mayor riesgo o menor liquidez en este momento. Se mantiene la posición actual para evitar la exposición a la volatilidad de los vencimientos largos.
+
+---
+
+## Fecha: 2025-06-15 | Tipo: UP
+
+**Session ID:** `backtest_up_37a43495-b48e-45a1-9987-8857097ea304`
+
+### Prompt
+```text
+De los siguientes bonos soberanos argentinos: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP
+¿Cuáles subirán de precio en el corto plazo debido a factores macroeconómicos y políticos (e.g. inflación IPC, tipo de cambio MEP/CCL/Blue, superávit fiscal, reservas del BCRA, tasa de política monetaria)?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de alza..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": [
+    "AE38",
+    "AL29",
+    "AL30",
+    "AL35",
+    "AL41",
+    "GD29",
+    "GD30",
+    "GD35",
+    "GD38",
+    "GD41",
+    "GD46",
+    "GD29D",
+    "GD30D",
+    "GD38D",
+    "GD35D",
+    "GD41D",
+    "GD46D",
+    "AL29D",
+    "AL30D",
+    "AE38D",
+    "AL35D",
+    "AL41D",
+    "TZX27",
+    "TX31",
+    "DICP",
+    "DIP0",
+    "PARP",
+    "PAP0",
+    "CUAP"
+  ],
+  "textual_response": "Para un horizonte de inversión de 45 días, se prevé un alza en los precios de los bonos Hard Dollar y los activos ajustados por CER, fundamentado en los siguientes pilares macroeconómicos extraídos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j:\n\n**1. Análisis de Bonos Hard Dollar (AL, GD, AE):**\nEl motor principal es la solidez fiscal actual. Con un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones, el mercado percibe una reducción drástica en el riesgo de default.\n- [Superávit Fiscal Primario y Financiero] ──► causes ──► [Reducción de la probabilidad de default y compresión del Riesgo País (actualmente en 651)] ──► signals [UP] on Hard Dollar bonds.\n- [Baja Brecha Cambiaria (MEP 1192.9 vs Oficial 1200)] ──► causes ──► [Estabilidad monetaria y menor presión sobre las reservas del BCRA] ──► signals [UP] on Hard Dollar bonds.\n\n**2. Análisis de Bonos CER (TZX, TX, DICP, etc.):**\nAunque la inflación mensual ha desacelerado al 1.6%, el grafo de conocimiento indica que las tasas reales excepcionalmente altas mantienen el atractivo de estos activos.\n- [Tasas Reales Altas] ──► causes ──► [Aumento del atractivo relativo de activos indexados frente a tasa fija] ──► signals [UP] on CER bonds.\n\n**Condicionales y Triggers de Salida (Próximos 45 días):**\n- **Vender/Salir si:** La brecha cambiaria (MEP/CCL vs Oficial) vuelve a subir por encima del 40%, lo que indicaría una vuelta de la inestabilidad cambiaria.\n- **Vender/Salir si:** El resultado fiscal primario mensual se vuelve negativo, rompiendo la narrativa de ajuste fiscal.\n- **Monitorear:** La relación entre la inflación mensual y la tasa de política monetaria (29%). Si la inflación se acelera bruscamente, los bonos CER ganarán terreno sobre los Hard Dollar.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-15 | Tipo: DOWN
+
+**Session ID:** `backtest_down_115bd255-933a-4e51-8a78-b46facc0895a`
+
+### Prompt
+```text
+De los siguientes bonos disponibles: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP, ¿cuáles bajarán de precio en el corto plazo?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de baja..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": [],
+  "textual_response": "Tras analizar la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, no se han encontrado señales de venta ('DOWN') ni recomendaciones de baja para ninguno de los bonos listados en el corto plazo (ventana de 45 días). \n\nEl contexto macroeconómico actual, obtenido de la base de datos, presenta indicadores que tienden a sostener los precios en el corto plazo:\n1. **Desaceleración de la Inflación**: El IPC de mayo cerró en 1,5%, el nivel más bajo desde 2020, lo que reduce la presión sobre las tasas reales.\n2. **Sustentabilidad Fiscal**: Se registran balances primarios y financieros positivos, un pilar fundamental para la confianza en los activos soberanos.\n3. **Estabilidad Cambiaria**: La brecha cambiaria es prácticamente inexistente (Dólar Oficial en 1200 vs MEP/CCL en ~1190), lo que elimina presiones inmediatas de salto cambiario.\n\nSin embargo, existen **factores de riesgo** que el inversor debe monitorear estrictamente, ya que podrían actuar como disparadores de una baja de precios:\n- **Reservas Netas**: El BCRA mantiene reservas netas negativas (-2.000 millones USD), lo que representa la principal vulnerabilidad estructural.\n- **Misión del FMI**: La visita técnica a finales de junio es un evento crítico; cualquier desacuerdo en las metas podría generar volatilidad.\n- **Cierre de Ventana Corporativa**: Según fuentes de noticias (caso Banco Macro), se observa una mayor selectividad y exigencia de tasas más altas por parte de los inversores internacionales, lo que sugiere que el optimismo ciego está siendo reemplazado por un análisis más riguroso del riesgo.\n\n**Escenarios Condicionales**:\n- *Si la misión del FMI reporta incumplimientos en las metas*, entonces es probable que los bonos Hard Dolar (GD30, AL30) sufran una corrección a la baja.\n- *Si la brecha cambiaria comienza a abrirse nuevamente por encima del 20%*, se recomienda reducir exposición a activos en pesos y migrar hacia Hard Dólar.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-15 | Tipo: PORTFOLIO
+
+**Session ID:** `backtest_portfolio_600be8b4-cbd5-4947-92ee-0e39495f6136`
+
+### Prompt
+```text
+Estás administrando un portafolio de inversión en bonos. Hoy es 2025-06-15.
+
+Estado actual del portafolio:
+- Efectivo disponible en pesos (ARS Cash): $0.00 ARS
+- Efectivo disponible en dólares (USD Cash): $0.00 USD
+- Tipo de cambio MEP de hoy: $1192.90 ARS/USD
+- Valor total del portafolio (valuado en ARS): $1004086.46 ARS
+Tenencias actuales:
+- AL30: 624.3756 unidades (Precio actual: $805.40 ARS, Precio de compra promedio: $800.80 ARS, Valor actual: $502872.13 ARS, Peso actual: 50.1%)
+- GD30: 607.1645 unidades (Precio actual: $825.50 ARS, Precio de compra promedio: $823.50 ARS, Valor actual: $501214.33 ARS, Peso actual: 49.9%)
+
+Bonos disponibles para operar hoy:
+- TZV26 (Precio actual: $1099.00 ARS)
+- AE38 (Precio actual: $846.30 ARS)
+- AL29 (Precio actual: $870.80 ARS)
+- AL30 (Precio actual: $805.40 ARS)
+- AL35 (Precio actual: $812.80 ARS)
+- AL41 (Precio actual: $743.20 ARS)
+- BA37D (Precio actual: $825.00 USD)
+- CO26 (Precio actual: $237.45 ARS)
+- GD29 (Precio actual: $890.00 ARS)
+- GD30 (Precio actual: $825.50 ARS)
+- GD35 (Precio actual: $814.50 ARS)
+- GD38 (Precio actual: $870.60 ARS)
+- GD41 (Precio actual: $755.90 ARS)
+- GD46 (Precio actual: $783.00 ARS)
+- GD29D (Precio actual: $0.75 USD)
+- GD30D (Precio actual: $0.69 USD)
+- GD38D (Precio actual: $0.73 USD)
+- GD35D (Precio actual: $0.68 USD)
+- GD41D (Precio actual: $0.63 USD)
+- GD46D (Precio actual: $0.66 USD)
+- AL29D (Precio actual: $0.73 USD)
+- AL30D (Precio actual: $0.68 USD)
+- AE38D (Precio actual: $0.71 USD)
+- AL35D (Precio actual: $0.68 USD)
+- AL41D (Precio actual: $0.62 USD)
+- TZX27 (Precio actual: $2.41 ARS)
+- TX31 (Precio actual: $9.53 ARS)
+- DICP (Precio actual: $417.05 ARS)
+- DIP0 (Precio actual: $415.40 ARS)
+- PARP (Precio actual: $224.00 ARS)
+- PAP0 (Precio actual: $223.55 ARS)
+- CUAP (Precio actual: $278.80 ARS)
+
+
+Predicciones del día:
+- Subirán (UP): Por favor, guíate por las predicciones y el análisis que acabas de realizar en tu respuesta anterior.
+- Bajarán (DOWN): Ninguno
+
+Decide si deseas realizar cambios en el portafolio (comprar, vender, mantener o rebalancear).
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```.
+El JSON debe tener exactamente la siguiente estructura:
+{
+  "action": "REBALANCE" o "DO_NOTHING",
+  "bonds": {
+    "TICKER1": monto_ARS_asignado_1,
+    "TICKER2": monto_ARS_asignado_2
+  },
+  "justification": "Tu análisis y justificación detallada de los movimientos o de no hacer nada..."
+}
+
+Reglas importantes:
+1. El portafolio DEBE estar 100% invertido en bonos en todo momento. No se permite mantener efectivo (cash). Por lo tanto, la suma de los montos asignados en 'bonds' debe ser exactamente igual al valor total del portafolio ($1004086.46 ARS).
+2. Si seleccionas 'DO_NOTHING', solo es válido si el portafolio ya está 100% invertido y no deseas realizar cambios. Si hay efectivo disponible (como en el primer día), debes seleccionar 'REBALANCE' para invertir todo el efectivo.
+3. Si 'action' es 'REBALANCE', debes indicar el nuevo monto total en ARS que deseas tener asignado a CADA bono en 'bonds'. Para vender por completo un bono que posees, pon su monto en 0.0 o no lo incluyas en la lista 'bonds'.
+4. Nota sobre monedas: El sistema utiliza pesos para comprar bonos en pesos y dólares para bonos en dólares (tickers terminados en 'D'). Si no posees la moneda necesaria al operar, el sistema realizará automáticamente una conversión de moneda utilizando el tipo de cambio MEP de hoy.
+```
+
+### Respuesta
+Se mantiene la posición actual en AL30 y GD30 basándose en el análisis del contexto macroeconómico al 2025-06-15. El dato más relevante es el fuerte superávit fiscal (Primario: 845.9B ARS, Financiero: 572.3B ARS), que actúa como el principal motor alcista para los bonos soberanos en el corto y mediano plazo. Asimismo, la brecha cambiaria es prácticamente inexistente (MEP $1192.9 vs Oficial $1200), lo que reduce la probabilidad de shocks cambiarios bruscos en el horizonte de 45 días. Dado que no se han detectado señales de venta (DOWN) ni oportunidades con mayor consenso en otros activos, la estrategia óptima es mantener la exposición a los activos más líquidos del mercado (AL30/GD30) para capturar la convergencia del riesgo país (actualmente en 651 bps) y la sostenibilidad fiscal. 
+
+Causalidad: [Superávit Fiscal] ──► reduce riesgo de default ──► comprime Riesgo País ──► señales UP en [AL30/GD30].
+
+Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.
+
+---
+
+## Fecha: 2025-06-20 | Tipo: UP
+
+**Session ID:** `backtest_up_d998eceb-65d5-4a38-9415-bfd9135bdbb3`
+
+### Prompt
+```text
+De los siguientes bonos soberanos argentinos: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP
+¿Cuáles subirán de precio en el corto plazo debido a factores macroeconómicos y políticos (e.g. inflación IPC, tipo de cambio MEP/CCL/Blue, superávit fiscal, reservas del BCRA, tasa de política monetaria)?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de alza..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["AL30", "GD30", "AL35", "GD35", "AL41", "GD41"],
+  "textual_response": "El análisis de los activos seleccionados para el horizonte de 45 días se basa en la convergencia de tres factores macroeconómicos críticos y la lógica de duration (sensibilidad al precio).\n\n**1. Cadena Causal de Alza:**\n- **Superávit Fiscal $\\longrightarrow$ Solvencia $\\longrightarrow$ $\\downarrow$ Riesgo País $\\longrightarrow$ $\\uparrow$ Precio de Bonos:** La base de datos relacional de Supabase muestra un superávit primario robusto (845.949 millones) y un superávit financiero positivo (572.341 millones). Este ancla fiscal es el principal motor de confianza, ya que reduce la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 bps).\n- **Desinflación $\\longrightarrow$ $\\downarrow$ Tasas Reales $\\longrightarrow$ $\\uparrow$ Valor Presente $\\longrightarrow$ $\\uparrow$ Precio de Bonos:** Con una inflación mensual del 1,6%, el camino desinflacionario permite una reducción de las tasas de descuento aplicadas a los flujos futuros, incrementando el valor actual de los cupones.\n- **Baja Brecha Cambiaria $\\longrightarrow$ Estabilidad $\\longrightarrow$ $\\uparrow$ Confianza $\\longrightarrow$ $\\uparrow$ Precio de Bonos:** La proximidad entre el dólar MEP (1173,8) y el Oficial (1180) elimina la presión inmediata sobre las reservas y reduce la volatilidad del mercado.\n\n**2. Justificación por Ticker:**\n- **AL30 y GD30 (Tácticos):** Son los activos más líquidos. Según fuentes de noticias (IOL), el AL30 es una opción táctica superior debido a su esquema de amortización, que reduce el riesgo de reestructuración en el corto plazo.\n- **AL35, GD35, AL41 y GD41 (Duration):** Siguiendo la recomendación de GMA Capital, en escenarios de 'shock de confianza' y compresión de rendimientos, la estrategia óptima es 'estirar duration'. Estos bonos, al tener vencimientos más largos, presentan una mayor sensibilidad al precio: una caída en la tasa de retorno (TIR) se traduce en un incremento porcentual del precio mucho más agresivo que en los bonos cortos.\n\n**3. Escenarios y Triggers (Próximos 45 días):**\n- **Escenario Alcista:** Si el BCRA comienza a acumular reservas netas (actualmente en -2.000 millones), se eliminaría el principal techo actual, disparando los precios de los bonos largos (35s y 41s).\n- **Escenario de Riesgo:** Si la inflación mensual vuelve a acelerarse por encima del 3% o la brecha cambiaria se ensancha significativamente, la tendencia de alza se revertiría, sugiriendo una salida hacia activos de menor duration o Hard Dólar.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-20 | Tipo: DOWN
+
+**Session ID:** `backtest_down_d05ce379-ec98-4f14-b138-ed2caa7dc452`
+
+### Prompt
+```text
+De los siguientes bonos disponibles: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP, ¿cuáles bajarán de precio en el corto plazo?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de baja..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["TZX27", "TX31", "DICP", "DIP0", "PARP", "PAP0", "CUAP"],
+  "textual_response": "El análisis causal para los próximos 45 días indica una tendencia a la baja en los precios de los bonos ajustados por CER (TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP). \n\n**Justificación Causal:**\nLa variable macroeconómica determinante es la fuerte desaceleración de la inflación, que se sitúa actualmente en un 1,6% mensual (según la base de datos relacional de Supabase). \n\nEl camino causal es el siguiente: \n`Baja de Inflación (1,6%)` ──► `Reducción del rendimiento real de activos indexados` ──► `Menor atractivo relativo frente a tasa fija` ──► `Presión a la baja en precios de Bonos CER`.\n\nDe acuerdo con el grafo de conocimiento Neo4j, en un 'sendero de desinflación', el mercado tiende a rotar su cartera hacia instrumentos de tasa fija, ya que los bonos CER pierden su principal motor de valorización al reducirse la tasa de ajuste. \n\nEn contraste, los bonos Hard Dollar (AL y GD) cuentan con un soporte fundamental sólido debido al superávit primario (845.949 millones) y financiero (572.341 millones) registrados, lo que mitiga el riesgo asociado a las reservas netas negativas (-2.000 millones) en el corto plazo.\n\n**Condicionales y Riesgos:**\n- **Si la inflación vuelve a acelerarse** por encima del 3-4% mensual, la tendencia de los bonos CER podría revertirse rápidamente.\n- **Si la brecha cambiaria se amplía** significativamente (actualmente muy baja con MEP en 1173 y Oficial en 1180), los bonos Hard Dollar podrían sufrir correcciones a pesar del superávit fiscal.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-20 | Tipo: PORTFOLIO
+
+**Session ID:** `backtest_portfolio_8d1e5f1c-1c04-4141-b061-bfef47f5ea36`
+
+### Prompt
+```text
+Estás administrando un portafolio de inversión en bonos. Hoy es 2025-06-20.
+
+Estado actual del portafolio:
+- Efectivo disponible en pesos (ARS Cash): $0.00 ARS
+- Efectivo disponible en dólares (USD Cash): $0.00 USD
+- Tipo de cambio MEP de hoy: $1173.80 ARS/USD
+- Valor total del portafolio (valuado en ARS): $985230.12 ARS
+Tenencias actuales:
+- AL30: 624.3756 unidades (Precio actual: $789.30 ARS, Precio de compra promedio: $800.80 ARS, Valor actual: $492819.68 ARS, Peso actual: 50.0%)
+- GD30: 607.1645 unidades (Precio actual: $811.00 ARS, Precio de compra promedio: $823.50 ARS, Valor actual: $492410.44 ARS, Peso actual: 50.0%)
+
+Bonos disponibles para operar hoy:
+- TZV26 (Precio actual: $1087.10 ARS)
+- AE38 (Precio actual: $827.50 ARS)
+- AL29 (Precio actual: $867.80 ARS)
+- AL30 (Precio actual: $789.30 ARS)
+- AL35 (Precio actual: $791.50 ARS)
+- AL41 (Precio actual: $724.90 ARS)
+- BA37D (Precio actual: $807.00 USD)
+- CO26 (Precio actual: $235.90 ARS)
+- GD29 (Precio actual: $885.00 ARS)
+- GD30 (Precio actual: $811.00 ARS)
+- GD35 (Precio actual: $797.00 ARS)
+- GD38 (Precio actual: $847.40 ARS)
+- GD41 (Precio actual: $733.60 ARS)
+- GD46 (Precio actual: $766.70 ARS)
+- GD29D (Precio actual: $0.75 USD)
+- GD30D (Precio actual: $0.69 USD)
+- GD38D (Precio actual: $0.73 USD)
+- GD35D (Precio actual: $0.68 USD)
+- GD41D (Precio actual: $0.62 USD)
+- GD46D (Precio actual: $0.65 USD)
+- AL29D (Precio actual: $0.74 USD)
+- AL30D (Precio actual: $0.67 USD)
+- AE38D (Precio actual: $0.71 USD)
+- AL35D (Precio actual: $0.67 USD)
+- AL41D (Precio actual: $0.62 USD)
+- TZX27 (Precio actual: $2.43 ARS)
+- TX31 (Precio actual: $9.69 ARS)
+- DICP (Precio actual: $413.50 ARS)
+- DIP0 (Precio actual: $414.20 ARS)
+- PARP (Precio actual: $225.00 ARS)
+- PAP0 (Precio actual: $230.00 ARS)
+- CUAP (Precio actual: $278.60 ARS)
+
+
+Predicciones del día:
+- Subirán (UP): Por favor, guíate por las predicciones y el análisis que acabas de realizar en tu respuesta anterior.
+- Bajarán (DOWN): TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP
+  Análisis detallado de baja (DOWN) obtenido:
+  El análisis causal para los próximos 45 días indica una tendencia a la baja en los precios de los bonos ajustados por CER (TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP). 
+
+**Justificación Causal:**
+La variable macroeconómica determinante es la fuerte desaceleración de la inflación, que se sitúa actualmente en un 1,6% mensual (según la base de datos relacional de Supabase). 
+
+El camino causal es el siguiente: 
+`Baja de Inflación (1,6%)` ──► `Reducción del rendimiento real de activos indexados` ──► `Menor atractivo relativo frente a tasa fija` ──► `Presión a la baja en precios de Bonos CER`.
+
+De acuerdo con el grafo de conocimiento Neo4j, en un 'sendero de desinflación', el mercado tiende a rotar su cartera hacia instrumentos de tasa fija, ya que los bonos CER pierden su principal motor de valorización al reducirse la tasa de ajuste. 
+
+En contraste, los bonos Hard Dollar (AL y GD) cuentan con un soporte fundamental sólido debido al superávit primario (845.949 millones) y financiero (572.341 millones) registrados, lo que mitiga el riesgo asociado a las reservas netas negativas (-2.000 millones) en el corto plazo.
+
+**Condicionales y Riesgos:**
+- **Si la inflación vuelve a acelerarse** por encima del 3-4% mensual, la tendencia de los bonos CER podría revertirse rápidamente.
+- **Si la brecha cambiaria se amplía** significativamente (actualmente muy baja con MEP en 1173 y Oficial en 1180), los bonos Hard Dollar podrían sufrir correcciones a pesar del superávit fiscal.
+
+Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.
+
+Decide si deseas realizar cambios en el portafolio (comprar, vender, mantener o rebalancear).
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```.
+El JSON debe tener exactamente la siguiente estructura:
+{
+  "action": "REBALANCE" o "DO_NOTHING",
+  "bonds": {
+    "TICKER1": monto_ARS_asignado_1,
+    "TICKER2": monto_ARS_asignado_2
+  },
+  "justification": "Tu análisis y justificación detallada de los movimientos o de no hacer nada..."
+}
+
+Reglas importantes:
+1. El portafolio DEBE estar 100% invertido en bonos en todo momento. No se permite mantener efectivo (cash). Por lo tanto, la suma de los montos asignados en 'bonds' debe ser exactamente igual al valor total del portafolio ($985230.12 ARS).
+2. Si seleccionas 'DO_NOTHING', solo es válido si el portafolio ya está 100% invertido y no deseas realizar cambios. Si hay efectivo disponible (como en el primer día), debes seleccionar 'REBALANCE' para invertir todo el efectivo.
+3. Si 'action' es 'REBALANCE', debes indicar el nuevo monto total en ARS que deseas tener asignado a CADA bono en 'bonds'. Para vender por completo un bono que posees, pon su monto en 0.0 o no lo incluyas en la lista 'bonds'.
+4. Nota sobre monedas: El sistema utiliza pesos para comprar bonos en pesos y dólares para bonos en dólares (tickers terminados en 'D'). Si no posees la moneda necesaria al operar, el sistema realizará automáticamente una conversión de moneda utilizando el tipo de cambio MEP de hoy.
+```
+
+### Respuesta
+El portafolio ya se encuentra 100% invertido en activos Hard Dollar (AL30 y GD30), los cuales presentan una perspectiva alcista (UP) para el horizonte de 45 días. Esta tendencia está respaldada por el sólido superávit primario (845.949 millones) y financiero (572.341 millones), que actúan como soporte fundamental frente a las reservas netas negativas. Por otro lado, el análisis causal indica una tendencia a la baja (DOWN) para los bonos ajustados por CER debido a la desaceleración de la inflación (1,6% mensual), lo que valida la decisión de mantener la exposición actual y evitar la rotación hacia instrumentos indexados. La distribución 50/50 entre ley local y ley extranjera mantiene un equilibrio de riesgo adecuado.
+
+---
+
+## Fecha: 2025-06-25 | Tipo: UP
+
+**Session ID:** `backtest_up_59d5e9b5-d181-4273-ae05-ebe5c2f2cff3`
+
+### Prompt
+```text
+De los siguientes bonos soberanos argentinos: AL29, AL30, AL35, BA37D, CO26, GD30, GD35, GD30D, GD38D, AL29D, AL30D, AE38D, TZX27, TX31, DICP, AE38, AL41, GD29, GD38, GD41, GD46, GD29D, GD35D, GD41D, GD46D, AL35D, AL41D, DIP0, PARP, PAP0, CUAP, TZV26
+¿Cuáles subirán de precio en el corto plazo debido a factores macroeconómicos y políticos (e.g. inflación IPC, tipo de cambio MEP/CCL/Blue, superávit fiscal, reservas del BCRA, tasa de política monetaria)?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de alza..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["AL30", "GD30", "AL35", "GD35", "AL29", "GD29"],
+  "textual_response": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 25 de junio de 2025, se observa un escenario macroeconómico altamente favorable para los bonos soberanos en el corto plazo (horizonte de 45 días). \n\n**Análisis Causal:**\n1. **Sostenibilidad Fiscal:** El registro de un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones actúa como el principal motor alcista. \n   `Superávit Financiero ──► reduce ──► Probabilidad de Default ──► comprime ──► Riesgo País (actualmente en 651) ──► señales UP en Bonos Soberanos`.\n2. **Estabilidad Cambiaria:** La brecha cambiaria es prácticamente inexistente (Dólar MEP 1202.2 vs. Oficial 1205), lo que elimina la volatilidad por saltos bruscos del tipo de cambio y aumenta la confianza en los activos nominados en dólares.\n   `Brecha Cambiaria $\approx$ 0% ──► estabiliza ──► Expectativas de Mercado ──► señales UP en AL30/GD30`.\n3. **Desaceleración Inflacionaria:** Con una inflación mensual del 1.6%, se reduce la presión sobre las tasas reales, favoreciendo la detención de la caída de precios en bonos de tasa fija.\n\n**Justificación de Selección:**\nSe seleccionan AL30, GD30, AL35, GD35, AL29 y GD29 por ser los activos más líquidos del mercado. En contextos de compresión de riesgo país, estos bonos suelen presentar la mayor beta y reaccionar más rápido a las mejoras macroeconómicas.\n\n**Condicionales y Triggers de Salida:**\n- **Vender si:** La brecha cambiaria (MEP/Oficial) vuelve a superar el 20% o si el superávit financiero se torna deficitario.\n- **Objetivo:** Considerar la salida de la posición en un plazo de 45 días o si el Riesgo País desciende por debajo de los 500 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-25 | Tipo: DOWN
+
+**Session ID:** `backtest_down_fa8cc77f-e70c-45b7-8151-dfe73f4324c2`
+
+### Prompt
+```text
+De los siguientes bonos disponibles: AL29, AL30, AL35, BA37D, CO26, GD30, GD35, GD30D, GD38D, AL29D, AL30D, AE38D, TZX27, TX31, DICP, AE38, AL41, GD29, GD38, GD41, GD46, GD29D, GD35D, GD41D, GD46D, AL35D, AL41D, DIP0, PARP, PAP0, CUAP, TZV26, ¿cuáles bajarán de precio en el corto plazo?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de baja..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["AL35", "GD35", "AL41", "GD41", "GD46", "GD38", "AE38"],
+  "textual_response": "Basado en el análisis de las variables macroeconómicas y la red causal, se prevé una presión bajista en el corto plazo (ventana de 45 días) para los bonos soberanos de mayor duración, ya que son los más sensibles a las variaciones del Riesgo País.\n\n**Análisis Causal:**\n`[Escasa acumulación de reservas] ──► causes ──► [Aumento de la percepción de riesgo soberano / Riesgo País] ──► signals [DOWN] on [Bonos Soberanos de larga duración]`\n\n**Justificación Detallada:**\n1. **Debilidad del Frente Externo:** Según la base de datos relacional de Supabase (`obtener_contexto_macro`), las **reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD)**. Esta fragilidad es el principal detonante de desconfianza en el mercado de renta fija.\n2. **Consenso de Mercado:** El grafo de conocimiento Neo4j (`query_concept_paths`) indica que la falta de acumulación de divisas debilita la posición externa, incrementando la percepción de riesgo. Esto es respaldado por reportes recientes de la vista de fuentes de noticias, donde el **Instituto Internacional de Finanzas (IIF)** afirma que \"recomponer reservas sigue siendo una prioridad para la Argentina\".\n3. **Apretón de Liquidez:** Se registran noticias sobre un \"apretón de liquidez\" en el mercado local, con el nivel de rollover de deuda en pesos más bajo del año, lo que sugiere que el Gobierno enfrenta mayores dificultades para financiar sus vencimientos inmediatos.\n4. **Sensibilidad por Duración:** Los bonos seleccionados (AL35, GD35, AL41, GD41, GD46, GD38, AE38) poseen vencimientos más lejanos, lo que implica una mayor **duración**. En términos financieros, esto significa que cualquier incremento en el Riesgo País (actualmente en 651 puntos) impacta con mayor fuerza en la caída de sus precios en comparación con los bonos de corto plazo (como AL30 o GD30).\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario Bajista:** *Si el BCRA no logra revertir la tendencia de reservas netas negativas o si el Riesgo País supera los 700-750 puntos básicos*, se recomienda reducir la exposición a estos activos de largo plazo.\n- **Escenario de Reversión:** *Si se anuncian nuevos desembolsos multilaterales significativos o una acumulación genuina de reservas* (no vía deuda), la presión bajista podría mitigarse.\n\n**Sugerencia de Salida:** Considerar la reducción de posiciones en estos activos si el objetivo de rendimiento (TIR) es alcanzado prematuramente o si la brecha cambiaria comienza a acelerarse, afectando la confianza en la estabilidad del peso.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+}
+```
+
+---
+
+## Fecha: 2025-06-25 | Tipo: PORTFOLIO
+
+**Session ID:** `backtest_portfolio_dffa99dd-9669-452b-ba5d-3f61dbd9e5a4`
+
+### Prompt
+```text
+Estás administrando un portafolio de inversión en bonos. Hoy es 2025-06-25.
+
+Estado actual del portafolio:
+- Efectivo disponible en pesos (ARS Cash): $0.00 ARS
+- Efectivo disponible en dólares (USD Cash): $0.00 USD
+- Tipo de cambio MEP de hoy: $1202.20 ARS/USD
+- Valor total del portafolio (valuado en ARS): $1028441.69 ARS
+Tenencias actuales:
+- AL30: 624.3756 unidades (Precio actual: $823.50 ARS, Precio de compra promedio: $800.80 ARS, Valor actual: $514173.33 ARS, Peso actual: 50.0%)
+- GD30: 607.1645 unidades (Precio actual: $847.00 ARS, Precio de compra promedio: $823.50 ARS, Valor actual: $514268.37 ARS, Peso actual: 50.0%)
+
+Bonos disponibles para operar hoy:
+- AL29 (Precio actual: $890.00 ARS)
+- AL30 (Precio actual: $823.50 ARS)
+- AL35 (Precio actual: $826.70 ARS)
+- BA37D (Precio actual: $837.50 USD)
+- CO26 (Precio actual: $241.95 ARS)
+- GD30 (Precio actual: $847.00 ARS)
+- GD35 (Precio actual: $835.80 ARS)
+- GD30D (Precio actual: $0.71 USD)
+- GD38D (Precio actual: $0.74 USD)
+- AL29D (Precio actual: $0.75 USD)
+- AL30D (Precio actual: $0.69 USD)
+- AE38D (Precio actual: $0.72 USD)
+- TZX27 (Precio actual: $2.41 ARS)
+- TX31 (Precio actual: $9.53 ARS)
+- DICP (Precio actual: $412.40 ARS)
+- AE38 (Precio actual: $862.00 ARS)
+- AL41 (Precio actual: $753.60 ARS)
+- GD29 (Precio actual: $919.50 ARS)
+- GD38 (Precio actual: $884.00 ARS)
+- GD41 (Precio actual: $768.70 ARS)
+- GD46 (Precio actual: $790.00 ARS)
+- GD29D (Precio actual: $0.77 USD)
+- GD35D (Precio actual: $0.70 USD)
+- GD41D (Precio actual: $0.64 USD)
+- GD46D (Precio actual: $0.66 USD)
+- AL35D (Precio actual: $0.69 USD)
+- AL41D (Precio actual: $0.63 USD)
+- DIP0 (Precio actual: $413.00 ARS)
+- PARP (Precio actual: $224.00 ARS)
+- PAP0 (Precio actual: $229.90 ARS)
+- CUAP (Precio actual: $278.00 ARS)
+- TZV26 (Precio actual: $1120.00 ARS)
+
+
+Predicciones del día:
+- Subirán (UP): Por favor, guíate por las predicciones y el análisis que acabas de realizar en tu respuesta anterior.
+- Bajarán (DOWN): AL35, GD35, AL41, GD41, GD46, GD38, AE38
+  Análisis detallado de baja (DOWN) obtenido:
+  Basado en el análisis de las variables macroeconómicas y la red causal, se prevé una presión bajista en el corto plazo (ventana de 45 días) para los bonos soberanos de mayor duración, ya que son los más sensibles a las variaciones del Riesgo País.
+
+**Análisis Causal:**
+`[Escasa acumulación de reservas] ──► causes ──► [Aumento de la percepción de riesgo soberano / Riesgo País] ──► signals [DOWN] on [Bonos Soberanos de larga duración]`
+
+**Justificación Detallada:**
+1. **Debilidad del Frente Externo:** Según la base de datos relacional de Supabase (`obtener_contexto_macro`), las **reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD)**. Esta fragilidad es el principal detonante de desconfianza en el mercado de renta fija.
+2. **Consenso de Mercado:** El grafo de conocimiento Neo4j (`query_concept_paths`) indica que la falta de acumulación de divisas debilita la posición externa, incrementando la percepción de riesgo. Esto es respaldado por reportes recientes de la vista de fuentes de noticias, donde el **Instituto Internacional de Finanzas (IIF)** afirma que "recomponer reservas sigue siendo una prioridad para la Argentina".
+3. **Apretón de Liquidez:** Se registran noticias sobre un "apretón de liquidez" en el mercado local, con el nivel de rollover de deuda en pesos más bajo del año, lo que sugiere que el Gobierno enfrenta mayores dificultades para financiar sus vencimientos inmediatos.
+4. **Sensibilidad por Duración:** Los bonos seleccionados (AL35, GD35, AL41, GD41, GD46, GD38, AE38) poseen vencimientos más lejanos, lo que implica una mayor **duración**. En términos financieros, esto significa que cualquier incremento en el Riesgo País (actualmente en 651 puntos) impacta con mayor fuerza en la caída de sus precios en comparación con los bonos de corto plazo (como AL30 o GD30).
+
+**Escenarios Condicionales y Triggers:**
+- **Escenario Bajista:** *Si el BCRA no logra revertir la tendencia de reservas netas negativas o si el Riesgo País supera los 700-750 puntos básicos*, se recomienda reducir la exposición a estos activos de largo plazo.
+- **Escenario de Reversión:** *Si se anuncian nuevos desembolsos multilaterales significativos o una acumulación genuina de reservas* (no vía deuda), la presión bajista podría mitigarse.
+
+**Sugerencia de Salida:** Considerar la reducción de posiciones en estos activos si el objetivo de rendimiento (TIR) es alcanzado prematuramente o si la brecha cambiaria comienza a acelerarse, afectando la confianza en la estabilidad del peso.
+
+*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*
+
+Decide si deseas realizar cambios en el portafolio (comprar, vender, mantener o rebalancear).
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```.
+El JSON debe tener exactamente la siguiente estructura:
+{
+  "action": "REBALANCE" o "DO_NOTHING",
+  "bonds": {
+    "TICKER1": monto_ARS_asignado_1,
+    "TICKER2": monto_ARS_asignado_2
+  },
+  "justification": "Tu análisis y justificación detallada de los movimientos o de no hacer nada..."
+}
+
+Reglas importantes:
+1. El portafolio DEBE estar 100% invertido en bonos en todo momento. No se permite mantener efectivo (cash). Por lo tanto, la suma de los montos asignados en 'bonds' debe ser exactamente igual al valor total del portafolio ($1028441.69 ARS).
+2. Si seleccionas 'DO_NOTHING', solo es válido si el portafolio ya está 100% invertido y no deseas realizar cambios. Si hay efectivo disponible (como en el primer día), debes seleccionar 'REBALANCE' para invertir todo el efectivo.
+3. Si 'action' es 'REBALANCE', debes indicar el nuevo monto total en ARS que deseas tener asignado a CADA bono en 'bonds'. Para vender por completo un bono que posees, pon su monto en 0.0 o no lo incluyas en la lista 'bonds'.
+4. Nota sobre monedas: El sistema utiliza pesos para comprar bonos en pesos y dólares para bonos en dólares (tickers terminados en 'D'). Si no posees la moneda necesaria al operar, el sistema realizará automáticamente una conversión de moneda utilizando el tipo de cambio MEP de hoy.
+```
+
+### Respuesta
+El portafolio se encuentra actualmente 100% invertido en AL30 y GD30, los cuales son los activos más líquidos y con menor sensibilidad al riesgo de duración en la curva soberana. El análisis causal actual indica una tendencia bajista (DOWN) específicamente para los bonos de larga duración (AL35, GD35, AL41, GD41, GD46, GD38, AE38) debido a la fragilidad del frente externo (reservas netas negativas de -2.000 millones USD) y el consecuente aumento del Riesgo País. Dado que AL30 y GD30 no forman parte de la lista de activos en caída y presentan un perfil de riesgo más adecuado para el horizonte de inversión de 45 días en este contexto de incertidumbre, no existe una razón técnica para rotar la cartera hacia activos de mayor riesgo o menor liquidez. Se mantiene la posición actual para preservar la flexibilidad y evitar la exposición a la volatilidad de los bonos largos.
+
+---
+
+## Fecha: 2025-06-30 | Tipo: UP
+
+**Session ID:** `backtest_up_3e73f060-75f0-4fbc-be39-3c13745aa5be`
+
+### Prompt
+```text
+De los siguientes bonos soberanos argentinos: AL30, AL35, AL41, CO26, GD29, GD35, GD38, GD38D, GD35D, AL30D, AE38D, AL35D, TZX27, TX31, DICP, DIP0, AE38, AL29, BA37D, GD30, GD41, GD46, GD29D, GD30D, GD41D, GD46D, AL29D, AL41D, PARP, PAP0, CUAP, TZV26
+¿Cuáles subirán de precio en el corto plazo debido a factores macroeconómicos y políticos (e.g. inflación IPC, tipo de cambio MEP/CCL/Blue, superávit fiscal, reservas del BCRA, tasa de política monetaria)?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de alza..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["AL30", "GD30", "AL35", "GD35", "AL29", "GD29", "AL41", "GD41"],
+  "textual_response": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se prevé un alza de precio en los bonos soberanos en moneda dura (Hard Dollar) en el horizonte de 45 días. \n\n### Análisis Causal\nLa dinámica de precios está impulsada por la siguiente cadena de causalidad:\n**Superávit Fiscal (Primario y Financiero) ──► causes ──► Reducción de Riesgo País ──► signals UP on Hard Dollar Bonds (AL/GD)**\n\n1. **Sólido Anclaje Fiscal**: El contexto macroeconómico muestra un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones. Esta disciplina fiscal es el principal motor de confianza, ya que reduce drásticamente la probabilidad de default y presiona a la baja el Riesgo País (actualmente en 651 puntos), lo que impacta directamente en la subida de los precios de los bonos AL y GD.\n2. **Desaceleración Inflacionaria**: Con una inflación mensual del 1.6%, se observa un quiebre en la inercia inflacionaria. Según el grafo de conocimiento, la consolidación de la baja de inflación genera confianza en la moneda local y en la capacidad de pago del Estado, favoreciendo la recuperación de activos soberanos.\n3. **Estabilidad Cambiaria**: La convergencia de los tipos de cambio (Blue: 1215, MEP: 1211.3, CCL: 1211.8) indica una brecha mínima, eliminando la volatilidad que suele castigar a los activos locales.\n\n### Estrategia y Condicionales (Horizonte 45 días)\n\n**Escenarios Condicionales:**\n- **Si** el superávit financiero se mantiene y el Riesgo País continúa bajando hacia los 500 puntos, **entonces** mantener la posición en AL30 y GD30 para capturar la compresión de tasas.\n- **Si** la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, **entonces** rotar la cartera desde bonos Hard Dollar hacia bonos ajustados por CER (aunque actualmente la tendencia es bajista para CER).\n- **Si** la brecha cambiaria (MEP/CCL vs Oficial) vuelve a superar el 20%, **entonces** reducir exposición a bonos soberanos y refugiarse en activos líquidos en dólares.\n\n**Triggers de Salida:**\n- **Toma de Ganancias**: Considerar la venta de las posiciones si el Riesgo País alcanza el piso de los 500 puntos o si se alcanza el target de TIR proyectado para el corto plazo.\n- **Alerta de Riesgo**: Salir de la posición inmediatamente si se produce un shock político que comprometa la meta de déficit cero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-30 | Tipo: DOWN
+
+**Session ID:** `backtest_down_5f0dddea-cb23-423f-982d-d4fa1a466d82`
+
+### Prompt
+```text
+De los siguientes bonos disponibles: AL30, AL35, AL41, CO26, GD29, GD35, GD38, GD38D, GD35D, AL30D, AE38D, AL35D, TZX27, TX31, DICP, DIP0, AE38, AL29, BA37D, GD30, GD41, GD46, GD29D, GD30D, GD41D, GD46D, AL29D, AL41D, PARP, PAP0, CUAP, TZV26, ¿cuáles bajarán de precio en el corto plazo?
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```. El JSON debe tener exactamente la siguiente estructura (con 'predicted_bonds' primero para evitar problemas de truncamiento):
+{
+  "predicted_bonds": ["BONO1", "BONO2"],
+  "textual_response": "Tu análisis y justificación detallada de las causas de baja..."
+}
+```
+
+### Respuesta
+```json
+{
+  "predicted_bonds": ["AL30", "GD30", "AL35", "GD35", "AL41", "GD41", "GD46", "GD38", "GD29"],
+  "textual_response": "El análisis para los próximos 45 días indica una tendencia a la baja o corrección en los precios de los bonos soberanos, especialmente en los más líquidos y los de ley extranjera (GD). Esta predicción se fundamenta en las siguientes cadenas causales extraídas de la base de datos relacional de Supabase y la vista de fuentes de noticias:\n\n1. **Riesgo Legal y Reputacional (Caso YPF):** \n`Fallo Jueza Preska (YPF) ──► aumenta ──► Riesgo Legal del Tesoro Nacional ──► señales DOWN en Bonos Soberanos`.\nLa orden de la justicia de EE.UU. para que Argentina entregue el 51% de las acciones de YPF genera un shock de incertidumbre sobre la solvencia y la capacidad de cumplimiento del Estado, impactando directamente en la valoración de los activos soberanos.\n\n2. **Estacionalidad y Liquidez de Divisas:**\n`Fin de liquidación agro + Salidas por turismo ──► disminuye ──► Disponibilidad de Reservas Netas (BCRA) ──► señales DOWN en Activos de Corto Plazo`.\nSegún reportes de JPMorgan, el fin de la estacionalidad positiva del agro y el aumento de las salidas de divisas por turismo generan una presión bajista. Esto se ve agravado por el dato de reservas netas negativas (-2.000 millones USD) obtenido del contexto macroeconómico.\n\n3. **Consenso de Mercado (Toma de Ganancias):**\n`Recomendación de 'tomar un respiro' (JPMorgan) ──► aumenta ──► Presión vendedora en el corto plazo ──► señales DOWN en Deuda Soberana`.\nExiste una recomendación explícita de reducir riesgo y tomar ganancias en instrumentos locales, lo que sugiere que el mercado ha descontado gran parte de las noticias positivas y ahora es vulnerable a ruidos electorales o legales.\n\n**Condicionales y Triggers de Salida:**\n- **Vender/Salir si:** El Riesgo País presenta un salto brusco por encima de los 700-750 puntos básicos o si las reservas netas continúan cayendo aceleradamente.\n- **Mantener/Comprar si:** El Gobierno logra un acuerdo rápido de apelación en el caso YPF que suspenda la ejecución del fallo o si se anuncian nuevos desembolsos del FMI que refuercen la liquidez inmediata.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+}
+```
+
+---
+
+## Fecha: 2025-06-30 | Tipo: PORTFOLIO
+
+**Session ID:** `backtest_portfolio_8f5493b4-3dae-4b66-bd55-9682ccc834eb`
+
+### Prompt
+```text
+Estás administrando un portafolio de inversión en bonos. Hoy es 2025-06-30.
+
+Estado actual del portafolio:
+- Efectivo disponible en pesos (ARS Cash): $0.00 ARS
+- Efectivo disponible en dólares (USD Cash): $0.00 USD
+- Tipo de cambio MEP de hoy: $1211.30 ARS/USD
+- Valor total del portafolio (valuado en ARS): $1033150.80 ARS
+Tenencias actuales:
+- AL30: 624.3756 unidades (Precio actual: $829.00 ARS, Precio de compra promedio: $800.80 ARS, Valor actual: $517607.39 ARS, Peso actual: 50.1%)
+- GD30: 607.1645 unidades (Precio actual: $849.10 ARS, Precio de compra promedio: $823.50 ARS, Valor actual: $515543.41 ARS, Peso actual: 49.9%)
+
+Bonos disponibles para operar hoy:
+- AL30 (Precio actual: $829.00 ARS)
+- AL35 (Precio actual: $831.00 ARS)
+- AL41 (Precio actual: $763.40 ARS)
+- CO26 (Precio actual: $245.00 ARS)
+- GD29 (Precio actual: $924.80 ARS)
+- GD35 (Precio actual: $839.00 ARS)
+- GD38 (Precio actual: $894.00 ARS)
+- GD38D (Precio actual: $0.74 USD)
+- GD35D (Precio actual: $0.69 USD)
+- AL30D (Precio actual: $0.68 USD)
+- AE38D (Precio actual: $0.71 USD)
+- AL35D (Precio actual: $0.69 USD)
+- TZX27 (Precio actual: $2.39 ARS)
+- TX31 (Precio actual: $9.61 ARS)
+- DICP (Precio actual: $371.50 ARS)
+- DIP0 (Precio actual: $369.00 ARS)
+- AE38 (Precio actual: $866.70 ARS)
+- AL29 (Precio actual: $898.00 ARS)
+- BA37D (Precio actual: $842.00 USD)
+- GD30 (Precio actual: $849.10 ARS)
+- GD41 (Precio actual: $777.00 ARS)
+- GD46 (Precio actual: $800.80 ARS)
+- GD29D (Precio actual: $0.76 USD)
+- GD30D (Precio actual: $0.70 USD)
+- GD41D (Precio actual: $0.64 USD)
+- GD46D (Precio actual: $0.66 USD)
+- AL29D (Precio actual: $0.74 USD)
+- AL41D (Precio actual: $0.63 USD)
+- PARP (Precio actual: $221.90 ARS)
+- PAP0 (Precio actual: $227.00 ARS)
+- CUAP (Precio actual: $269.50 ARS)
+- TZV26 (Precio actual: $1150.00 ARS)
+
+
+Predicciones del día:
+- Subirán (UP): Por favor, guíate por las predicciones y el análisis que acabas de realizar en tu respuesta anterior.
+- Bajarán (DOWN): AL30, GD30, AL35, GD35, AL41, GD41, GD46, GD38, GD29
+  Análisis detallado de baja (DOWN) obtenido:
+  El análisis para los próximos 45 días indica una tendencia a la baja o corrección en los precios de los bonos soberanos, especialmente en los más líquidos y los de ley extranjera (GD). Esta predicción se fundamenta en las siguientes cadenas causales extraídas de la base de datos relacional de Supabase y la vista de fuentes de noticias:
+
+1. **Riesgo Legal y Reputacional (Caso YPF):** 
+`Fallo Jueza Preska (YPF) ──► aumenta ──► Riesgo Legal del Tesoro Nacional ──► señales DOWN en Bonos Soberanos`.
+La orden de la justicia de EE.UU. para que Argentina entregue el 51% de las acciones de YPF genera un shock de incertidumbre sobre la solvencia y la capacidad de cumplimiento del Estado, impactando directamente en la valoración de los activos soberanos.
+
+2. **Estacionalidad y Liquidez de Divisas:**
+`Fin de liquidación agro + Salidas por turismo ──► disminuye ──► Disponibilidad de Reservas Netas (BCRA) ──► señales DOWN en Activos de Corto Plazo`.
+Según reportes de JPMorgan, el fin de la estacionalidad positiva del agro y el aumento de las salidas de divisas por turismo generan una presión bajista. Esto se ve agravado por el dato de reservas netas negativas (-2.000 millones USD) obtenido del contexto macroeconómico.
+
+3. **Consenso de Mercado (Toma de Ganancias):**
+`Recomendación de 'tomar un respiro' (JPMorgan) ──► aumenta ──► Presión vendedora en el corto plazo ──► señales DOWN en Deuda Soberana`.
+Existe una recomendación explícita de reducir riesgo y tomar ganancias en instrumentos locales, lo que sugiere que el mercado ha descontado gran parte de las noticias positivas y ahora es vulnerable a ruidos electorales o legales.
+
+**Condicionales y Triggers de Salida:**
+- **Vender/Salir si:** El Riesgo País presenta un salto brusco por encima de los 700-750 puntos básicos o si las reservas netas continúan cayendo aceleradamente.
+- **Mantener/Comprar si:** El Gobierno logra un acuerdo rápido de apelación en el caso YPF que suspenda la ejecución del fallo o si se anuncian nuevos desembolsos del FMI que refuercen la liquidez inmediata.
+
+Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.
+
+Decide si deseas realizar cambios en el portafolio (comprar, vender, mantener o rebalancear).
+Responde estrictamente en formato JSON válido, rodeado por bloques de código ```json ... ```.
+El JSON debe tener exactamente la siguiente estructura:
+{
+  "action": "REBALANCE" o "DO_NOTHING",
+  "bonds": {
+    "TICKER1": monto_ARS_asignado_1,
+    "TICKER2": monto_ARS_asignado_2
+  },
+  "justification": "Tu análisis y justificación detallada de los movimientos o de no hacer nada..."
+}
+
+Reglas importantes:
+1. El portafolio DEBE estar 100% invertido en bonos en todo momento. No se permite mantener efectivo (cash). Por lo tanto, la suma de los montos asignados en 'bonds' debe ser exactamente igual al valor total del portafolio ($1033150.80 ARS).
+2. Si seleccionas 'DO_NOTHING', solo es válido si el portafolio ya está 100% invertido y no deseas realizar cambios. Si hay efectivo disponible (como en el primer día), debes seleccionar 'REBALANCE' para invertir todo el efectivo.
+3. Si 'action' es 'REBALANCE', debes indicar el nuevo monto total en ARS que deseas tener asignado a CADA bono en 'bonds'. Para vender por completo un bono que posees, pon su monto en 0.0 o no lo incluyas en la lista 'bonds'.
+4. Nota sobre monedas: El sistema utiliza pesos para comprar bonos en pesos y dólares para bonos en dólares (tickers terminados en 'D'). Si no posees la moneda necesaria al operar, el sistema realizará automáticamente una conversión de moneda utilizando el tipo de cambio MEP de hoy.
+```
+
+### Respuesta
+Se procede a un rebalanceo total del portafolio debido a que las tenencias actuales (AL30 y GD30) presentan señales claras de tendencia bajista (DOWN) para el horizonte de 45 días. El análisis causal identifica tres factores críticos: 1) El riesgo legal derivado del fallo de la Jueza Preska por el caso YPF, que aumenta la incertidumbre sobre la solvencia del Tesoro; 2) La caída de las reservas netas del BCRA (-2.000 millones USD) potenciada por el fin de la liquidación del agro y el gasto turístico; y 3) El consenso de mercado (JPMorgan) que recomienda la toma de ganancias en activos soberanos. Dado que el portafolio debe permanecer 100% invertido y los bonos soberanos más líquidos y de ley extranjera están bajo presión vendedora, se rota la totalidad del capital hacia TZV26. Este activo no se encuentra en la lista de predicciones bajistas y, al ser un bono ajustado por CER, ofrece una cobertura contra la inflación en un contexto donde el riesgo crediticio soberano se dispara, alineándose con la estrategia de reducir exposición a los bonos AL/GD durante este periodo de volatilidad.
+
+---
+

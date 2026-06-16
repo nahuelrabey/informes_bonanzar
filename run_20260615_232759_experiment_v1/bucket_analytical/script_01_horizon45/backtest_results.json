@@ -1,0 +1,844 @@
+{
+  "summary": {
+    "bucket_id": "analytical",
+    "temperature": 0.0,
+    "max_tool_call_iterations": 20,
+    "model": "gemma-4-31b-it",
+    "start_date": "2025-06-05",
+    "end_date": "2025-07-03",
+    "horizon_days": 45,
+    "step_days": 5,
+    "total_predictions": 59,
+    "total_correct": 29,
+    "accuracy": 0.4915,
+    "precision_up": 0.6,
+    "precision_down": 0.3333,
+    "up_predictions": {
+      "total": 35,
+      "correct": 21
+    },
+    "down_predictions": {
+      "total": 24,
+      "correct": 8
+    },
+    "portfolio": {
+      "initial_capital": 1000000.0,
+      "final_value": 1109879.48,
+      "return_pct": 10.99,
+      "final_value_real": 1067827.58,
+      "return_pct_real": 6.78,
+      "final_cash": 1109879.48,
+      "trades_pnl": {
+        "total_trades": 3,
+        "correct_trades": 2,
+        "incorrect_trades": 1,
+        "total_gains_ARS": 109879.48,
+        "total_losses_ARS": 0,
+        "total_gains_real_ARS": 70870.28,
+        "total_losses_real_ARS": -398.95,
+        "completed_pnl_ARS": 5980.14,
+        "liquidated_pnl_ARS": 103899.34,
+        "completed_pnl_real_ARS": 652.37,
+        "liquidated_pnl_real_ARS": 69818.96,
+        "payments_pnl_ARS": 0,
+        "payments_pnl_real_ARS": 0,
+        "net_pnl_ARS": 109879.48,
+        "net_pnl_real_ARS": 70471.33
+      }
+    }
+  },
+  "predictions": [
+    {
+      "date": "2025-06-05",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 800.8,
+      "price_end": 762.0,
+      "change": -38.8,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el análisis de tendencias macroeconómicas, se prevé un alza en los bonos Hard Dollar más líquidos (AL30, GD30, AL35, GD35) en el horizonte de 45 días. \n\n**Análisis Causal:**\nEl motor principal es el fuerte desempeño fiscal. El registro de un **Superávit Primario (845.949 M)** y un **Superávit Financiero (572.341 M)** actúa como el catalizador fundamental: \n`[Superávit Fiscal Sostenido] ──► [Reducción de Necesidad de Emisión/Endeudamiento] ──► [Menor Probabilidad de Default] ──► [Compresión del Riesgo País (actualmente en 651)] ──► [Alza de Precios en Bonos Soberanos Hard Dollar]`.\n\nEste escenario se ve reforzado por una **inflación mensual del 1,5%**, que indica una desaceleración de los precios y reduce la presión sobre el tipo de cambio. La ausencia de brecha cambiaria significativa (MEP 1193.6 vs Oficial 1205) sugiere una estabilidad que favorece la entrada de capitales y la recuperación de confianza en los activos locales, tal como indica el grafo de conocimiento Neo4j respecto a la relación entre reservas y confianza.\n\n**Escenarios y Triggers de Salida:**\n- **Si el superávit primario se erosiona** o desaparece en los próximos reportes, se recomienda cerrar posiciones inmediatamente.\n- **Si la inflación mensual vuelve a acelerarse** por encima del 4%, el atractivo de los bonos Hard Dollar podría disminuir frente a activos CER.\n- **Si la brecha cambiaria (MEP/Oficial) se amplía** por encima del 20%, se debe reducir la exposición a bonos soberanos debido al aumento del riesgo de volatilidad.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 823.5,
+      "price_end": 783.0,
+      "change": -40.5,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el análisis de tendencias macroeconómicas, se prevé un alza en los bonos Hard Dollar más líquidos (AL30, GD30, AL35, GD35) en el horizonte de 45 días. \n\n**Análisis Causal:**\nEl motor principal es el fuerte desempeño fiscal. El registro de un **Superávit Primario (845.949 M)** y un **Superávit Financiero (572.341 M)** actúa como el catalizador fundamental: \n`[Superávit Fiscal Sostenido] ──► [Reducción de Necesidad de Emisión/Endeudamiento] ──► [Menor Probabilidad de Default] ──► [Compresión del Riesgo País (actualmente en 651)] ──► [Alza de Precios en Bonos Soberanos Hard Dollar]`.\n\nEste escenario se ve reforzado por una **inflación mensual del 1,5%**, que indica una desaceleración de los precios y reduce la presión sobre el tipo de cambio. La ausencia de brecha cambiaria significativa (MEP 1193.6 vs Oficial 1205) sugiere una estabilidad que favorece la entrada de capitales y la recuperación de confianza en los activos locales, tal como indica el grafo de conocimiento Neo4j respecto a la relación entre reservas y confianza.\n\n**Escenarios y Triggers de Salida:**\n- **Si el superávit primario se erosiona** o desaparece en los próximos reportes, se recomienda cerrar posiciones inmediatamente.\n- **Si la inflación mensual vuelve a acelerarse** por encima del 4%, el atractivo de los bonos Hard Dollar podría disminuir frente a activos CER.\n- **Si la brecha cambiaria (MEP/Oficial) se amplía** por encima del 20%, se debe reducir la exposición a bonos soberanos debido al aumento del riesgo de volatilidad.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 805.0,
+      "price_end": 824.0,
+      "change": 19.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el análisis de tendencias macroeconómicas, se prevé un alza en los bonos Hard Dollar más líquidos (AL30, GD30, AL35, GD35) en el horizonte de 45 días. \n\n**Análisis Causal:**\nEl motor principal es el fuerte desempeño fiscal. El registro de un **Superávit Primario (845.949 M)** y un **Superávit Financiero (572.341 M)** actúa como el catalizador fundamental: \n`[Superávit Fiscal Sostenido] ──► [Reducción de Necesidad de Emisión/Endeudamiento] ──► [Menor Probabilidad de Default] ──► [Compresión del Riesgo País (actualmente en 651)] ──► [Alza de Precios en Bonos Soberanos Hard Dollar]`.\n\nEste escenario se ve reforzado por una **inflación mensual del 1,5%**, que indica una desaceleración de los precios y reduce la presión sobre el tipo de cambio. La ausencia de brecha cambiaria significativa (MEP 1193.6 vs Oficial 1205) sugiere una estabilidad que favorece la entrada de capitales y la recuperación de confianza en los activos locales, tal como indica el grafo de conocimiento Neo4j respecto a la relación entre reservas y confianza.\n\n**Escenarios y Triggers de Salida:**\n- **Si el superávit primario se erosiona** o desaparece en los próximos reportes, se recomienda cerrar posiciones inmediatamente.\n- **Si la inflación mensual vuelve a acelerarse** por encima del 4%, el atractivo de los bonos Hard Dollar podría disminuir frente a activos CER.\n- **Si la brecha cambiaria (MEP/Oficial) se amplía** por encima del 20%, se debe reducir la exposición a bonos soberanos debido al aumento del riesgo de volatilidad.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 812.0,
+      "price_end": 840.0,
+      "change": 28.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y el análisis de tendencias macroeconómicas, se prevé un alza en los bonos Hard Dollar más líquidos (AL30, GD30, AL35, GD35) en el horizonte de 45 días. \n\n**Análisis Causal:**\nEl motor principal es el fuerte desempeño fiscal. El registro de un **Superávit Primario (845.949 M)** y un **Superávit Financiero (572.341 M)** actúa como el catalizador fundamental: \n`[Superávit Fiscal Sostenido] ──► [Reducción de Necesidad de Emisión/Endeudamiento] ──► [Menor Probabilidad de Default] ──► [Compresión del Riesgo País (actualmente en 651)] ──► [Alza de Precios en Bonos Soberanos Hard Dollar]`.\n\nEste escenario se ve reforzado por una **inflación mensual del 1,5%**, que indica una desaceleración de los precios y reduce la presión sobre el tipo de cambio. La ausencia de brecha cambiaria significativa (MEP 1193.6 vs Oficial 1205) sugiere una estabilidad que favorece la entrada de capitales y la recuperación de confianza en los activos locales, tal como indica el grafo de conocimiento Neo4j respecto a la relación entre reservas y confianza.\n\n**Escenarios y Triggers de Salida:**\n- **Si el superávit primario se erosiona** o desaparece en los próximos reportes, se recomienda cerrar posiciones inmediatamente.\n- **Si la inflación mensual vuelve a acelerarse** por encima del 4%, el atractivo de los bonos Hard Dollar podría disminuir frente a activos CER.\n- **Si la brecha cambiaria (MEP/Oficial) se amplía** por encima del 20%, se debe reducir la exposición a bonos soberanos debido al aumento del riesgo de volatilidad.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 805.0,
+      "price_end": 824.0,
+      "change": 19.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se prevé una tendencia a la baja en los precios de los bonos soberanos más líquidos y de mayor plazo en el horizonte de 45 días. \n\n**Análisis Causal:**\n[Reservas Netas Negativas] ──► causes ──► [Aumento de Percepción de Riesgo de Impago] ──► signals [DOWN] on [Bonos Soberanos].\n\n**Justificación Detallada:**\n1. **Vulnerabilidad de Reservas:** Según el contexto macroeconómico, las reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD). Esta situación es un detonante crítico que, según el grafo causal, incrementa la presión cambiaria y la percepción de riesgo país, afectando directamente la valoración de los activos en dólares.\n2. **Deterioro del Crédito Sistémico:** Fuentes de noticias recientes (Bloomberg Línea) reportan un aumento en la morosidad de tarjetas de crédito (2,8%) y préstamos personales (4,1%), además de impagos corporativos (ej. Albanesi SA, Celulosa Argentina). Este deterioro del crédito interno genera una 'luz amarilla' que erosiona la confianza general en los activos locales.\n3. **Sentimiento de Mercado:** Se han registrado reportes recientes sobre un desplome de los activos argentinos, lo que indica que el mercado ya está descontando una mayor fragilidad financiera a pesar del superávit fiscal.\n4. **Sensibilidad de Plazo:** Los bonos de largo plazo (AL35, GD35, AL41, GD41) presentan una mayor sensibilidad (duration) ante el aumento del riesgo país, lo que los hace más propensos a caídas de precio más pronunciadas que los instrumentos de corto plazo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Trigger de Venta:** Considere salir de las posiciones si el Riesgo País supera los 700-750 puntos básicos o si las reservas netas continúan cayendo sin la concreción de un nuevo préstamo REPO significativo.\n- **Condicional A:** *Si* el BCRA no logra acumular reservas netas positivas en los próximos 30 días, *entonces* reduzca la exposición a bonos largos y migre hacia Hard Dólar o activos de muy corto plazo.\n- **Condicional B:** *Si* la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, *entonces* venda bonos en dólares y rote hacia bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 812.0,
+      "price_end": 840.0,
+      "change": 28.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se prevé una tendencia a la baja en los precios de los bonos soberanos más líquidos y de mayor plazo en el horizonte de 45 días. \n\n**Análisis Causal:**\n[Reservas Netas Negativas] ──► causes ──► [Aumento de Percepción de Riesgo de Impago] ──► signals [DOWN] on [Bonos Soberanos].\n\n**Justificación Detallada:**\n1. **Vulnerabilidad de Reservas:** Según el contexto macroeconómico, las reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD). Esta situación es un detonante crítico que, según el grafo causal, incrementa la presión cambiaria y la percepción de riesgo país, afectando directamente la valoración de los activos en dólares.\n2. **Deterioro del Crédito Sistémico:** Fuentes de noticias recientes (Bloomberg Línea) reportan un aumento en la morosidad de tarjetas de crédito (2,8%) y préstamos personales (4,1%), además de impagos corporativos (ej. Albanesi SA, Celulosa Argentina). Este deterioro del crédito interno genera una 'luz amarilla' que erosiona la confianza general en los activos locales.\n3. **Sentimiento de Mercado:** Se han registrado reportes recientes sobre un desplome de los activos argentinos, lo que indica que el mercado ya está descontando una mayor fragilidad financiera a pesar del superávit fiscal.\n4. **Sensibilidad de Plazo:** Los bonos de largo plazo (AL35, GD35, AL41, GD41) presentan una mayor sensibilidad (duration) ante el aumento del riesgo país, lo que los hace más propensos a caídas de precio más pronunciadas que los instrumentos de corto plazo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Trigger de Venta:** Considere salir de las posiciones si el Riesgo País supera los 700-750 puntos básicos o si las reservas netas continúan cayendo sin la concreción de un nuevo préstamo REPO significativo.\n- **Condicional A:** *Si* el BCRA no logra acumular reservas netas positivas en los próximos 30 días, *entonces* reduzca la exposición a bonos largos y migre hacia Hard Dólar o activos de muy corto plazo.\n- **Condicional B:** *Si* la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, *entonces* venda bonos en dólares y rote hacia bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 744.9,
+      "price_end": 756.8,
+      "change": 11.9,
+      "correct": false,
+      "explanation": "Basado en el análisis de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se prevé una tendencia a la baja en los precios de los bonos soberanos más líquidos y de mayor plazo en el horizonte de 45 días. \n\n**Análisis Causal:**\n[Reservas Netas Negativas] ──► causes ──► [Aumento de Percepción de Riesgo de Impago] ──► signals [DOWN] on [Bonos Soberanos].\n\n**Justificación Detallada:**\n1. **Vulnerabilidad de Reservas:** Según el contexto macroeconómico, las reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD). Esta situación es un detonante crítico que, según el grafo causal, incrementa la presión cambiaria y la percepción de riesgo país, afectando directamente la valoración de los activos en dólares.\n2. **Deterioro del Crédito Sistémico:** Fuentes de noticias recientes (Bloomberg Línea) reportan un aumento en la morosidad de tarjetas de crédito (2,8%) y préstamos personales (4,1%), además de impagos corporativos (ej. Albanesi SA, Celulosa Argentina). Este deterioro del crédito interno genera una 'luz amarilla' que erosiona la confianza general en los activos locales.\n3. **Sentimiento de Mercado:** Se han registrado reportes recientes sobre un desplome de los activos argentinos, lo que indica que el mercado ya está descontando una mayor fragilidad financiera a pesar del superávit fiscal.\n4. **Sensibilidad de Plazo:** Los bonos de largo plazo (AL35, GD35, AL41, GD41) presentan una mayor sensibilidad (duration) ante el aumento del riesgo país, lo que los hace más propensos a caídas de precio más pronunciadas que los instrumentos de corto plazo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Trigger de Venta:** Considere salir de las posiciones si el Riesgo País supera los 700-750 puntos básicos o si las reservas netas continúan cayendo sin la concreción de un nuevo préstamo REPO significativo.\n- **Condicional A:** *Si* el BCRA no logra acumular reservas netas positivas en los próximos 30 días, *entonces* reduzca la exposición a bonos largos y migre hacia Hard Dólar o activos de muy corto plazo.\n- **Condicional B:** *Si* la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, *entonces* venda bonos en dólares y rote hacia bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 753.0,
+      "price_end": 779.0,
+      "change": 26.0,
+      "correct": false,
+      "explanation": "Basado en el análisis de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se prevé una tendencia a la baja en los precios de los bonos soberanos más líquidos y de mayor plazo en el horizonte de 45 días. \n\n**Análisis Causal:**\n[Reservas Netas Negativas] ──► causes ──► [Aumento de Percepción de Riesgo de Impago] ──► signals [DOWN] on [Bonos Soberanos].\n\n**Justificación Detallada:**\n1. **Vulnerabilidad de Reservas:** Según el contexto macroeconómico, las reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD). Esta situación es un detonante crítico que, según el grafo causal, incrementa la presión cambiaria y la percepción de riesgo país, afectando directamente la valoración de los activos en dólares.\n2. **Deterioro del Crédito Sistémico:** Fuentes de noticias recientes (Bloomberg Línea) reportan un aumento en la morosidad de tarjetas de crédito (2,8%) y préstamos personales (4,1%), además de impagos corporativos (ej. Albanesi SA, Celulosa Argentina). Este deterioro del crédito interno genera una 'luz amarilla' que erosiona la confianza general en los activos locales.\n3. **Sentimiento de Mercado:** Se han registrado reportes recientes sobre un desplome de los activos argentinos, lo que indica que el mercado ya está descontando una mayor fragilidad financiera a pesar del superávit fiscal.\n4. **Sensibilidad de Plazo:** Los bonos de largo plazo (AL35, GD35, AL41, GD41) presentan una mayor sensibilidad (duration) ante el aumento del riesgo país, lo que los hace más propensos a caídas de precio más pronunciadas que los instrumentos de corto plazo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Trigger de Venta:** Considere salir de las posiciones si el Riesgo País supera los 700-750 puntos básicos o si las reservas netas continúan cayendo sin la concreción de un nuevo préstamo REPO significativo.\n- **Condicional A:** *Si* el BCRA no logra acumular reservas netas positivas en los próximos 30 días, *entonces* reduzca la exposición a bonos largos y migre hacia Hard Dólar o activos de muy corto plazo.\n- **Condicional B:** *Si* la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, *entonces* venda bonos en dólares y rote hacia bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "AL30",
+      "predicted_direction": "DOWN",
+      "price_start": 800.8,
+      "price_end": 762.0,
+      "change": -38.8,
+      "correct": true,
+      "explanation": "Basado en el análisis de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se prevé una tendencia a la baja en los precios de los bonos soberanos más líquidos y de mayor plazo en el horizonte de 45 días. \n\n**Análisis Causal:**\n[Reservas Netas Negativas] ──► causes ──► [Aumento de Percepción de Riesgo de Impago] ──► signals [DOWN] on [Bonos Soberanos].\n\n**Justificación Detallada:**\n1. **Vulnerabilidad de Reservas:** Según el contexto macroeconómico, las reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD). Esta situación es un detonante crítico que, según el grafo causal, incrementa la presión cambiaria y la percepción de riesgo país, afectando directamente la valoración de los activos en dólares.\n2. **Deterioro del Crédito Sistémico:** Fuentes de noticias recientes (Bloomberg Línea) reportan un aumento en la morosidad de tarjetas de crédito (2,8%) y préstamos personales (4,1%), además de impagos corporativos (ej. Albanesi SA, Celulosa Argentina). Este deterioro del crédito interno genera una 'luz amarilla' que erosiona la confianza general en los activos locales.\n3. **Sentimiento de Mercado:** Se han registrado reportes recientes sobre un desplome de los activos argentinos, lo que indica que el mercado ya está descontando una mayor fragilidad financiera a pesar del superávit fiscal.\n4. **Sensibilidad de Plazo:** Los bonos de largo plazo (AL35, GD35, AL41, GD41) presentan una mayor sensibilidad (duration) ante el aumento del riesgo país, lo que los hace más propensos a caídas de precio más pronunciadas que los instrumentos de corto plazo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Trigger de Venta:** Considere salir de las posiciones si el Riesgo País supera los 700-750 puntos básicos o si las reservas netas continúan cayendo sin la concreción de un nuevo préstamo REPO significativo.\n- **Condicional A:** *Si* el BCRA no logra acumular reservas netas positivas en los próximos 30 días, *entonces* reduzca la exposición a bonos largos y migre hacia Hard Dólar o activos de muy corto plazo.\n- **Condicional B:** *Si* la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, *entonces* venda bonos en dólares y rote hacia bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-05",
+      "ticker": "GD30",
+      "predicted_direction": "DOWN",
+      "price_start": 823.5,
+      "price_end": 783.0,
+      "change": -40.5,
+      "correct": true,
+      "explanation": "Basado en el análisis de la base de datos relacional de Supabase y el grafo de conocimiento Neo4j, se prevé una tendencia a la baja en los precios de los bonos soberanos más líquidos y de mayor plazo en el horizonte de 45 días. \n\n**Análisis Causal:**\n[Reservas Netas Negativas] ──► causes ──► [Aumento de Percepción de Riesgo de Impago] ──► signals [DOWN] on [Bonos Soberanos].\n\n**Justificación Detallada:**\n1. **Vulnerabilidad de Reservas:** Según el contexto macroeconómico, las reservas netas del BCRA se encuentran en terreno negativo (-2.000 millones USD). Esta situación es un detonante crítico que, según el grafo causal, incrementa la presión cambiaria y la percepción de riesgo país, afectando directamente la valoración de los activos en dólares.\n2. **Deterioro del Crédito Sistémico:** Fuentes de noticias recientes (Bloomberg Línea) reportan un aumento en la morosidad de tarjetas de crédito (2,8%) y préstamos personales (4,1%), además de impagos corporativos (ej. Albanesi SA, Celulosa Argentina). Este deterioro del crédito interno genera una 'luz amarilla' que erosiona la confianza general en los activos locales.\n3. **Sentimiento de Mercado:** Se han registrado reportes recientes sobre un desplome de los activos argentinos, lo que indica que el mercado ya está descontando una mayor fragilidad financiera a pesar del superávit fiscal.\n4. **Sensibilidad de Plazo:** Los bonos de largo plazo (AL35, GD35, AL41, GD41) presentan una mayor sensibilidad (duration) ante el aumento del riesgo país, lo que los hace más propensos a caídas de precio más pronunciadas que los instrumentos de corto plazo.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Trigger de Venta:** Considere salir de las posiciones si el Riesgo País supera los 700-750 puntos básicos o si las reservas netas continúan cayendo sin la concreción de un nuevo préstamo REPO significativo.\n- **Condicional A:** *Si* el BCRA no logra acumular reservas netas positivas en los próximos 30 días, *entonces* reduzca la exposición a bonos largos y migre hacia Hard Dólar o activos de muy corto plazo.\n- **Condicional B:** *Si* la inflación mensual (IPC) vuelve a acelerarse por encima del 3%, *entonces* venda bonos en dólares y rote hacia bonos ajustados por CER.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-10",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 817.5,
+      "price_end": 770.3,
+      "change": -47.2,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, el análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente aquellos con mayor duration y convexidad.\n\n### Análisis Causal\nEl motor principal de este movimiento es la combinación de disciplina fiscal y medidas activas para fortalecer las reservas del BCRA:\n\n**[Superávit Fiscal Primario y Financiero] ──► causes ──► [Sostenibilidad de la Deuda] ──► signals [UP] on [Bonos Soberanos]**\n**[Operación de Repo US$2.000M + Suscripciones Directas] ──► causes ──► [Aumento de Reservas Netas] ──► signals [UP] on [AL30, GD30, GD35, GD41]**\n**[Desaceleración de Inflación (IPC 1,5% - 1,6%)] ──► causes ──► [Estabilidad Macroeconómica] ──► signals [UP] on [Riesgo País / Compresión de Spreads]**\n\n### Justificación Detallada\n1. **Fortalecimiento de Reservas**: El anuncio del BCRA sobre una nueva operación de Repo por US$2.000 millones y la apertura de suscripciones directas en dólares (hasta US$1.000M mensuales) actúa como un catalizador inmediato para reducir la vulnerabilidad externa, lo que impacta positivamente en la cotización de los bonos.\n2. **Compresión de Riesgo País**: Con un riesgo país actual de 651 puntos y una inflación mensual que ha perforado el 2% (según datos de IPCBA y contexto macro), el mercado comienza a descontar una normalización. Expertos de brokers como Facimex y PPI sugieren que los bonos **GD41** y **GD35** son los más beneficiados en un escenario de compresión de spreads debido a su mayor sensibilidad al precio (convexidad).\n3. **Desplazamiento de CER**: La fuerte caída de la inflación mensual (1,5%) reduce el atractivo relativo de los bonos ajustados por CER (como TZV26) frente a los Hard Dollar, ya que el componente de ajuste por inflación pierde fuerza.\n\n### Escenarios y Triggers de Salida\nPara este horizonte de 45 días, se sugieren los siguientes condicionales:\n- **Si el Riesgo País cae por debajo de 500 puntos**: Considerar la toma de ganancias parcial en los bonos más largos (GD41, AE38).\n- **Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a subir del 10%**: Reducir exposición a bonos soberanos y migrar a activos más líquidos o Hard Dollar directo.\n- **Si el superávit primario se ve comprometido**: Vender posiciones en bonos Hard Dollar inmediatamente, ya que la solvencia es el pilar del precio actual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-10",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 841.0,
+      "price_end": 795.0,
+      "change": -46.0,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, el análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente aquellos con mayor duration y convexidad.\n\n### Análisis Causal\nEl motor principal de este movimiento es la combinación de disciplina fiscal y medidas activas para fortalecer las reservas del BCRA:\n\n**[Superávit Fiscal Primario y Financiero] ──► causes ──► [Sostenibilidad de la Deuda] ──► signals [UP] on [Bonos Soberanos]**\n**[Operación de Repo US$2.000M + Suscripciones Directas] ──► causes ──► [Aumento de Reservas Netas] ──► signals [UP] on [AL30, GD30, GD35, GD41]**\n**[Desaceleración de Inflación (IPC 1,5% - 1,6%)] ──► causes ──► [Estabilidad Macroeconómica] ──► signals [UP] on [Riesgo País / Compresión de Spreads]**\n\n### Justificación Detallada\n1. **Fortalecimiento de Reservas**: El anuncio del BCRA sobre una nueva operación de Repo por US$2.000 millones y la apertura de suscripciones directas en dólares (hasta US$1.000M mensuales) actúa como un catalizador inmediato para reducir la vulnerabilidad externa, lo que impacta positivamente en la cotización de los bonos.\n2. **Compresión de Riesgo País**: Con un riesgo país actual de 651 puntos y una inflación mensual que ha perforado el 2% (según datos de IPCBA y contexto macro), el mercado comienza a descontar una normalización. Expertos de brokers como Facimex y PPI sugieren que los bonos **GD41** y **GD35** son los más beneficiados en un escenario de compresión de spreads debido a su mayor sensibilidad al precio (convexidad).\n3. **Desplazamiento de CER**: La fuerte caída de la inflación mensual (1,5%) reduce el atractivo relativo de los bonos ajustados por CER (como TZV26) frente a los Hard Dollar, ya que el componente de ajuste por inflación pierde fuerza.\n\n### Escenarios y Triggers de Salida\nPara este horizonte de 45 días, se sugieren los siguientes condicionales:\n- **Si el Riesgo País cae por debajo de 500 puntos**: Considerar la toma de ganancias parcial en los bonos más largos (GD41, AE38).\n- **Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a subir del 10%**: Reducir exposición a bonos soberanos y migrar a activos más líquidos o Hard Dollar directo.\n- **Si el superávit primario se ve comprometido**: Vender posiciones en bonos Hard Dollar inmediatamente, ya que la solvencia es el pilar del precio actual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-10",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 828.3,
+      "price_end": 849.0,
+      "change": 20.7,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, el análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente aquellos con mayor duration y convexidad.\n\n### Análisis Causal\nEl motor principal de este movimiento es la combinación de disciplina fiscal y medidas activas para fortalecer las reservas del BCRA:\n\n**[Superávit Fiscal Primario y Financiero] ──► causes ──► [Sostenibilidad de la Deuda] ──► signals [UP] on [Bonos Soberanos]**\n**[Operación de Repo US$2.000M + Suscripciones Directas] ──► causes ──► [Aumento de Reservas Netas] ──► signals [UP] on [AL30, GD30, GD35, GD41]**\n**[Desaceleración de Inflación (IPC 1,5% - 1,6%)] ──► causes ──► [Estabilidad Macroeconómica] ──► signals [UP] on [Riesgo País / Compresión de Spreads]**\n\n### Justificación Detallada\n1. **Fortalecimiento de Reservas**: El anuncio del BCRA sobre una nueva operación de Repo por US$2.000 millones y la apertura de suscripciones directas en dólares (hasta US$1.000M mensuales) actúa como un catalizador inmediato para reducir la vulnerabilidad externa, lo que impacta positivamente en la cotización de los bonos.\n2. **Compresión de Riesgo País**: Con un riesgo país actual de 651 puntos y una inflación mensual que ha perforado el 2% (según datos de IPCBA y contexto macro), el mercado comienza a descontar una normalización. Expertos de brokers como Facimex y PPI sugieren que los bonos **GD41** y **GD35** son los más beneficiados en un escenario de compresión de spreads debido a su mayor sensibilidad al precio (convexidad).\n3. **Desplazamiento de CER**: La fuerte caída de la inflación mensual (1,5%) reduce el atractivo relativo de los bonos ajustados por CER (como TZV26) frente a los Hard Dollar, ya que el componente de ajuste por inflación pierde fuerza.\n\n### Escenarios y Triggers de Salida\nPara este horizonte de 45 días, se sugieren los siguientes condicionales:\n- **Si el Riesgo País cae por debajo de 500 puntos**: Considerar la toma de ganancias parcial en los bonos más largos (GD41, AE38).\n- **Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a subir del 10%**: Reducir exposición a bonos soberanos y migrar a activos más líquidos o Hard Dollar directo.\n- **Si el superávit primario se ve comprometido**: Vender posiciones en bonos Hard Dollar inmediatamente, ya que la solvencia es el pilar del precio actual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-10",
+      "ticker": "GD41",
+      "predicted_direction": "UP",
+      "price_start": 765.8,
+      "price_end": 785.0,
+      "change": 19.2,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, el análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente aquellos con mayor duration y convexidad.\n\n### Análisis Causal\nEl motor principal de este movimiento es la combinación de disciplina fiscal y medidas activas para fortalecer las reservas del BCRA:\n\n**[Superávit Fiscal Primario y Financiero] ──► causes ──► [Sostenibilidad de la Deuda] ──► signals [UP] on [Bonos Soberanos]**\n**[Operación de Repo US$2.000M + Suscripciones Directas] ──► causes ──► [Aumento de Reservas Netas] ──► signals [UP] on [AL30, GD30, GD35, GD41]**\n**[Desaceleración de Inflación (IPC 1,5% - 1,6%)] ──► causes ──► [Estabilidad Macroeconómica] ──► signals [UP] on [Riesgo País / Compresión de Spreads]**\n\n### Justificación Detallada\n1. **Fortalecimiento de Reservas**: El anuncio del BCRA sobre una nueva operación de Repo por US$2.000 millones y la apertura de suscripciones directas en dólares (hasta US$1.000M mensuales) actúa como un catalizador inmediato para reducir la vulnerabilidad externa, lo que impacta positivamente en la cotización de los bonos.\n2. **Compresión de Riesgo País**: Con un riesgo país actual de 651 puntos y una inflación mensual que ha perforado el 2% (según datos de IPCBA y contexto macro), el mercado comienza a descontar una normalización. Expertos de brokers como Facimex y PPI sugieren que los bonos **GD41** y **GD35** son los más beneficiados en un escenario de compresión de spreads debido a su mayor sensibilidad al precio (convexidad).\n3. **Desplazamiento de CER**: La fuerte caída de la inflación mensual (1,5%) reduce el atractivo relativo de los bonos ajustados por CER (como TZV26) frente a los Hard Dollar, ya que el componente de ajuste por inflación pierde fuerza.\n\n### Escenarios y Triggers de Salida\nPara este horizonte de 45 días, se sugieren los siguientes condicionales:\n- **Si el Riesgo País cae por debajo de 500 puntos**: Considerar la toma de ganancias parcial en los bonos más largos (GD41, AE38).\n- **Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a subir del 10%**: Reducir exposición a bonos soberanos y migrar a activos más líquidos o Hard Dollar directo.\n- **Si el superávit primario se ve comprometido**: Vender posiciones en bonos Hard Dollar inmediatamente, ya que la solvencia es el pilar del precio actual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-10",
+      "ticker": "AE38",
+      "predicted_direction": "UP",
+      "price_start": 858.8,
+      "price_end": 873.4,
+      "change": 14.6,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, el análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente aquellos con mayor duration y convexidad.\n\n### Análisis Causal\nEl motor principal de este movimiento es la combinación de disciplina fiscal y medidas activas para fortalecer las reservas del BCRA:\n\n**[Superávit Fiscal Primario y Financiero] ──► causes ──► [Sostenibilidad de la Deuda] ──► signals [UP] on [Bonos Soberanos]**\n**[Operación de Repo US$2.000M + Suscripciones Directas] ──► causes ──► [Aumento de Reservas Netas] ──► signals [UP] on [AL30, GD30, GD35, GD41]**\n**[Desaceleración de Inflación (IPC 1,5% - 1,6%)] ──► causes ──► [Estabilidad Macroeconómica] ──► signals [UP] on [Riesgo País / Compresión de Spreads]**\n\n### Justificación Detallada\n1. **Fortalecimiento de Reservas**: El anuncio del BCRA sobre una nueva operación de Repo por US$2.000 millones y la apertura de suscripciones directas en dólares (hasta US$1.000M mensuales) actúa como un catalizador inmediato para reducir la vulnerabilidad externa, lo que impacta positivamente en la cotización de los bonos.\n2. **Compresión de Riesgo País**: Con un riesgo país actual de 651 puntos y una inflación mensual que ha perforado el 2% (según datos de IPCBA y contexto macro), el mercado comienza a descontar una normalización. Expertos de brokers como Facimex y PPI sugieren que los bonos **GD41** y **GD35** son los más beneficiados en un escenario de compresión de spreads debido a su mayor sensibilidad al precio (convexidad).\n3. **Desplazamiento de CER**: La fuerte caída de la inflación mensual (1,5%) reduce el atractivo relativo de los bonos ajustados por CER (como TZV26) frente a los Hard Dollar, ya que el componente de ajuste por inflación pierde fuerza.\n\n### Escenarios y Triggers de Salida\nPara este horizonte de 45 días, se sugieren los siguientes condicionales:\n- **Si el Riesgo País cae por debajo de 500 puntos**: Considerar la toma de ganancias parcial en los bonos más largos (GD41, AE38).\n- **Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a subir del 10%**: Reducir exposición a bonos soberanos y migrar a activos más líquidos o Hard Dollar directo.\n- **Si el superávit primario se ve comprometido**: Vender posiciones en bonos Hard Dollar inmediatamente, ya que la solvencia es el pilar del precio actual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 805.4,
+      "price_end": 799.5,
+      "change": -5.9,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 825.5,
+      "price_end": 822.5,
+      "change": -3.0,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 812.8,
+      "price_end": 867.7,
+      "change": 54.9,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 814.5,
+      "price_end": 876.5,
+      "change": 62.0,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "AL29",
+      "predicted_direction": "UP",
+      "price_start": 870.8,
+      "price_end": 830.0,
+      "change": -40.8,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "GD29",
+      "predicted_direction": "UP",
+      "price_start": 890.0,
+      "price_end": 858.4,
+      "change": -31.6,
+      "correct": false,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "AL41",
+      "predicted_direction": "UP",
+      "price_start": 743.2,
+      "price_end": 796.0,
+      "change": 52.8,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-15",
+      "ticker": "GD41",
+      "predicted_direction": "UP",
+      "price_start": 755.9,
+      "price_end": 816.7,
+      "change": 60.8,
+      "correct": true,
+      "explanation": "Basado en los datos obtenidos de la base de datos relacional de Supabase al 15 de junio de 2025, se proyecta un alza de precio para los bonos soberanos más líquidos (especialmente los Hard Dollar y los bonos ley local) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Solvencia Fiscal:** [Superávit Financiero Positivo (572.341M)] ──► causa ──► [Mejora en la capacidad de pago y reducción del riesgo de default] ──► señal [UP] en Bonos Soberanos. El hecho de que el balance financiero sea positivo indica que el Estado no necesita emitir moneda para financiar sus intereses.\n2. **Estabilidad Cambiaria:** [Brecha Cambiaria ≈ 0%] ──► causa ──► [Eliminación de la prima de riesgo por salto cambiario y mayor confianza del inversor] ──► señal [UP] en activos argentinos. Con un Dólar Oficial de 1200 y un MEP de 1192.9, la convergencia es casi total.\n3. **Desaceleración Inflacionaria:** [Inflación Mensual 1.6%] ──► causa ──► [Menor presión sobre las tasas reales y estabilización de precios] ──► señal [UP] en bonos de tasa fija.\n\n**Condicionales y Triggers de Salida:**\n- **Escenario Alcista:** Si el Riesgo País continúa bajando de los 651 puntos actuales, los bonos largos (AL35, GD35, AL41, GD41) tendrán un mayor rally por su mayor duration.\n- **Trigger de Venta (Stop Loss):** Considerar la salida de las posiciones si la brecha cambiaria (MEP vs Oficial) vuelve a superar el 20% o si el superávit primario se vuelve negativo.\n- **Plazo:** El objetivo de salida es a 45 días, monitoreando la sostenibilidad del superávit financiero.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 789.3,
+      "price_end": 812.2,
+      "change": 22.9,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares, especialmente aquellos con mayor duration y los activos más líquidos. Esta predicción se fundamenta en la siguiente cadena causal: \n\n**[Superávit Fiscal] ──► genera ──► [Reducción de Riesgo de Default] ──► señales [UP] en [Bonos Soberanos]**\n\n1. **Soporte Fiscal Sólido**: Según la base de datos relacional de Supabase, Argentina presenta un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones. Este ancla fiscal es el driver principal que sostiene la confianza del mercado y presiona a la baja el riesgo país (actualmente en 651 puntos).\n\n2. **Dinámica de Desinflación**: Con una inflación mensual del 1,6% (fuente: Supabase), el atractivo de los activos ajustados por CER disminuye frente a los bonos de tasa fija o Hard Dollar, ya que la tasa real de estos últimos se vuelve más competitiva en el corto plazo.\n\n3. **Estrategia de Duration**: De acuerdo con el análisis de GMA Capital (fuente: vista de noticias), ante un eventual 'shock de confianza' o compresión de rendimientos, la estrategia óptima es **estirar la duration**. Esto posiciona a los bonos **GD35, GD41, AL35 y AL41** como los activos con mayor potencial de apreciación de capital debido a su mayor sensibilidad a la baja de tasas.\n\n4. **Opción Táctica (AL30)**: Se identifica al **AL30** como una opción táctica superior debido a su esquema de amortización de capital durante el mandato actual, lo que reduce el riesgo de reestructuración agresiva en comparación con tramos más largos (fuente: IOL).\n\n**Escenarios Condicionales y Triggers:**\n- **Si la inflación (IPC) se acelera** por encima de la tasa de política monetaria (actualmente 29%), se recomienda rotar la cartera hacia bonos ajustados por CER.\n- **Si la brecha cambiaria (MEP/Oficial)** vuelve a expandirse significativamente (ej. >40%), se sugiere reducir la exposición a soberanos y migrar a Hard Dólar.\n- **Trigger de Salida**: Considerar la venta de posiciones si se alcanza la TIR objetivo o si se observa una deteriación en el resultado financiero mensual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 811.0,
+      "price_end": 839.0,
+      "change": 28.0,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares, especialmente aquellos con mayor duration y los activos más líquidos. Esta predicción se fundamenta en la siguiente cadena causal: \n\n**[Superávit Fiscal] ──► genera ──► [Reducción de Riesgo de Default] ──► señales [UP] en [Bonos Soberanos]**\n\n1. **Soporte Fiscal Sólido**: Según la base de datos relacional de Supabase, Argentina presenta un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones. Este ancla fiscal es el driver principal que sostiene la confianza del mercado y presiona a la baja el riesgo país (actualmente en 651 puntos).\n\n2. **Dinámica de Desinflación**: Con una inflación mensual del 1,6% (fuente: Supabase), el atractivo de los activos ajustados por CER disminuye frente a los bonos de tasa fija o Hard Dollar, ya que la tasa real de estos últimos se vuelve más competitiva en el corto plazo.\n\n3. **Estrategia de Duration**: De acuerdo con el análisis de GMA Capital (fuente: vista de noticias), ante un eventual 'shock de confianza' o compresión de rendimientos, la estrategia óptima es **estirar la duration**. Esto posiciona a los bonos **GD35, GD41, AL35 y AL41** como los activos con mayor potencial de apreciación de capital debido a su mayor sensibilidad a la baja de tasas.\n\n4. **Opción Táctica (AL30)**: Se identifica al **AL30** como una opción táctica superior debido a su esquema de amortización de capital durante el mandato actual, lo que reduce el riesgo de reestructuración agresiva en comparación con tramos más largos (fuente: IOL).\n\n**Escenarios Condicionales y Triggers:**\n- **Si la inflación (IPC) se acelera** por encima de la tasa de política monetaria (actualmente 29%), se recomienda rotar la cartera hacia bonos ajustados por CER.\n- **Si la brecha cambiaria (MEP/Oficial)** vuelve a expandirse significativamente (ej. >40%), se sugiere reducir la exposición a soberanos y migrar a Hard Dólar.\n- **Trigger de Salida**: Considerar la venta de posiciones si se alcanza la TIR objetivo o si se observa una deteriación en el resultado financiero mensual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 791.5,
+      "price_end": 875.5,
+      "change": 84.0,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares, especialmente aquellos con mayor duration y los activos más líquidos. Esta predicción se fundamenta en la siguiente cadena causal: \n\n**[Superávit Fiscal] ──► genera ──► [Reducción de Riesgo de Default] ──► señales [UP] en [Bonos Soberanos]**\n\n1. **Soporte Fiscal Sólido**: Según la base de datos relacional de Supabase, Argentina presenta un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones. Este ancla fiscal es el driver principal que sostiene la confianza del mercado y presiona a la baja el riesgo país (actualmente en 651 puntos).\n\n2. **Dinámica de Desinflación**: Con una inflación mensual del 1,6% (fuente: Supabase), el atractivo de los activos ajustados por CER disminuye frente a los bonos de tasa fija o Hard Dollar, ya que la tasa real de estos últimos se vuelve más competitiva en el corto plazo.\n\n3. **Estrategia de Duration**: De acuerdo con el análisis de GMA Capital (fuente: vista de noticias), ante un eventual 'shock de confianza' o compresión de rendimientos, la estrategia óptima es **estirar la duration**. Esto posiciona a los bonos **GD35, GD41, AL35 y AL41** como los activos con mayor potencial de apreciación de capital debido a su mayor sensibilidad a la baja de tasas.\n\n4. **Opción Táctica (AL30)**: Se identifica al **AL30** como una opción táctica superior debido a su esquema de amortización de capital durante el mandato actual, lo que reduce el riesgo de reestructuración agresiva en comparación con tramos más largos (fuente: IOL).\n\n**Escenarios Condicionales y Triggers:**\n- **Si la inflación (IPC) se acelera** por encima de la tasa de política monetaria (actualmente 29%), se recomienda rotar la cartera hacia bonos ajustados por CER.\n- **Si la brecha cambiaria (MEP/Oficial)** vuelve a expandirse significativamente (ej. >40%), se sugiere reducir la exposición a soberanos y migrar a Hard Dólar.\n- **Trigger de Salida**: Considerar la venta de posiciones si se alcanza la TIR objetivo o si se observa una deteriación en el resultado financiero mensual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 797.0,
+      "price_end": 892.8,
+      "change": 95.8,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares, especialmente aquellos con mayor duration y los activos más líquidos. Esta predicción se fundamenta en la siguiente cadena causal: \n\n**[Superávit Fiscal] ──► genera ──► [Reducción de Riesgo de Default] ──► señales [UP] en [Bonos Soberanos]**\n\n1. **Soporte Fiscal Sólido**: Según la base de datos relacional de Supabase, Argentina presenta un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones. Este ancla fiscal es el driver principal que sostiene la confianza del mercado y presiona a la baja el riesgo país (actualmente en 651 puntos).\n\n2. **Dinámica de Desinflación**: Con una inflación mensual del 1,6% (fuente: Supabase), el atractivo de los activos ajustados por CER disminuye frente a los bonos de tasa fija o Hard Dollar, ya que la tasa real de estos últimos se vuelve más competitiva en el corto plazo.\n\n3. **Estrategia de Duration**: De acuerdo con el análisis de GMA Capital (fuente: vista de noticias), ante un eventual 'shock de confianza' o compresión de rendimientos, la estrategia óptima es **estirar la duration**. Esto posiciona a los bonos **GD35, GD41, AL35 y AL41** como los activos con mayor potencial de apreciación de capital debido a su mayor sensibilidad a la baja de tasas.\n\n4. **Opción Táctica (AL30)**: Se identifica al **AL30** como una opción táctica superior debido a su esquema de amortización de capital durante el mandato actual, lo que reduce el riesgo de reestructuración agresiva en comparación con tramos más largos (fuente: IOL).\n\n**Escenarios Condicionales y Triggers:**\n- **Si la inflación (IPC) se acelera** por encima de la tasa de política monetaria (actualmente 29%), se recomienda rotar la cartera hacia bonos ajustados por CER.\n- **Si la brecha cambiaria (MEP/Oficial)** vuelve a expandirse significativamente (ej. >40%), se sugiere reducir la exposición a soberanos y migrar a Hard Dólar.\n- **Trigger de Salida**: Considerar la venta de posiciones si se alcanza la TIR objetivo o si se observa una deteriación en el resultado financiero mensual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "AL41",
+      "predicted_direction": "UP",
+      "price_start": 724.9,
+      "price_end": 805.5,
+      "change": 80.6,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares, especialmente aquellos con mayor duration y los activos más líquidos. Esta predicción se fundamenta en la siguiente cadena causal: \n\n**[Superávit Fiscal] ──► genera ──► [Reducción de Riesgo de Default] ──► señales [UP] en [Bonos Soberanos]**\n\n1. **Soporte Fiscal Sólido**: Según la base de datos relacional de Supabase, Argentina presenta un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones. Este ancla fiscal es el driver principal que sostiene la confianza del mercado y presiona a la baja el riesgo país (actualmente en 651 puntos).\n\n2. **Dinámica de Desinflación**: Con una inflación mensual del 1,6% (fuente: Supabase), el atractivo de los activos ajustados por CER disminuye frente a los bonos de tasa fija o Hard Dollar, ya que la tasa real de estos últimos se vuelve más competitiva en el corto plazo.\n\n3. **Estrategia de Duration**: De acuerdo con el análisis de GMA Capital (fuente: vista de noticias), ante un eventual 'shock de confianza' o compresión de rendimientos, la estrategia óptima es **estirar la duration**. Esto posiciona a los bonos **GD35, GD41, AL35 y AL41** como los activos con mayor potencial de apreciación de capital debido a su mayor sensibilidad a la baja de tasas.\n\n4. **Opción Táctica (AL30)**: Se identifica al **AL30** como una opción táctica superior debido a su esquema de amortización de capital durante el mandato actual, lo que reduce el riesgo de reestructuración agresiva en comparación con tramos más largos (fuente: IOL).\n\n**Escenarios Condicionales y Triggers:**\n- **Si la inflación (IPC) se acelera** por encima de la tasa de política monetaria (actualmente 29%), se recomienda rotar la cartera hacia bonos ajustados por CER.\n- **Si la brecha cambiaria (MEP/Oficial)** vuelve a expandirse significativamente (ej. >40%), se sugiere reducir la exposición a soberanos y migrar a Hard Dólar.\n- **Trigger de Salida**: Considerar la venta de posiciones si se alcanza la TIR objetivo o si se observa una deteriación en el resultado financiero mensual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "GD41",
+      "predicted_direction": "UP",
+      "price_start": 733.6,
+      "price_end": 824.3,
+      "change": 90.7,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares, especialmente aquellos con mayor duration y los activos más líquidos. Esta predicción se fundamenta en la siguiente cadena causal: \n\n**[Superávit Fiscal] ──► genera ──► [Reducción de Riesgo de Default] ──► señales [UP] en [Bonos Soberanos]**\n\n1. **Soporte Fiscal Sólido**: Según la base de datos relacional de Supabase, Argentina presenta un superávit primario de 845.949 millones y un superávit financiero de 572.341 millones. Este ancla fiscal es el driver principal que sostiene la confianza del mercado y presiona a la baja el riesgo país (actualmente en 651 puntos).\n\n2. **Dinámica de Desinflación**: Con una inflación mensual del 1,6% (fuente: Supabase), el atractivo de los activos ajustados por CER disminuye frente a los bonos de tasa fija o Hard Dollar, ya que la tasa real de estos últimos se vuelve más competitiva en el corto plazo.\n\n3. **Estrategia de Duration**: De acuerdo con el análisis de GMA Capital (fuente: vista de noticias), ante un eventual 'shock de confianza' o compresión de rendimientos, la estrategia óptima es **estirar la duration**. Esto posiciona a los bonos **GD35, GD41, AL35 y AL41** como los activos con mayor potencial de apreciación de capital debido a su mayor sensibilidad a la baja de tasas.\n\n4. **Opción Táctica (AL30)**: Se identifica al **AL30** como una opción táctica superior debido a su esquema de amortización de capital durante el mandato actual, lo que reduce el riesgo de reestructuración agresiva en comparación con tramos más largos (fuente: IOL).\n\n**Escenarios Condicionales y Triggers:**\n- **Si la inflación (IPC) se acelera** por encima de la tasa de política monetaria (actualmente 29%), se recomienda rotar la cartera hacia bonos ajustados por CER.\n- **Si la brecha cambiaria (MEP/Oficial)** vuelve a expandirse significativamente (ej. >40%), se sugiere reducir la exposición a soberanos y migrar a Hard Dólar.\n- **Trigger de Salida**: Considerar la venta de posiciones si se alcanza la TIR objetivo o si se observa una deteriación en el resultado financiero mensual.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 797.0,
+      "price_end": 892.8,
+      "change": 95.8,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase y el análisis de noticias recientes, se prevé una tendencia a la baja o estancamiento con sesgo negativo para los bonos de larga duración en el horizonte de 45 días. \n\n**Análisis Causal:**\n`[Déficit de Reservas Netas] ──► causes ──► [Estancamiento del Riesgo País y falta de catalizadores de confianza] ──► signals [DOWN] on [Bonos de Larga Duración (GD35, GD41, AL35, AL41, AE38)]` \n\n**Justificación Detallada:**\n1. **Factor Reservas**: El contexto macroeconómico muestra reservas netas negativas (-2.000 millones USD), lo que representa el principal obstáculo para que el Riesgo País (actualmente en 651 bps) continúe comprimiéndose. Según analistas de GMA Capital citados en la vista de fuentes de noticias, la acumulación de reservas netas es el factor doméstico más determinante para el mercado.\n2. **Sensibilidad a la Tasa (Duration)**: Los bonos seleccionados (vencimientos 2035, 2038, 2041, 2046) poseen la mayor duración de la curva. Esto significa que son los activos más sensibles a cualquier incremento en la percepción de riesgo o a la ausencia de noticias positivas. Mientras que los bonos cortos (como AL30) están protegidos por sus esquemas de amortización, los largos dependen enteramente de una 'compresión de tasas' que hoy no tiene un catalizador claro en el corto plazo.\n3. **Ruido Electoral**: La proximidad de las elecciones de 2025 comienza a generar volatilidad. Los inversores extranjeros, según reportes de IOL, están priorizando la incertidumbre electoral sobre las variables monetarias, lo que suele derivar en una salida de activos de mayor riesgo y plazo.\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario A**: *Si el BCRA no logra revertir la tendencia de reservas netas negativas en los próximos 45 días*, entonces los bonos de larga duración sufrirán una corrección de precio por falta de soporte fundamental.\n- **Escenario B**: *Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a ensancharse significativamente*, reduzca la exposición a bonos soberanos y migre hacia Hard Dólar líquido.\n- **Trigger de Salida**: Considerar la venta o reducción de posiciones en estos activos si el Riesgo País supera los 750 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "GD38",
+      "predicted_direction": "DOWN",
+      "price_start": 847.4,
+      "price_end": 956.1,
+      "change": 108.7,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase y el análisis de noticias recientes, se prevé una tendencia a la baja o estancamiento con sesgo negativo para los bonos de larga duración en el horizonte de 45 días. \n\n**Análisis Causal:**\n`[Déficit de Reservas Netas] ──► causes ──► [Estancamiento del Riesgo País y falta de catalizadores de confianza] ──► signals [DOWN] on [Bonos de Larga Duración (GD35, GD41, AL35, AL41, AE38)]` \n\n**Justificación Detallada:**\n1. **Factor Reservas**: El contexto macroeconómico muestra reservas netas negativas (-2.000 millones USD), lo que representa el principal obstáculo para que el Riesgo País (actualmente en 651 bps) continúe comprimiéndose. Según analistas de GMA Capital citados en la vista de fuentes de noticias, la acumulación de reservas netas es el factor doméstico más determinante para el mercado.\n2. **Sensibilidad a la Tasa (Duration)**: Los bonos seleccionados (vencimientos 2035, 2038, 2041, 2046) poseen la mayor duración de la curva. Esto significa que son los activos más sensibles a cualquier incremento en la percepción de riesgo o a la ausencia de noticias positivas. Mientras que los bonos cortos (como AL30) están protegidos por sus esquemas de amortización, los largos dependen enteramente de una 'compresión de tasas' que hoy no tiene un catalizador claro en el corto plazo.\n3. **Ruido Electoral**: La proximidad de las elecciones de 2025 comienza a generar volatilidad. Los inversores extranjeros, según reportes de IOL, están priorizando la incertidumbre electoral sobre las variables monetarias, lo que suele derivar en una salida de activos de mayor riesgo y plazo.\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario A**: *Si el BCRA no logra revertir la tendencia de reservas netas negativas en los próximos 45 días*, entonces los bonos de larga duración sufrirán una corrección de precio por falta de soporte fundamental.\n- **Escenario B**: *Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a ensancharse significativamente*, reduzca la exposición a bonos soberanos y migre hacia Hard Dólar líquido.\n- **Trigger de Salida**: Considerar la venta o reducción de posiciones en estos activos si el Riesgo País supera los 750 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 733.6,
+      "price_end": 824.3,
+      "change": 90.7,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase y el análisis de noticias recientes, se prevé una tendencia a la baja o estancamiento con sesgo negativo para los bonos de larga duración en el horizonte de 45 días. \n\n**Análisis Causal:**\n`[Déficit de Reservas Netas] ──► causes ──► [Estancamiento del Riesgo País y falta de catalizadores de confianza] ──► signals [DOWN] on [Bonos de Larga Duración (GD35, GD41, AL35, AL41, AE38)]` \n\n**Justificación Detallada:**\n1. **Factor Reservas**: El contexto macroeconómico muestra reservas netas negativas (-2.000 millones USD), lo que representa el principal obstáculo para que el Riesgo País (actualmente en 651 bps) continúe comprimiéndose. Según analistas de GMA Capital citados en la vista de fuentes de noticias, la acumulación de reservas netas es el factor doméstico más determinante para el mercado.\n2. **Sensibilidad a la Tasa (Duration)**: Los bonos seleccionados (vencimientos 2035, 2038, 2041, 2046) poseen la mayor duración de la curva. Esto significa que son los activos más sensibles a cualquier incremento en la percepción de riesgo o a la ausencia de noticias positivas. Mientras que los bonos cortos (como AL30) están protegidos por sus esquemas de amortización, los largos dependen enteramente de una 'compresión de tasas' que hoy no tiene un catalizador claro en el corto plazo.\n3. **Ruido Electoral**: La proximidad de las elecciones de 2025 comienza a generar volatilidad. Los inversores extranjeros, según reportes de IOL, están priorizando la incertidumbre electoral sobre las variables monetarias, lo que suele derivar en una salida de activos de mayor riesgo y plazo.\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario A**: *Si el BCRA no logra revertir la tendencia de reservas netas negativas en los próximos 45 días*, entonces los bonos de larga duración sufrirán una corrección de precio por falta de soporte fundamental.\n- **Escenario B**: *Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a ensancharse significativamente*, reduzca la exposición a bonos soberanos y migre hacia Hard Dólar líquido.\n- **Trigger de Salida**: Considerar la venta o reducción de posiciones en estos activos si el Riesgo País supera los 750 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "GD46",
+      "predicted_direction": "DOWN",
+      "price_start": 766.7,
+      "price_end": 832.5,
+      "change": 65.8,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase y el análisis de noticias recientes, se prevé una tendencia a la baja o estancamiento con sesgo negativo para los bonos de larga duración en el horizonte de 45 días. \n\n**Análisis Causal:**\n`[Déficit de Reservas Netas] ──► causes ──► [Estancamiento del Riesgo País y falta de catalizadores de confianza] ──► signals [DOWN] on [Bonos de Larga Duración (GD35, GD41, AL35, AL41, AE38)]` \n\n**Justificación Detallada:**\n1. **Factor Reservas**: El contexto macroeconómico muestra reservas netas negativas (-2.000 millones USD), lo que representa el principal obstáculo para que el Riesgo País (actualmente en 651 bps) continúe comprimiéndose. Según analistas de GMA Capital citados en la vista de fuentes de noticias, la acumulación de reservas netas es el factor doméstico más determinante para el mercado.\n2. **Sensibilidad a la Tasa (Duration)**: Los bonos seleccionados (vencimientos 2035, 2038, 2041, 2046) poseen la mayor duración de la curva. Esto significa que son los activos más sensibles a cualquier incremento en la percepción de riesgo o a la ausencia de noticias positivas. Mientras que los bonos cortos (como AL30) están protegidos por sus esquemas de amortización, los largos dependen enteramente de una 'compresión de tasas' que hoy no tiene un catalizador claro en el corto plazo.\n3. **Ruido Electoral**: La proximidad de las elecciones de 2025 comienza a generar volatilidad. Los inversores extranjeros, según reportes de IOL, están priorizando la incertidumbre electoral sobre las variables monetarias, lo que suele derivar en una salida de activos de mayor riesgo y plazo.\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario A**: *Si el BCRA no logra revertir la tendencia de reservas netas negativas en los próximos 45 días*, entonces los bonos de larga duración sufrirán una corrección de precio por falta de soporte fundamental.\n- **Escenario B**: *Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a ensancharse significativamente*, reduzca la exposición a bonos soberanos y migre hacia Hard Dólar líquido.\n- **Trigger de Salida**: Considerar la venta o reducción de posiciones en estos activos si el Riesgo País supera los 750 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 791.5,
+      "price_end": 875.5,
+      "change": 84.0,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase y el análisis de noticias recientes, se prevé una tendencia a la baja o estancamiento con sesgo negativo para los bonos de larga duración en el horizonte de 45 días. \n\n**Análisis Causal:**\n`[Déficit de Reservas Netas] ──► causes ──► [Estancamiento del Riesgo País y falta de catalizadores de confianza] ──► signals [DOWN] on [Bonos de Larga Duración (GD35, GD41, AL35, AL41, AE38)]` \n\n**Justificación Detallada:**\n1. **Factor Reservas**: El contexto macroeconómico muestra reservas netas negativas (-2.000 millones USD), lo que representa el principal obstáculo para que el Riesgo País (actualmente en 651 bps) continúe comprimiéndose. Según analistas de GMA Capital citados en la vista de fuentes de noticias, la acumulación de reservas netas es el factor doméstico más determinante para el mercado.\n2. **Sensibilidad a la Tasa (Duration)**: Los bonos seleccionados (vencimientos 2035, 2038, 2041, 2046) poseen la mayor duración de la curva. Esto significa que son los activos más sensibles a cualquier incremento en la percepción de riesgo o a la ausencia de noticias positivas. Mientras que los bonos cortos (como AL30) están protegidos por sus esquemas de amortización, los largos dependen enteramente de una 'compresión de tasas' que hoy no tiene un catalizador claro en el corto plazo.\n3. **Ruido Electoral**: La proximidad de las elecciones de 2025 comienza a generar volatilidad. Los inversores extranjeros, según reportes de IOL, están priorizando la incertidumbre electoral sobre las variables monetarias, lo que suele derivar en una salida de activos de mayor riesgo y plazo.\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario A**: *Si el BCRA no logra revertir la tendencia de reservas netas negativas en los próximos 45 días*, entonces los bonos de larga duración sufrirán una corrección de precio por falta de soporte fundamental.\n- **Escenario B**: *Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a ensancharse significativamente*, reduzca la exposición a bonos soberanos y migre hacia Hard Dólar líquido.\n- **Trigger de Salida**: Considerar la venta o reducción de posiciones en estos activos si el Riesgo País supera los 750 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 724.9,
+      "price_end": 805.5,
+      "change": 80.6,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase y el análisis de noticias recientes, se prevé una tendencia a la baja o estancamiento con sesgo negativo para los bonos de larga duración en el horizonte de 45 días. \n\n**Análisis Causal:**\n`[Déficit de Reservas Netas] ──► causes ──► [Estancamiento del Riesgo País y falta de catalizadores de confianza] ──► signals [DOWN] on [Bonos de Larga Duración (GD35, GD41, AL35, AL41, AE38)]` \n\n**Justificación Detallada:**\n1. **Factor Reservas**: El contexto macroeconómico muestra reservas netas negativas (-2.000 millones USD), lo que representa el principal obstáculo para que el Riesgo País (actualmente en 651 bps) continúe comprimiéndose. Según analistas de GMA Capital citados en la vista de fuentes de noticias, la acumulación de reservas netas es el factor doméstico más determinante para el mercado.\n2. **Sensibilidad a la Tasa (Duration)**: Los bonos seleccionados (vencimientos 2035, 2038, 2041, 2046) poseen la mayor duración de la curva. Esto significa que son los activos más sensibles a cualquier incremento en la percepción de riesgo o a la ausencia de noticias positivas. Mientras que los bonos cortos (como AL30) están protegidos por sus esquemas de amortización, los largos dependen enteramente de una 'compresión de tasas' que hoy no tiene un catalizador claro en el corto plazo.\n3. **Ruido Electoral**: La proximidad de las elecciones de 2025 comienza a generar volatilidad. Los inversores extranjeros, según reportes de IOL, están priorizando la incertidumbre electoral sobre las variables monetarias, lo que suele derivar en una salida de activos de mayor riesgo y plazo.\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario A**: *Si el BCRA no logra revertir la tendencia de reservas netas negativas en los próximos 45 días*, entonces los bonos de larga duración sufrirán una corrección de precio por falta de soporte fundamental.\n- **Escenario B**: *Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a ensancharse significativamente*, reduzca la exposición a bonos soberanos y migre hacia Hard Dólar líquido.\n- **Trigger de Salida**: Considerar la venta o reducción de posiciones en estos activos si el Riesgo País supera los 750 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-20",
+      "ticker": "AE38",
+      "predicted_direction": "DOWN",
+      "price_start": 827.5,
+      "price_end": 912.6,
+      "change": 85.1,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase y el análisis de noticias recientes, se prevé una tendencia a la baja o estancamiento con sesgo negativo para los bonos de larga duración en el horizonte de 45 días. \n\n**Análisis Causal:**\n`[Déficit de Reservas Netas] ──► causes ──► [Estancamiento del Riesgo País y falta de catalizadores de confianza] ──► signals [DOWN] on [Bonos de Larga Duración (GD35, GD41, AL35, AL41, AE38)]` \n\n**Justificación Detallada:**\n1. **Factor Reservas**: El contexto macroeconómico muestra reservas netas negativas (-2.000 millones USD), lo que representa el principal obstáculo para que el Riesgo País (actualmente en 651 bps) continúe comprimiéndose. Según analistas de GMA Capital citados en la vista de fuentes de noticias, la acumulación de reservas netas es el factor doméstico más determinante para el mercado.\n2. **Sensibilidad a la Tasa (Duration)**: Los bonos seleccionados (vencimientos 2035, 2038, 2041, 2046) poseen la mayor duración de la curva. Esto significa que son los activos más sensibles a cualquier incremento en la percepción de riesgo o a la ausencia de noticias positivas. Mientras que los bonos cortos (como AL30) están protegidos por sus esquemas de amortización, los largos dependen enteramente de una 'compresión de tasas' que hoy no tiene un catalizador claro en el corto plazo.\n3. **Ruido Electoral**: La proximidad de las elecciones de 2025 comienza a generar volatilidad. Los inversores extranjeros, según reportes de IOL, están priorizando la incertidumbre electoral sobre las variables monetarias, lo que suele derivar en una salida de activos de mayor riesgo y plazo.\n\n**Escenarios Condicionales y Triggers:**\n- **Escenario A**: *Si el BCRA no logra revertir la tendencia de reservas netas negativas en los próximos 45 días*, entonces los bonos de larga duración sufrirán una corrección de precio por falta de soporte fundamental.\n- **Escenario B**: *Si la brecha cambiaria (MEP/CCL vs Oficial) vuelve a ensancharse significativamente*, reduzca la exposición a bonos soberanos y migre hacia Hard Dólar líquido.\n- **Trigger de Salida**: Considerar la venta o reducción de posiciones en estos activos si el Riesgo País supera los 750 puntos básicos.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 823.5,
+      "price_end": 804.0,
+      "change": -19.5,
+      "correct": false,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos, impulsado por una combinación de fundamentos fiscales sólidos y un entorno global favorable.\n\n### ⛓️ Rastreo Causal de Alza\n\n1. **Sostenibilidad Fiscal:**\n`Superávit Financiero (Positivo) ──► Reducción de Necesidades de Financiamiento ──► Menor Riesgo de Default ──► Compresión de Tasas ──► Alza de Precios en AL30/GD30`.\nSegún la base de datos relacional de Supabase, Argentina registra un superávit financiero de ARS 572.341 millones, lo que valida la narrativa de ortodoxia económica.\n\n2. **Entorno Global (Risk-On):**\n`Tregua en Medio Oriente ──► Apetito por Riesgo Global ──► Flujo de Capitales hacia Emergentes ──► Aumento de Demanda de Activos Argentinos ──► Alza de Precios`.\nFuentes de noticias recientes (Bloomberg Línea) destacan que el cese de tensiones entre Irán e Israel ha generado un 'envión del norte' que impulsa los ADRs y bonos soberanos.\n\n3. **Catalizadores Técnicos:**\n`Expectativa de Reclasificación MSCI ──► Posible Ingreso a Mercados Emergentes ──► Entrada de Fondos Indexados ──► Presión Alcista en Precios`.\n\n### 📊 Evaluación de Consenso y Riesgos\nExiste un **consenso fuerte** en la prensa financiera sobre la capacidad del gobierno para mantener la desinflación (IPC mensual del 1,6% según datos macro) y el superávit. Sin embargo, el punto débil sigue siendo la acumulación de reservas netas (actualmente en -2.000 millones USD), lo que mantiene el Riesgo País en 651 bps, lejos del umbral de 550 bps necesario para un retorno pleno a los mercados voluntarios.\n\n### ⏱️ Estrategia de Salida y Condicionales (Horizonte 45 días)\n\n**Trigger de Venta:** Se recomienda considerar la salida de las posiciones o toma de ganancias si el Riesgo País perfora los **550 puntos básicos** o si se alcanza un objetivo de TIR ajustado a la baja.\n\n**Escenarios Condicionales:**\n- **SI** la inflación mensual (IPC) vuelve a acelerarse por encima del 4%, **ENTONCES** rotar cartera de bonos Hard Dollar hacia bonos ajustados por CER (ej. TX26, TZX27).\n- **SI** el BCRA logra revertir las reservas netas a terreno positivo, **ENTONCES** incrementar la exposición en bonos de mediano plazo (AL35/GD35).\n- **SI** la brecha cambiaria (MEP/CCL vs Oficial) supera el 40%, **ENTONCES** reducir exposición a soberanos y refugiarse en Hard Dólar líquido.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 847.0,
+      "price_end": 833.0,
+      "change": -14.0,
+      "correct": false,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos, impulsado por una combinación de fundamentos fiscales sólidos y un entorno global favorable.\n\n### ⛓️ Rastreo Causal de Alza\n\n1. **Sostenibilidad Fiscal:**\n`Superávit Financiero (Positivo) ──► Reducción de Necesidades de Financiamiento ──► Menor Riesgo de Default ──► Compresión de Tasas ──► Alza de Precios en AL30/GD30`.\nSegún la base de datos relacional de Supabase, Argentina registra un superávit financiero de ARS 572.341 millones, lo que valida la narrativa de ortodoxia económica.\n\n2. **Entorno Global (Risk-On):**\n`Tregua en Medio Oriente ──► Apetito por Riesgo Global ──► Flujo de Capitales hacia Emergentes ──► Aumento de Demanda de Activos Argentinos ──► Alza de Precios`.\nFuentes de noticias recientes (Bloomberg Línea) destacan que el cese de tensiones entre Irán e Israel ha generado un 'envión del norte' que impulsa los ADRs y bonos soberanos.\n\n3. **Catalizadores Técnicos:**\n`Expectativa de Reclasificación MSCI ──► Posible Ingreso a Mercados Emergentes ──► Entrada de Fondos Indexados ──► Presión Alcista en Precios`.\n\n### 📊 Evaluación de Consenso y Riesgos\nExiste un **consenso fuerte** en la prensa financiera sobre la capacidad del gobierno para mantener la desinflación (IPC mensual del 1,6% según datos macro) y el superávit. Sin embargo, el punto débil sigue siendo la acumulación de reservas netas (actualmente en -2.000 millones USD), lo que mantiene el Riesgo País en 651 bps, lejos del umbral de 550 bps necesario para un retorno pleno a los mercados voluntarios.\n\n### ⏱️ Estrategia de Salida y Condicionales (Horizonte 45 días)\n\n**Trigger de Venta:** Se recomienda considerar la salida de las posiciones o toma de ganancias si el Riesgo País perfora los **550 puntos básicos** o si se alcanza un objetivo de TIR ajustado a la baja.\n\n**Escenarios Condicionales:**\n- **SI** la inflación mensual (IPC) vuelve a acelerarse por encima del 4%, **ENTONCES** rotar cartera de bonos Hard Dollar hacia bonos ajustados por CER (ej. TX26, TZX27).\n- **SI** el BCRA logra revertir las reservas netas a terreno positivo, **ENTONCES** incrementar la exposición en bonos de mediano plazo (AL35/GD35).\n- **SI** la brecha cambiaria (MEP/CCL vs Oficial) supera el 40%, **ENTONCES** reducir exposición a soberanos y refugiarse en Hard Dólar líquido.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "AL29",
+      "predicted_direction": "UP",
+      "price_start": 890.0,
+      "price_end": 841.4,
+      "change": -48.6,
+      "correct": false,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos, impulsado por una combinación de fundamentos fiscales sólidos y un entorno global favorable.\n\n### ⛓️ Rastreo Causal de Alza\n\n1. **Sostenibilidad Fiscal:**\n`Superávit Financiero (Positivo) ──► Reducción de Necesidades de Financiamiento ──► Menor Riesgo de Default ──► Compresión de Tasas ──► Alza de Precios en AL30/GD30`.\nSegún la base de datos relacional de Supabase, Argentina registra un superávit financiero de ARS 572.341 millones, lo que valida la narrativa de ortodoxia económica.\n\n2. **Entorno Global (Risk-On):**\n`Tregua en Medio Oriente ──► Apetito por Riesgo Global ──► Flujo de Capitales hacia Emergentes ──► Aumento de Demanda de Activos Argentinos ──► Alza de Precios`.\nFuentes de noticias recientes (Bloomberg Línea) destacan que el cese de tensiones entre Irán e Israel ha generado un 'envión del norte' que impulsa los ADRs y bonos soberanos.\n\n3. **Catalizadores Técnicos:**\n`Expectativa de Reclasificación MSCI ──► Posible Ingreso a Mercados Emergentes ──► Entrada de Fondos Indexados ──► Presión Alcista en Precios`.\n\n### 📊 Evaluación de Consenso y Riesgos\nExiste un **consenso fuerte** en la prensa financiera sobre la capacidad del gobierno para mantener la desinflación (IPC mensual del 1,6% según datos macro) y el superávit. Sin embargo, el punto débil sigue siendo la acumulación de reservas netas (actualmente en -2.000 millones USD), lo que mantiene el Riesgo País en 651 bps, lejos del umbral de 550 bps necesario para un retorno pleno a los mercados voluntarios.\n\n### ⏱️ Estrategia de Salida y Condicionales (Horizonte 45 días)\n\n**Trigger de Venta:** Se recomienda considerar la salida de las posiciones o toma de ganancias si el Riesgo País perfora los **550 puntos básicos** o si se alcanza un objetivo de TIR ajustado a la baja.\n\n**Escenarios Condicionales:**\n- **SI** la inflación mensual (IPC) vuelve a acelerarse por encima del 4%, **ENTONCES** rotar cartera de bonos Hard Dollar hacia bonos ajustados por CER (ej. TX26, TZX27).\n- **SI** el BCRA logra revertir las reservas netas a terreno positivo, **ENTONCES** incrementar la exposición en bonos de mediano plazo (AL35/GD35).\n- **SI** la brecha cambiaria (MEP/CCL vs Oficial) supera el 40%, **ENTONCES** reducir exposición a soberanos y refugiarse en Hard Dólar líquido.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "GD29",
+      "predicted_direction": "UP",
+      "price_start": 919.5,
+      "price_end": 873.7,
+      "change": -45.8,
+      "correct": false,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos, impulsado por una combinación de fundamentos fiscales sólidos y un entorno global favorable.\n\n### ⛓️ Rastreo Causal de Alza\n\n1. **Sostenibilidad Fiscal:**\n`Superávit Financiero (Positivo) ──► Reducción de Necesidades de Financiamiento ──► Menor Riesgo de Default ──► Compresión de Tasas ──► Alza de Precios en AL30/GD30`.\nSegún la base de datos relacional de Supabase, Argentina registra un superávit financiero de ARS 572.341 millones, lo que valida la narrativa de ortodoxia económica.\n\n2. **Entorno Global (Risk-On):**\n`Tregua en Medio Oriente ──► Apetito por Riesgo Global ──► Flujo de Capitales hacia Emergentes ──► Aumento de Demanda de Activos Argentinos ──► Alza de Precios`.\nFuentes de noticias recientes (Bloomberg Línea) destacan que el cese de tensiones entre Irán e Israel ha generado un 'envión del norte' que impulsa los ADRs y bonos soberanos.\n\n3. **Catalizadores Técnicos:**\n`Expectativa de Reclasificación MSCI ──► Posible Ingreso a Mercados Emergentes ──► Entrada de Fondos Indexados ──► Presión Alcista en Precios`.\n\n### 📊 Evaluación de Consenso y Riesgos\nExiste un **consenso fuerte** en la prensa financiera sobre la capacidad del gobierno para mantener la desinflación (IPC mensual del 1,6% según datos macro) y el superávit. Sin embargo, el punto débil sigue siendo la acumulación de reservas netas (actualmente en -2.000 millones USD), lo que mantiene el Riesgo País en 651 bps, lejos del umbral de 550 bps necesario para un retorno pleno a los mercados voluntarios.\n\n### ⏱️ Estrategia de Salida y Condicionales (Horizonte 45 días)\n\n**Trigger de Venta:** Se recomienda considerar la salida de las posiciones o toma de ganancias si el Riesgo País perfora los **550 puntos básicos** o si se alcanza un objetivo de TIR ajustado a la baja.\n\n**Escenarios Condicionales:**\n- **SI** la inflación mensual (IPC) vuelve a acelerarse por encima del 4%, **ENTONCES** rotar cartera de bonos Hard Dollar hacia bonos ajustados por CER (ej. TX26, TZX27).\n- **SI** el BCRA logra revertir las reservas netas a terreno positivo, **ENTONCES** incrementar la exposición en bonos de mediano plazo (AL35/GD35).\n- **SI** la brecha cambiaria (MEP/CCL vs Oficial) supera el 40%, **ENTONCES** reducir exposición a soberanos y refugiarse en Hard Dólar líquido.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 826.7,
+      "price_end": 875.2,
+      "change": 48.5,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos, impulsado por una combinación de fundamentos fiscales sólidos y un entorno global favorable.\n\n### ⛓️ Rastreo Causal de Alza\n\n1. **Sostenibilidad Fiscal:**\n`Superávit Financiero (Positivo) ──► Reducción de Necesidades de Financiamiento ──► Menor Riesgo de Default ──► Compresión de Tasas ──► Alza de Precios en AL30/GD30`.\nSegún la base de datos relacional de Supabase, Argentina registra un superávit financiero de ARS 572.341 millones, lo que valida la narrativa de ortodoxia económica.\n\n2. **Entorno Global (Risk-On):**\n`Tregua en Medio Oriente ──► Apetito por Riesgo Global ──► Flujo de Capitales hacia Emergentes ──► Aumento de Demanda de Activos Argentinos ──► Alza de Precios`.\nFuentes de noticias recientes (Bloomberg Línea) destacan que el cese de tensiones entre Irán e Israel ha generado un 'envión del norte' que impulsa los ADRs y bonos soberanos.\n\n3. **Catalizadores Técnicos:**\n`Expectativa de Reclasificación MSCI ──► Posible Ingreso a Mercados Emergentes ──► Entrada de Fondos Indexados ──► Presión Alcista en Precios`.\n\n### 📊 Evaluación de Consenso y Riesgos\nExiste un **consenso fuerte** en la prensa financiera sobre la capacidad del gobierno para mantener la desinflación (IPC mensual del 1,6% según datos macro) y el superávit. Sin embargo, el punto débil sigue siendo la acumulación de reservas netas (actualmente en -2.000 millones USD), lo que mantiene el Riesgo País en 651 bps, lejos del umbral de 550 bps necesario para un retorno pleno a los mercados voluntarios.\n\n### ⏱️ Estrategia de Salida y Condicionales (Horizonte 45 días)\n\n**Trigger de Venta:** Se recomienda considerar la salida de las posiciones o toma de ganancias si el Riesgo País perfora los **550 puntos básicos** o si se alcanza un objetivo de TIR ajustado a la baja.\n\n**Escenarios Condicionales:**\n- **SI** la inflación mensual (IPC) vuelve a acelerarse por encima del 4%, **ENTONCES** rotar cartera de bonos Hard Dollar hacia bonos ajustados por CER (ej. TX26, TZX27).\n- **SI** el BCRA logra revertir las reservas netas a terreno positivo, **ENTONCES** incrementar la exposición en bonos de mediano plazo (AL35/GD35).\n- **SI** la brecha cambiaria (MEP/CCL vs Oficial) supera el 40%, **ENTONCES** reducir exposición a soberanos y refugiarse en Hard Dólar líquido.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 835.8,
+      "price_end": 888.5,
+      "change": 52.7,
+      "correct": true,
+      "explanation": "El análisis para los próximos 45 días indica un sesgo alcista para los bonos soberanos en dólares (Hard Dollar), especialmente los más líquidos, impulsado por una combinación de fundamentos fiscales sólidos y un entorno global favorable.\n\n### ⛓️ Rastreo Causal de Alza\n\n1. **Sostenibilidad Fiscal:**\n`Superávit Financiero (Positivo) ──► Reducción de Necesidades de Financiamiento ──► Menor Riesgo de Default ──► Compresión de Tasas ──► Alza de Precios en AL30/GD30`.\nSegún la base de datos relacional de Supabase, Argentina registra un superávit financiero de ARS 572.341 millones, lo que valida la narrativa de ortodoxia económica.\n\n2. **Entorno Global (Risk-On):**\n`Tregua en Medio Oriente ──► Apetito por Riesgo Global ──► Flujo de Capitales hacia Emergentes ──► Aumento de Demanda de Activos Argentinos ──► Alza de Precios`.\nFuentes de noticias recientes (Bloomberg Línea) destacan que el cese de tensiones entre Irán e Israel ha generado un 'envión del norte' que impulsa los ADRs y bonos soberanos.\n\n3. **Catalizadores Técnicos:**\n`Expectativa de Reclasificación MSCI ──► Posible Ingreso a Mercados Emergentes ──► Entrada de Fondos Indexados ──► Presión Alcista en Precios`.\n\n### 📊 Evaluación de Consenso y Riesgos\nExiste un **consenso fuerte** en la prensa financiera sobre la capacidad del gobierno para mantener la desinflación (IPC mensual del 1,6% según datos macro) y el superávit. Sin embargo, el punto débil sigue siendo la acumulación de reservas netas (actualmente en -2.000 millones USD), lo que mantiene el Riesgo País en 651 bps, lejos del umbral de 550 bps necesario para un retorno pleno a los mercados voluntarios.\n\n### ⏱️ Estrategia de Salida y Condicionales (Horizonte 45 días)\n\n**Trigger de Venta:** Se recomienda considerar la salida de las posiciones o toma de ganancias si el Riesgo País perfora los **550 puntos básicos** o si se alcanza un objetivo de TIR ajustado a la baja.\n\n**Escenarios Condicionales:**\n- **SI** la inflación mensual (IPC) vuelve a acelerarse por encima del 4%, **ENTONCES** rotar cartera de bonos Hard Dollar hacia bonos ajustados por CER (ej. TX26, TZX27).\n- **SI** el BCRA logra revertir las reservas netas a terreno positivo, **ENTONCES** incrementar la exposición en bonos de mediano plazo (AL35/GD35).\n- **SI** la brecha cambiaria (MEP/CCL vs Oficial) supera el 40%, **ENTONCES** reducir exposición a soberanos y refugiarse en Hard Dólar líquido.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "TX31",
+      "predicted_direction": "DOWN",
+      "price_start": 9.53,
+      "price_end": 9.28,
+      "change": -0.25,
+      "correct": true,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales y las relaciones causales del grafo de conocimiento, se prevé una tendencia a la baja en el precio de los siguientes activos en un horizonte de 45 días:\n\n1. **Bonos ajustados por CER (TX31, TZX27):** \n   - **Cadena Causal:** `[Baja de Inflación (1.6% mensual)] ──► causes ──► [Menor atractivo relativo de activos CER vs Tasa Fija] ──► signals [DOWN] on [TX31, TZX27]`.\n   - **Justificación:** Con una inflación mensual del 1.6% y una tasa de política monetaria del 29% (aprox. 2.4% mensual), las tasas reales son positivas. El grafo de conocimiento indica que la 'Baja de la inflación sugiere UP Tasa Fija'. En este escenario de desinflación, los bonos CER pierden su atractivo como cobertura, impulsando a los inversores a rotar sus carteras hacia activos de tasa fija (como LECAPs), lo que presiona los precios de los bonos CER a la baja.\n\n2. **Bonos Hard Dollar (AL30, GD30, AL35, GD35):**\n   - **Cadena Causal:** `[Reservas Netas Negativas (-2.000M USD)] ──► causes ──► [Persistencia de Riesgo País (651 pts)] ──► signals [DOWN] on [Hard Dollar Bonds]`.\n   - **Justificación:** A pesar del superávit fiscal, la falta de acumulación de reservas netas (actualmente en -2.000 millones USD) debilita la posición externa del país. Según el grafo, la 'falta de acumulación de divisas incrementa la percepción de riesgo entre los inversores'. Esto, sumado a la fuerte señal de 'UP' para activos de Tasa Fija en pesos, sugiere una rotación de capitales fuera de los bonos soberanos en dólares hacia instrumentos locales más atractivos en el corto plazo.\n\n**Condicionales y Triggers de Salida:**\n- **Si** la inflación (IPC) vuelve a acelerarse por encima de la tasa de política monetaria, la tendencia de los bonos CER podría revertirse (comprar CER, vender Tasa Fija).\n- **Si** el BCRA comienza una acumulación agresiva de reservas netas, el Riesgo País tendería a bajar, impulsando el precio de los bonos Hard Dollar (AL30, GD30).\n- **Trigger de Venta:** Considerar la salida de estas posiciones si el Riesgo País rompe la barrera de los 700 puntos o si la brecha cambiaria se expande significativamente por encima del 40%.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "TZX27",
+      "predicted_direction": "DOWN",
+      "price_start": 2.407,
+      "price_end": 2.378,
+      "change": -0.029,
+      "correct": true,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales y las relaciones causales del grafo de conocimiento, se prevé una tendencia a la baja en el precio de los siguientes activos en un horizonte de 45 días:\n\n1. **Bonos ajustados por CER (TX31, TZX27):** \n   - **Cadena Causal:** `[Baja de Inflación (1.6% mensual)] ──► causes ──► [Menor atractivo relativo de activos CER vs Tasa Fija] ──► signals [DOWN] on [TX31, TZX27]`.\n   - **Justificación:** Con una inflación mensual del 1.6% y una tasa de política monetaria del 29% (aprox. 2.4% mensual), las tasas reales son positivas. El grafo de conocimiento indica que la 'Baja de la inflación sugiere UP Tasa Fija'. En este escenario de desinflación, los bonos CER pierden su atractivo como cobertura, impulsando a los inversores a rotar sus carteras hacia activos de tasa fija (como LECAPs), lo que presiona los precios de los bonos CER a la baja.\n\n2. **Bonos Hard Dollar (AL30, GD30, AL35, GD35):**\n   - **Cadena Causal:** `[Reservas Netas Negativas (-2.000M USD)] ──► causes ──► [Persistencia de Riesgo País (651 pts)] ──► signals [DOWN] on [Hard Dollar Bonds]`.\n   - **Justificación:** A pesar del superávit fiscal, la falta de acumulación de reservas netas (actualmente en -2.000 millones USD) debilita la posición externa del país. Según el grafo, la 'falta de acumulación de divisas incrementa la percepción de riesgo entre los inversores'. Esto, sumado a la fuerte señal de 'UP' para activos de Tasa Fija en pesos, sugiere una rotación de capitales fuera de los bonos soberanos en dólares hacia instrumentos locales más atractivos en el corto plazo.\n\n**Condicionales y Triggers de Salida:**\n- **Si** la inflación (IPC) vuelve a acelerarse por encima de la tasa de política monetaria, la tendencia de los bonos CER podría revertirse (comprar CER, vender Tasa Fija).\n- **Si** el BCRA comienza una acumulación agresiva de reservas netas, el Riesgo País tendería a bajar, impulsando el precio de los bonos Hard Dollar (AL30, GD30).\n- **Trigger de Venta:** Considerar la salida de estas posiciones si el Riesgo País rompe la barrera de los 700 puntos o si la brecha cambiaria se expande significativamente por encima del 40%.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "AL30",
+      "predicted_direction": "DOWN",
+      "price_start": 823.5,
+      "price_end": 804.0,
+      "change": -19.5,
+      "correct": true,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales y las relaciones causales del grafo de conocimiento, se prevé una tendencia a la baja en el precio de los siguientes activos en un horizonte de 45 días:\n\n1. **Bonos ajustados por CER (TX31, TZX27):** \n   - **Cadena Causal:** `[Baja de Inflación (1.6% mensual)] ──► causes ──► [Menor atractivo relativo de activos CER vs Tasa Fija] ──► signals [DOWN] on [TX31, TZX27]`.\n   - **Justificación:** Con una inflación mensual del 1.6% y una tasa de política monetaria del 29% (aprox. 2.4% mensual), las tasas reales son positivas. El grafo de conocimiento indica que la 'Baja de la inflación sugiere UP Tasa Fija'. En este escenario de desinflación, los bonos CER pierden su atractivo como cobertura, impulsando a los inversores a rotar sus carteras hacia activos de tasa fija (como LECAPs), lo que presiona los precios de los bonos CER a la baja.\n\n2. **Bonos Hard Dollar (AL30, GD30, AL35, GD35):**\n   - **Cadena Causal:** `[Reservas Netas Negativas (-2.000M USD)] ──► causes ──► [Persistencia de Riesgo País (651 pts)] ──► signals [DOWN] on [Hard Dollar Bonds]`.\n   - **Justificación:** A pesar del superávit fiscal, la falta de acumulación de reservas netas (actualmente en -2.000 millones USD) debilita la posición externa del país. Según el grafo, la 'falta de acumulación de divisas incrementa la percepción de riesgo entre los inversores'. Esto, sumado a la fuerte señal de 'UP' para activos de Tasa Fija en pesos, sugiere una rotación de capitales fuera de los bonos soberanos en dólares hacia instrumentos locales más atractivos en el corto plazo.\n\n**Condicionales y Triggers de Salida:**\n- **Si** la inflación (IPC) vuelve a acelerarse por encima de la tasa de política monetaria, la tendencia de los bonos CER podría revertirse (comprar CER, vender Tasa Fija).\n- **Si** el BCRA comienza una acumulación agresiva de reservas netas, el Riesgo País tendería a bajar, impulsando el precio de los bonos Hard Dollar (AL30, GD30).\n- **Trigger de Venta:** Considerar la salida de estas posiciones si el Riesgo País rompe la barrera de los 700 puntos o si la brecha cambiaria se expande significativamente por encima del 40%.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "GD30",
+      "predicted_direction": "DOWN",
+      "price_start": 847.0,
+      "price_end": 833.0,
+      "change": -14.0,
+      "correct": true,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales y las relaciones causales del grafo de conocimiento, se prevé una tendencia a la baja en el precio de los siguientes activos en un horizonte de 45 días:\n\n1. **Bonos ajustados por CER (TX31, TZX27):** \n   - **Cadena Causal:** `[Baja de Inflación (1.6% mensual)] ──► causes ──► [Menor atractivo relativo de activos CER vs Tasa Fija] ──► signals [DOWN] on [TX31, TZX27]`.\n   - **Justificación:** Con una inflación mensual del 1.6% y una tasa de política monetaria del 29% (aprox. 2.4% mensual), las tasas reales son positivas. El grafo de conocimiento indica que la 'Baja de la inflación sugiere UP Tasa Fija'. En este escenario de desinflación, los bonos CER pierden su atractivo como cobertura, impulsando a los inversores a rotar sus carteras hacia activos de tasa fija (como LECAPs), lo que presiona los precios de los bonos CER a la baja.\n\n2. **Bonos Hard Dollar (AL30, GD30, AL35, GD35):**\n   - **Cadena Causal:** `[Reservas Netas Negativas (-2.000M USD)] ──► causes ──► [Persistencia de Riesgo País (651 pts)] ──► signals [DOWN] on [Hard Dollar Bonds]`.\n   - **Justificación:** A pesar del superávit fiscal, la falta de acumulación de reservas netas (actualmente en -2.000 millones USD) debilita la posición externa del país. Según el grafo, la 'falta de acumulación de divisas incrementa la percepción de riesgo entre los inversores'. Esto, sumado a la fuerte señal de 'UP' para activos de Tasa Fija en pesos, sugiere una rotación de capitales fuera de los bonos soberanos en dólares hacia instrumentos locales más atractivos en el corto plazo.\n\n**Condicionales y Triggers de Salida:**\n- **Si** la inflación (IPC) vuelve a acelerarse por encima de la tasa de política monetaria, la tendencia de los bonos CER podría revertirse (comprar CER, vender Tasa Fija).\n- **Si** el BCRA comienza una acumulación agresiva de reservas netas, el Riesgo País tendería a bajar, impulsando el precio de los bonos Hard Dollar (AL30, GD30).\n- **Trigger de Venta:** Considerar la salida de estas posiciones si el Riesgo País rompe la barrera de los 700 puntos o si la brecha cambiaria se expande significativamente por encima del 40%.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "AL35",
+      "predicted_direction": "DOWN",
+      "price_start": 826.7,
+      "price_end": 875.2,
+      "change": 48.5,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales y las relaciones causales del grafo de conocimiento, se prevé una tendencia a la baja en el precio de los siguientes activos en un horizonte de 45 días:\n\n1. **Bonos ajustados por CER (TX31, TZX27):** \n   - **Cadena Causal:** `[Baja de Inflación (1.6% mensual)] ──► causes ──► [Menor atractivo relativo de activos CER vs Tasa Fija] ──► signals [DOWN] on [TX31, TZX27]`.\n   - **Justificación:** Con una inflación mensual del 1.6% y una tasa de política monetaria del 29% (aprox. 2.4% mensual), las tasas reales son positivas. El grafo de conocimiento indica que la 'Baja de la inflación sugiere UP Tasa Fija'. En este escenario de desinflación, los bonos CER pierden su atractivo como cobertura, impulsando a los inversores a rotar sus carteras hacia activos de tasa fija (como LECAPs), lo que presiona los precios de los bonos CER a la baja.\n\n2. **Bonos Hard Dollar (AL30, GD30, AL35, GD35):**\n   - **Cadena Causal:** `[Reservas Netas Negativas (-2.000M USD)] ──► causes ──► [Persistencia de Riesgo País (651 pts)] ──► signals [DOWN] on [Hard Dollar Bonds]`.\n   - **Justificación:** A pesar del superávit fiscal, la falta de acumulación de reservas netas (actualmente en -2.000 millones USD) debilita la posición externa del país. Según el grafo, la 'falta de acumulación de divisas incrementa la percepción de riesgo entre los inversores'. Esto, sumado a la fuerte señal de 'UP' para activos de Tasa Fija en pesos, sugiere una rotación de capitales fuera de los bonos soberanos en dólares hacia instrumentos locales más atractivos en el corto plazo.\n\n**Condicionales y Triggers de Salida:**\n- **Si** la inflación (IPC) vuelve a acelerarse por encima de la tasa de política monetaria, la tendencia de los bonos CER podría revertirse (comprar CER, vender Tasa Fija).\n- **Si** el BCRA comienza una acumulación agresiva de reservas netas, el Riesgo País tendería a bajar, impulsando el precio de los bonos Hard Dollar (AL30, GD30).\n- **Trigger de Venta:** Considerar la salida de estas posiciones si el Riesgo País rompe la barrera de los 700 puntos o si la brecha cambiaria se expande significativamente por encima del 40%.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-25",
+      "ticker": "GD35",
+      "predicted_direction": "DOWN",
+      "price_start": 835.8,
+      "price_end": 888.5,
+      "change": 52.7,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos macroeconómicos actuales y las relaciones causales del grafo de conocimiento, se prevé una tendencia a la baja en el precio de los siguientes activos en un horizonte de 45 días:\n\n1. **Bonos ajustados por CER (TX31, TZX27):** \n   - **Cadena Causal:** `[Baja de Inflación (1.6% mensual)] ──► causes ──► [Menor atractivo relativo de activos CER vs Tasa Fija] ──► signals [DOWN] on [TX31, TZX27]`.\n   - **Justificación:** Con una inflación mensual del 1.6% y una tasa de política monetaria del 29% (aprox. 2.4% mensual), las tasas reales son positivas. El grafo de conocimiento indica que la 'Baja de la inflación sugiere UP Tasa Fija'. En este escenario de desinflación, los bonos CER pierden su atractivo como cobertura, impulsando a los inversores a rotar sus carteras hacia activos de tasa fija (como LECAPs), lo que presiona los precios de los bonos CER a la baja.\n\n2. **Bonos Hard Dollar (AL30, GD30, AL35, GD35):**\n   - **Cadena Causal:** `[Reservas Netas Negativas (-2.000M USD)] ──► causes ──► [Persistencia de Riesgo País (651 pts)] ──► signals [DOWN] on [Hard Dollar Bonds]`.\n   - **Justificación:** A pesar del superávit fiscal, la falta de acumulación de reservas netas (actualmente en -2.000 millones USD) debilita la posición externa del país. Según el grafo, la 'falta de acumulación de divisas incrementa la percepción de riesgo entre los inversores'. Esto, sumado a la fuerte señal de 'UP' para activos de Tasa Fija en pesos, sugiere una rotación de capitales fuera de los bonos soberanos en dólares hacia instrumentos locales más atractivos en el corto plazo.\n\n**Condicionales y Triggers de Salida:**\n- **Si** la inflación (IPC) vuelve a acelerarse por encima de la tasa de política monetaria, la tendencia de los bonos CER podría revertirse (comprar CER, vender Tasa Fija).\n- **Si** el BCRA comienza una acumulación agresiva de reservas netas, el Riesgo País tendería a bajar, impulsando el precio de los bonos Hard Dollar (AL30, GD30).\n- **Trigger de Venta:** Considerar la salida de estas posiciones si el Riesgo País rompe la barrera de los 700 puntos o si la brecha cambiaria se expande significativamente por encima del 40%.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "AL30",
+      "predicted_direction": "UP",
+      "price_start": 829.0,
+      "price_end": 796.0,
+      "change": -33.0,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase al 30 de junio de 2025, se prevé un alza en los bonos soberanos en moneda dura (Hard Dollar) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Superávit Fiscal ──► mejora ──► Solvencia Crediticia ──► señales UP en Bonos Soberanos.** El dato más relevante es el fuerte superávit primario (845.949 millones) y financiero (572.341 millones), lo que reduce drásticamente el riesgo de default y presiona los precios al alza.\n2. **Riesgo País (651 bps) ──► compresión de tasas ──► alza en bonos de larga duración.** Con un riesgo país relativamente bajo, los bonos con mayor duration (como GD35, AL35, GD41, AL41) son los que más capturan la subida de precio ante una mejora en la percepción crediticia.\n3. **Inflación Baja (1.6% mensual) ──► reduce atractivo de CER ──► rotación hacia Tasa Fija/Dólar.** La desaceleración inflacionaria resta atractivo a los bonos ajustados por CER (como TZV26 o TZX27), favoreciendo la migración de capitales hacia los bonos en dólares.\n4. **Convergencia Cambiaria ──► estabilidad de precios ──► menor volatilidad.** La alineación de los tipos de cambio (MEP, CCL, Blue y Oficial) alrededor de los 1211-1215 USD reduce la incertidumbre inmediata sobre el valor de los activos.\n\n**Escenarios Condicionales y Triggers:**\n- **Si** las reservas netas del BCRA (actualmente en -2.000 millones) logran pasar a terreno positivo, se espera un rally agresivo especialmente en los bonos ley local (AL).\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, se recomienda rotar la cartera de bonos Hard Dollar hacia bonos CER.\n- **Si** el superávit primario se deteriora significativamente, es una señal de venta inmediata para todos los activos soberanos.\n\n**Estrategia de Salida:** Considerar el cierre de posiciones o toma de ganancias en un plazo de 45 días, o bien si el Riesgo País cae por debajo de los 500 bps, alcanzando un objetivo de rendimiento optimista.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "GD30",
+      "predicted_direction": "UP",
+      "price_start": 849.1,
+      "price_end": 820.5,
+      "change": -28.6,
+      "correct": false,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase al 30 de junio de 2025, se prevé un alza en los bonos soberanos en moneda dura (Hard Dollar) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Superávit Fiscal ──► mejora ──► Solvencia Crediticia ──► señales UP en Bonos Soberanos.** El dato más relevante es el fuerte superávit primario (845.949 millones) y financiero (572.341 millones), lo que reduce drásticamente el riesgo de default y presiona los precios al alza.\n2. **Riesgo País (651 bps) ──► compresión de tasas ──► alza en bonos de larga duración.** Con un riesgo país relativamente bajo, los bonos con mayor duration (como GD35, AL35, GD41, AL41) son los que más capturan la subida de precio ante una mejora en la percepción crediticia.\n3. **Inflación Baja (1.6% mensual) ──► reduce atractivo de CER ──► rotación hacia Tasa Fija/Dólar.** La desaceleración inflacionaria resta atractivo a los bonos ajustados por CER (como TZV26 o TZX27), favoreciendo la migración de capitales hacia los bonos en dólares.\n4. **Convergencia Cambiaria ──► estabilidad de precios ──► menor volatilidad.** La alineación de los tipos de cambio (MEP, CCL, Blue y Oficial) alrededor de los 1211-1215 USD reduce la incertidumbre inmediata sobre el valor de los activos.\n\n**Escenarios Condicionales y Triggers:**\n- **Si** las reservas netas del BCRA (actualmente en -2.000 millones) logran pasar a terreno positivo, se espera un rally agresivo especialmente en los bonos ley local (AL).\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, se recomienda rotar la cartera de bonos Hard Dollar hacia bonos CER.\n- **Si** el superávit primario se deteriora significativamente, es una señal de venta inmediata para todos los activos soberanos.\n\n**Estrategia de Salida:** Considerar el cierre de posiciones o toma de ganancias en un plazo de 45 días, o bien si el Riesgo País cae por debajo de los 500 bps, alcanzando un objetivo de rendimiento optimista.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "AL35",
+      "predicted_direction": "UP",
+      "price_start": 831.0,
+      "price_end": 860.1,
+      "change": 29.1,
+      "correct": true,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase al 30 de junio de 2025, se prevé un alza en los bonos soberanos en moneda dura (Hard Dollar) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Superávit Fiscal ──► mejora ──► Solvencia Crediticia ──► señales UP en Bonos Soberanos.** El dato más relevante es el fuerte superávit primario (845.949 millones) y financiero (572.341 millones), lo que reduce drásticamente el riesgo de default y presiona los precios al alza.\n2. **Riesgo País (651 bps) ──► compresión de tasas ──► alza en bonos de larga duración.** Con un riesgo país relativamente bajo, los bonos con mayor duration (como GD35, AL35, GD41, AL41) son los que más capturan la subida de precio ante una mejora en la percepción crediticia.\n3. **Inflación Baja (1.6% mensual) ──► reduce atractivo de CER ──► rotación hacia Tasa Fija/Dólar.** La desaceleración inflacionaria resta atractivo a los bonos ajustados por CER (como TZV26 o TZX27), favoreciendo la migración de capitales hacia los bonos en dólares.\n4. **Convergencia Cambiaria ──► estabilidad de precios ──► menor volatilidad.** La alineación de los tipos de cambio (MEP, CCL, Blue y Oficial) alrededor de los 1211-1215 USD reduce la incertidumbre inmediata sobre el valor de los activos.\n\n**Escenarios Condicionales y Triggers:**\n- **Si** las reservas netas del BCRA (actualmente en -2.000 millones) logran pasar a terreno positivo, se espera un rally agresivo especialmente en los bonos ley local (AL).\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, se recomienda rotar la cartera de bonos Hard Dollar hacia bonos CER.\n- **Si** el superávit primario se deteriora significativamente, es una señal de venta inmediata para todos los activos soberanos.\n\n**Estrategia de Salida:** Considerar el cierre de posiciones o toma de ganancias en un plazo de 45 días, o bien si el Riesgo País cae por debajo de los 500 bps, alcanzando un objetivo de rendimiento optimista.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "GD35",
+      "predicted_direction": "UP",
+      "price_start": 839.0,
+      "price_end": 881.9,
+      "change": 42.9,
+      "correct": true,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase al 30 de junio de 2025, se prevé un alza en los bonos soberanos en moneda dura (Hard Dollar) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Superávit Fiscal ──► mejora ──► Solvencia Crediticia ──► señales UP en Bonos Soberanos.** El dato más relevante es el fuerte superávit primario (845.949 millones) y financiero (572.341 millones), lo que reduce drásticamente el riesgo de default y presiona los precios al alza.\n2. **Riesgo País (651 bps) ──► compresión de tasas ──► alza en bonos de larga duración.** Con un riesgo país relativamente bajo, los bonos con mayor duration (como GD35, AL35, GD41, AL41) son los que más capturan la subida de precio ante una mejora en la percepción crediticia.\n3. **Inflación Baja (1.6% mensual) ──► reduce atractivo de CER ──► rotación hacia Tasa Fija/Dólar.** La desaceleración inflacionaria resta atractivo a los bonos ajustados por CER (como TZV26 o TZX27), favoreciendo la migración de capitales hacia los bonos en dólares.\n4. **Convergencia Cambiaria ──► estabilidad de precios ──► menor volatilidad.** La alineación de los tipos de cambio (MEP, CCL, Blue y Oficial) alrededor de los 1211-1215 USD reduce la incertidumbre inmediata sobre el valor de los activos.\n\n**Escenarios Condicionales y Triggers:**\n- **Si** las reservas netas del BCRA (actualmente en -2.000 millones) logran pasar a terreno positivo, se espera un rally agresivo especialmente en los bonos ley local (AL).\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, se recomienda rotar la cartera de bonos Hard Dollar hacia bonos CER.\n- **Si** el superávit primario se deteriora significativamente, es una señal de venta inmediata para todos los activos soberanos.\n\n**Estrategia de Salida:** Considerar el cierre de posiciones o toma de ganancias en un plazo de 45 días, o bien si el Riesgo País cae por debajo de los 500 bps, alcanzando un objetivo de rendimiento optimista.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "GD41",
+      "predicted_direction": "UP",
+      "price_start": 777.0,
+      "price_end": 816.2,
+      "change": 39.2,
+      "correct": true,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase al 30 de junio de 2025, se prevé un alza en los bonos soberanos en moneda dura (Hard Dollar) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Superávit Fiscal ──► mejora ──► Solvencia Crediticia ──► señales UP en Bonos Soberanos.** El dato más relevante es el fuerte superávit primario (845.949 millones) y financiero (572.341 millones), lo que reduce drásticamente el riesgo de default y presiona los precios al alza.\n2. **Riesgo País (651 bps) ──► compresión de tasas ──► alza en bonos de larga duración.** Con un riesgo país relativamente bajo, los bonos con mayor duration (como GD35, AL35, GD41, AL41) son los que más capturan la subida de precio ante una mejora en la percepción crediticia.\n3. **Inflación Baja (1.6% mensual) ──► reduce atractivo de CER ──► rotación hacia Tasa Fija/Dólar.** La desaceleración inflacionaria resta atractivo a los bonos ajustados por CER (como TZV26 o TZX27), favoreciendo la migración de capitales hacia los bonos en dólares.\n4. **Convergencia Cambiaria ──► estabilidad de precios ──► menor volatilidad.** La alineación de los tipos de cambio (MEP, CCL, Blue y Oficial) alrededor de los 1211-1215 USD reduce la incertidumbre inmediata sobre el valor de los activos.\n\n**Escenarios Condicionales y Triggers:**\n- **Si** las reservas netas del BCRA (actualmente en -2.000 millones) logran pasar a terreno positivo, se espera un rally agresivo especialmente en los bonos ley local (AL).\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, se recomienda rotar la cartera de bonos Hard Dollar hacia bonos CER.\n- **Si** el superávit primario se deteriora significativamente, es una señal de venta inmediata para todos los activos soberanos.\n\n**Estrategia de Salida:** Considerar el cierre de posiciones o toma de ganancias en un plazo de 45 días, o bien si el Riesgo País cae por debajo de los 500 bps, alcanzando un objetivo de rendimiento optimista.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "AL41",
+      "predicted_direction": "UP",
+      "price_start": 763.4,
+      "price_end": 794.2,
+      "change": 30.8,
+      "correct": true,
+      "explanation": "Basado en los datos de la base de datos relacional de Supabase al 30 de junio de 2025, se prevé un alza en los bonos soberanos en moneda dura (Hard Dollar) en el horizonte de 45 días. \n\n**Análisis Causal:**\n1. **Superávit Fiscal ──► mejora ──► Solvencia Crediticia ──► señales UP en Bonos Soberanos.** El dato más relevante es el fuerte superávit primario (845.949 millones) y financiero (572.341 millones), lo que reduce drásticamente el riesgo de default y presiona los precios al alza.\n2. **Riesgo País (651 bps) ──► compresión de tasas ──► alza en bonos de larga duración.** Con un riesgo país relativamente bajo, los bonos con mayor duration (como GD35, AL35, GD41, AL41) son los que más capturan la subida de precio ante una mejora en la percepción crediticia.\n3. **Inflación Baja (1.6% mensual) ──► reduce atractivo de CER ──► rotación hacia Tasa Fija/Dólar.** La desaceleración inflacionaria resta atractivo a los bonos ajustados por CER (como TZV26 o TZX27), favoreciendo la migración de capitales hacia los bonos en dólares.\n4. **Convergencia Cambiaria ──► estabilidad de precios ──► menor volatilidad.** La alineación de los tipos de cambio (MEP, CCL, Blue y Oficial) alrededor de los 1211-1215 USD reduce la incertidumbre inmediata sobre el valor de los activos.\n\n**Escenarios Condicionales y Triggers:**\n- **Si** las reservas netas del BCRA (actualmente en -2.000 millones) logran pasar a terreno positivo, se espera un rally agresivo especialmente en los bonos ley local (AL).\n- **Si** la inflación mensual vuelve a acelerarse por encima del 4%, se recomienda rotar la cartera de bonos Hard Dollar hacia bonos CER.\n- **Si** el superávit primario se deteriora significativamente, es una señal de venta inmediata para todos los activos soberanos.\n\n**Estrategia de Salida:** Considerar el cierre de posiciones o toma de ganancias en un plazo de 45 días, o bien si el Riesgo País cae por debajo de los 500 bps, alcanzando un objetivo de rendimiento optimista.\n\nDescargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo."
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "AL30",
+      "predicted_direction": "DOWN",
+      "price_start": 829.0,
+      "price_end": 796.0,
+      "change": -33.0,
+      "correct": true,
+      "explanation": "Basado en el análisis de los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, se prevé una tendencia bajista o de corrección para los bonos seleccionados en un horizonte de 45 días. Esta predicción no se basa en señales directas del grafo de conocimiento (que actualmente no registran señales activas), sino en una cadena causal de eventos macroeconómicos y legales recientes:\n\n**Análisis Causal de la Baja:**\n\n1. **Shock Legal (Caso YPF):** La noticia de que la jueza Loretta Preska ordenó a la República Argentina entregar el 51% de las acciones de YPF representa un riesgo reputacional y financiero severo para el Tesoro Nacional. \n   `[Fallo Judicial YPF] ──► aumenta ──► [Riesgo de Contingencias del Estado] ──► presión bajista en [Bonos Soberanos]`.\n\n2. **Toma de Ganancias y Estacionalidad:** Según el informe de **JPMorgan** obtenido de la base de datos, se recomienda a los inversores \"tomarse un respiro\" y reducir el riesgo. Esto se debe al fin de la estacionalidad positiva del agro (menor ingreso de divisas) y la salida de dólares por turismo.\n   `[Fin Estacionalidad Agro / Salidas Turismo] ──► reduce ──► [Liquidez en Divisas] ──► incentiva [Toma de Ganancias] en [AL30, GD30]`.\n\n3. **Fragilidad de Reservas:** El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**, lo que deja al BCRA con poco margen de maniobra ante cualquier shock externo en el corto plazo.\n\n**Justificación por Activo:**\n- **AL30 y GD30:** Al ser los bonos más líquidos, son los primeros objetivos de las operaciones de toma de ganancias sugeridas por analistas como JPMorgan.\n- **AL41, GD41 y GD46:** Debido a su mayor duración (vencimientos más largos), son mucho más sensibles a las variaciones del riesgo país y a la percepción de solvencia a largo plazo, la cual se ve afectada por el fallo de YPF.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si el Riesgo País supera los 700 puntos:** Se recomienda reducir la exposición a bonos soberanos y migrar hacia activos más líquidos o Hard Dólar.\n- **Si la apelación del fallo YPF es suspendida o favorable:** El sentimiento podría revertirse rápidamente, eliminando la presión bajista.\n- **Si la inflación (IPC) se acelera:** Venda bonos a tasa fija y considere bonos ajustados por CER.\n\n**Tener en cuenta:** Monitorear la brecha cambiaria (actualmente muy baja con MEP/CCL en ~1211 y Oficial en 1215) y la evolución de las reservas netas.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "GD30",
+      "predicted_direction": "DOWN",
+      "price_start": 849.1,
+      "price_end": 820.5,
+      "change": -28.6,
+      "correct": true,
+      "explanation": "Basado en el análisis de los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, se prevé una tendencia bajista o de corrección para los bonos seleccionados en un horizonte de 45 días. Esta predicción no se basa en señales directas del grafo de conocimiento (que actualmente no registran señales activas), sino en una cadena causal de eventos macroeconómicos y legales recientes:\n\n**Análisis Causal de la Baja:**\n\n1. **Shock Legal (Caso YPF):** La noticia de que la jueza Loretta Preska ordenó a la República Argentina entregar el 51% de las acciones de YPF representa un riesgo reputacional y financiero severo para el Tesoro Nacional. \n   `[Fallo Judicial YPF] ──► aumenta ──► [Riesgo de Contingencias del Estado] ──► presión bajista en [Bonos Soberanos]`.\n\n2. **Toma de Ganancias y Estacionalidad:** Según el informe de **JPMorgan** obtenido de la base de datos, se recomienda a los inversores \"tomarse un respiro\" y reducir el riesgo. Esto se debe al fin de la estacionalidad positiva del agro (menor ingreso de divisas) y la salida de dólares por turismo.\n   `[Fin Estacionalidad Agro / Salidas Turismo] ──► reduce ──► [Liquidez en Divisas] ──► incentiva [Toma de Ganancias] en [AL30, GD30]`.\n\n3. **Fragilidad de Reservas:** El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**, lo que deja al BCRA con poco margen de maniobra ante cualquier shock externo en el corto plazo.\n\n**Justificación por Activo:**\n- **AL30 y GD30:** Al ser los bonos más líquidos, son los primeros objetivos de las operaciones de toma de ganancias sugeridas por analistas como JPMorgan.\n- **AL41, GD41 y GD46:** Debido a su mayor duración (vencimientos más largos), son mucho más sensibles a las variaciones del riesgo país y a la percepción de solvencia a largo plazo, la cual se ve afectada por el fallo de YPF.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si el Riesgo País supera los 700 puntos:** Se recomienda reducir la exposición a bonos soberanos y migrar hacia activos más líquidos o Hard Dólar.\n- **Si la apelación del fallo YPF es suspendida o favorable:** El sentimiento podría revertirse rápidamente, eliminando la presión bajista.\n- **Si la inflación (IPC) se acelera:** Venda bonos a tasa fija y considere bonos ajustados por CER.\n\n**Tener en cuenta:** Monitorear la brecha cambiaria (actualmente muy baja con MEP/CCL en ~1211 y Oficial en 1215) y la evolución de las reservas netas.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "AL41",
+      "predicted_direction": "DOWN",
+      "price_start": 763.4,
+      "price_end": 794.2,
+      "change": 30.8,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, se prevé una tendencia bajista o de corrección para los bonos seleccionados en un horizonte de 45 días. Esta predicción no se basa en señales directas del grafo de conocimiento (que actualmente no registran señales activas), sino en una cadena causal de eventos macroeconómicos y legales recientes:\n\n**Análisis Causal de la Baja:**\n\n1. **Shock Legal (Caso YPF):** La noticia de que la jueza Loretta Preska ordenó a la República Argentina entregar el 51% de las acciones de YPF representa un riesgo reputacional y financiero severo para el Tesoro Nacional. \n   `[Fallo Judicial YPF] ──► aumenta ──► [Riesgo de Contingencias del Estado] ──► presión bajista en [Bonos Soberanos]`.\n\n2. **Toma de Ganancias y Estacionalidad:** Según el informe de **JPMorgan** obtenido de la base de datos, se recomienda a los inversores \"tomarse un respiro\" y reducir el riesgo. Esto se debe al fin de la estacionalidad positiva del agro (menor ingreso de divisas) y la salida de dólares por turismo.\n   `[Fin Estacionalidad Agro / Salidas Turismo] ──► reduce ──► [Liquidez en Divisas] ──► incentiva [Toma de Ganancias] en [AL30, GD30]`.\n\n3. **Fragilidad de Reservas:** El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**, lo que deja al BCRA con poco margen de maniobra ante cualquier shock externo en el corto plazo.\n\n**Justificación por Activo:**\n- **AL30 y GD30:** Al ser los bonos más líquidos, son los primeros objetivos de las operaciones de toma de ganancias sugeridas por analistas como JPMorgan.\n- **AL41, GD41 y GD46:** Debido a su mayor duración (vencimientos más largos), son mucho más sensibles a las variaciones del riesgo país y a la percepción de solvencia a largo plazo, la cual se ve afectada por el fallo de YPF.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si el Riesgo País supera los 700 puntos:** Se recomienda reducir la exposición a bonos soberanos y migrar hacia activos más líquidos o Hard Dólar.\n- **Si la apelación del fallo YPF es suspendida o favorable:** El sentimiento podría revertirse rápidamente, eliminando la presión bajista.\n- **Si la inflación (IPC) se acelera:** Venda bonos a tasa fija y considere bonos ajustados por CER.\n\n**Tener en cuenta:** Monitorear la brecha cambiaria (actualmente muy baja con MEP/CCL en ~1211 y Oficial en 1215) y la evolución de las reservas netas.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "GD41",
+      "predicted_direction": "DOWN",
+      "price_start": 777.0,
+      "price_end": 816.2,
+      "change": 39.2,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, se prevé una tendencia bajista o de corrección para los bonos seleccionados en un horizonte de 45 días. Esta predicción no se basa en señales directas del grafo de conocimiento (que actualmente no registran señales activas), sino en una cadena causal de eventos macroeconómicos y legales recientes:\n\n**Análisis Causal de la Baja:**\n\n1. **Shock Legal (Caso YPF):** La noticia de que la jueza Loretta Preska ordenó a la República Argentina entregar el 51% de las acciones de YPF representa un riesgo reputacional y financiero severo para el Tesoro Nacional. \n   `[Fallo Judicial YPF] ──► aumenta ──► [Riesgo de Contingencias del Estado] ──► presión bajista en [Bonos Soberanos]`.\n\n2. **Toma de Ganancias y Estacionalidad:** Según el informe de **JPMorgan** obtenido de la base de datos, se recomienda a los inversores \"tomarse un respiro\" y reducir el riesgo. Esto se debe al fin de la estacionalidad positiva del agro (menor ingreso de divisas) y la salida de dólares por turismo.\n   `[Fin Estacionalidad Agro / Salidas Turismo] ──► reduce ──► [Liquidez en Divisas] ──► incentiva [Toma de Ganancias] en [AL30, GD30]`.\n\n3. **Fragilidad de Reservas:** El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**, lo que deja al BCRA con poco margen de maniobra ante cualquier shock externo en el corto plazo.\n\n**Justificación por Activo:**\n- **AL30 y GD30:** Al ser los bonos más líquidos, son los primeros objetivos de las operaciones de toma de ganancias sugeridas por analistas como JPMorgan.\n- **AL41, GD41 y GD46:** Debido a su mayor duración (vencimientos más largos), son mucho más sensibles a las variaciones del riesgo país y a la percepción de solvencia a largo plazo, la cual se ve afectada por el fallo de YPF.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si el Riesgo País supera los 700 puntos:** Se recomienda reducir la exposición a bonos soberanos y migrar hacia activos más líquidos o Hard Dólar.\n- **Si la apelación del fallo YPF es suspendida o favorable:** El sentimiento podría revertirse rápidamente, eliminando la presión bajista.\n- **Si la inflación (IPC) se acelera:** Venda bonos a tasa fija y considere bonos ajustados por CER.\n\n**Tener en cuenta:** Monitorear la brecha cambiaria (actualmente muy baja con MEP/CCL en ~1211 y Oficial en 1215) y la evolución de las reservas netas.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    },
+    {
+      "date": "2025-06-30",
+      "ticker": "GD46",
+      "predicted_direction": "DOWN",
+      "price_start": 800.8,
+      "price_end": 811.7,
+      "change": 10.9,
+      "correct": false,
+      "explanation": "Basado en el análisis de los datos obtenidos de la base de datos relacional de Supabase y la vista de fuentes de noticias, se prevé una tendencia bajista o de corrección para los bonos seleccionados en un horizonte de 45 días. Esta predicción no se basa en señales directas del grafo de conocimiento (que actualmente no registran señales activas), sino en una cadena causal de eventos macroeconómicos y legales recientes:\n\n**Análisis Causal de la Baja:**\n\n1. **Shock Legal (Caso YPF):** La noticia de que la jueza Loretta Preska ordenó a la República Argentina entregar el 51% de las acciones de YPF representa un riesgo reputacional y financiero severo para el Tesoro Nacional. \n   `[Fallo Judicial YPF] ──► aumenta ──► [Riesgo de Contingencias del Estado] ──► presión bajista en [Bonos Soberanos]`.\n\n2. **Toma de Ganancias y Estacionalidad:** Según el informe de **JPMorgan** obtenido de la base de datos, se recomienda a los inversores \"tomarse un respiro\" y reducir el riesgo. Esto se debe al fin de la estacionalidad positiva del agro (menor ingreso de divisas) y la salida de dólares por turismo.\n   `[Fin Estacionalidad Agro / Salidas Turismo] ──► reduce ──► [Liquidez en Divisas] ──► incentiva [Toma de Ganancias] en [AL30, GD30]`.\n\n3. **Fragilidad de Reservas:** El contexto macroeconómico muestra **reservas netas negativas (-2.000 millones USD)**, lo que deja al BCRA con poco margen de maniobra ante cualquier shock externo en el corto plazo.\n\n**Justificación por Activo:**\n- **AL30 y GD30:** Al ser los bonos más líquidos, son los primeros objetivos de las operaciones de toma de ganancias sugeridas por analistas como JPMorgan.\n- **AL41, GD41 y GD46:** Debido a su mayor duración (vencimientos más largos), son mucho más sensibles a las variaciones del riesgo país y a la percepción de solvencia a largo plazo, la cual se ve afectada por el fallo de YPF.\n\n**Escenarios Condicionales y Triggers de Salida:**\n- **Si el Riesgo País supera los 700 puntos:** Se recomienda reducir la exposición a bonos soberanos y migrar hacia activos más líquidos o Hard Dólar.\n- **Si la apelación del fallo YPF es suspendida o favorable:** El sentimiento podría revertirse rápidamente, eliminando la presión bajista.\n- **Si la inflación (IPC) se acelera:** Venda bonos a tasa fija y considere bonos ajustados por CER.\n\n**Tener en cuenta:** Monitorear la brecha cambiaria (actualmente muy baja con MEP/CCL en ~1211 y Oficial en 1215) y la evolución de las reservas netas.\n\n*Descargo de responsabilidad: Este análisis se basa en relaciones causales extraídas de reportes de prensa mediante inteligencia artificial. No constituye asesoramiento financiero ni recomendación directa de inversión. Invierta bajo su propio riesgo.*"
+    }
+  ],
+  "portfolio_history": [
+    {
+      "date": "2025-06-05",
+      "cash": 0.0,
+      "cash_ars": 0.0,
+      "cash_usd": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 917.4312,
+          "price": 1090.0,
+          "value": 1000000.0
+        }
+      },
+      "total_value": 1000000.0,
+      "inflation_factor": 1.0
+    },
+    {
+      "date": "2025-06-10",
+      "cash": 0.0,
+      "cash_ars": 0.0,
+      "cash_usd": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 458.7156,
+          "price": 1095.0,
+          "value": 502293.58
+        },
+        "AL30": {
+          "quantity": 614.4264,
+          "price": 817.5,
+          "value": 502293.58
+        }
+      },
+      "total_value": 1004587.16,
+      "inflation_factor": 1.0024845167246488
+    },
+    {
+      "date": "2025-06-15",
+      "cash": 0.0,
+      "cash_ars": 0.0,
+      "cash_usd": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 458.7156,
+          "price": 1099.0,
+          "value": 504128.44
+        },
+        "AL30": {
+          "quantity": 614.4264,
+          "price": 805.4,
+          "value": 494859.02
+        }
+      },
+      "total_value": 998987.46,
+      "inflation_factor": 1.005305139062695
+    },
+    {
+      "date": "2025-06-20",
+      "cash": 0.0,
+      "cash_ars": 0.0,
+      "cash_usd": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 458.7156,
+          "price": 1087.1,
+          "value": 498669.72
+        },
+        "AL30": {
+          "quantity": 614.4264,
+          "price": 789.3,
+          "value": 484966.75
+        }
+      },
+      "total_value": 983636.48,
+      "inflation_factor": 1.0079682534683312
+    },
+    {
+      "date": "2025-06-25",
+      "cash": 0.0,
+      "cash_ars": 0.0,
+      "cash_usd": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 910.4836,
+          "price": 1120.0,
+          "value": 1019741.6
+        }
+      },
+      "total_value": 1019741.6,
+      "inflation_factor": 1.0106384226258647
+    },
+    {
+      "date": "2025-06-30",
+      "cash": 0.0,
+      "cash_ars": 0.0,
+      "cash_usd": 0.0,
+      "holdings": {
+        "TZV26": {
+          "quantity": 910.4836,
+          "price": 1150.0,
+          "value": 1047056.11
+        }
+      },
+      "total_value": 1047056.11,
+      "inflation_factor": 1.0133156652237625
+    },
+    {
+      "date": "2025-08-17",
+      "cash": 1109879.48,
+      "cash_ars": 1109879.48,
+      "cash_usd": 0.0,
+      "holdings": {},
+      "total_value": 1109879.48,
+      "inflation_factor": 1.0393807983240402
+    }
+  ],
+  "realized_trades": [
+    {
+      "ticker": "TZV26",
+      "date": "2025-06-05",
+      "action": "BUY",
+      "quantity": 917.4312,
+      "buy_price": 1090.0,
+      "buy_price_real": 1090.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "TZV26",
+      "date": "2025-06-10",
+      "action": "SELL_PARTIAL",
+      "quantity": 458.7156,
+      "buy_price": 1090.0,
+      "buy_price_real": 1092.71,
+      "sell_price": 1095.0,
+      "pnl_amount": 2293.58,
+      "pnl_pct": 0.46,
+      "pnl_amount_real": 1051.32,
+      "pnl_pct_real": 0.21,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-06-10",
+      "action": "BUY",
+      "quantity": 614.4264,
+      "buy_price": 817.5,
+      "buy_price_real": 817.5,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "AL30",
+      "date": "2025-06-25",
+      "action": "SELL_ALL",
+      "quantity": 614.4264,
+      "buy_price": 817.5,
+      "buy_price_real": 824.15,
+      "sell_price": 823.5,
+      "pnl_amount": 3686.56,
+      "pnl_pct": 0.73,
+      "pnl_amount_real": -398.95,
+      "pnl_pct_real": -0.08,
+      "correct": false
+    },
+    {
+      "ticker": "TZV26",
+      "date": "2025-06-25",
+      "action": "BUY",
+      "quantity": 451.768,
+      "buy_price": 1120.0,
+      "buy_price_real": 1120.0,
+      "sell_price": 0.0,
+      "pnl_amount": 0.0,
+      "pnl_pct": 0.0,
+      "pnl_amount_real": 0.0,
+      "pnl_pct_real": 0.0,
+      "correct": true
+    },
+    {
+      "ticker": "TZV26",
+      "date": "2025-08-17",
+      "action": "LIQUIDATION",
+      "quantity": 910.4836,
+      "buy_price": 1104.89,
+      "buy_price_real": 1142.32,
+      "sell_price": 1219.0,
+      "pnl_amount": 103899.34,
+      "pnl_pct": 10.33,
+      "pnl_amount_real": 69818.96,
+      "pnl_pct_real": 6.71,
+      "correct": true
+    }
+  ]
+}
