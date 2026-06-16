@@ -2,6 +2,11 @@
 
 Análisis archivo "agent_interactions"
 
+- **Rango de Fechas**: Desde 2025-06-03 hasta 2025-06-03
+- **Horizonte de Evaluación**: 30 días
+- **Paso temporal**: 1 días
+- **Restricción de Tickers**: Ninguna
+
 ## Análisis UP
 ### Prompt
 De los siguientes bonos soberanos argentinos: TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP
@@ -28,6 +33,10 @@ Macro Context Analysis:
 ### Análisis
 Notemos que en esta respuesta, desconoce la "evolución" de la inflación (la pendiente); por lo tanto la observación "desaceleración", si bien es correcta, fue "inventada" a partir de la información con la que fue entrenado el modelo; no desde un razonamiento a partir de los contenidos de la DB.
 
+Esta lista de precios son los disponibles para realizar operaciones de compra/venta (aquellos que existían a la fecha sobre la cuál se realiza el test, y también aquellos sobre los cuales hay precios disponibles)
+```
+TZV26, AE38, AL29, AL30, AL35, AL41, BA37D, CO26, GD29, GD30, GD35, GD38, GD41, GD46, GD29D, GD30D, GD38D, GD35D, GD41D, GD46D, AL29D, AL30D, AE38D, AL35D, AL41D, TZX27, TX31, DICP, DIP0, PARP, PAP0, CUAP
+```
 
 ## Lógica Causal
 ### Respuesta Agente
